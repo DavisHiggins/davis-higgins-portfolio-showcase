@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  /* Horizontal clipping lives here rather than on the app's root div. On a normal
+     element `overflow-x: hidden` forces `overflow-y` to compute to `auto`, turning
+     that element into a scroll container that never actually scrolls — which
+     silently disables `position: sticky` for everything inside it, including the
+     header. On html it propagates to the viewport instead, with no such side effect. */
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  @apply bg-ink text-slate-100 antialiased;
+  background-image:
+    radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 28%),
+    radial-gradient(circle at right, rgba(99, 102, 241, 0.14), transparent 30%),
+    linear-gradient(180deg, #0a1322 0%, #07101d 48%, #060d18 100%);
+}
+
+::selection {
+  background: rgba(125, 211, 252, 0.28);
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+  outline: none;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 1px solid rgba(212, 175, 55, 0.45);
+  outline-offset: 3px;
+}
+
+/* Reserve room for the fixed table-of-contents rail, but only when the viewport
+   is too narrow to fit it in the natural gutter beside centred content.
+
+   The rail is 160px wide and sits 16px off the right edge. Content centred in a
+   box of width (100vw - P) has its right edge at (100vw - P + 1280)/2 - 48, so
+   keeping a clearance of R needs P >= 2R + 1184 - 100vw. R = 198 (160 + 16 + a
+   ~22px visual gap) gives the constant below.
+
+   It evaluates to zero at 1580px and above, which is why content is
+   pixel-identical to the pre-rail layout on wide screens and slides left only on
+   narrow ones. Content never loses width — only its centring gives way. */
+@media (min-width: 1280px) {
+  .rail-reserve {
+    padding-right: max(0px, calc(1580px - 100vw));
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto max-w-7xl px-4 sm:px-8 lg:px-12;
+  }
+
+  .glass {
+    @apply border border-white/10 bg-white/[0.04] backdrop-blur;
+  }
+
+  .chip {
+    @apply rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-200;
+  }
+
+  .nav-link {
+    @apply rounded-full px-4 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/10 hover:text-white;
+  }
+
+  .primary-btn {
+    @apply inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-950 transition hover:scale-[1.02];
+  }
+
+  .secondary-btn {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10;
+  }
+}

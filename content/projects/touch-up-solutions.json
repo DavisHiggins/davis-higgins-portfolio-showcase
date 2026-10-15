@@ -1,0 +1,53 @@
+{
+  "slug": "touch-up-solutions",
+  "title": "Touch Up Solutions",
+  "sortOrder": 19,
+  "categories": ["web-commerce"],
+  "status": "Redesign preview",
+  "summary": "A material-first catalog and how-to redesign for a repair-products business.",
+  "tagline": "A redesign concept for a manufacturer of wood, leather, metal, and laminate repair products that organizes the catalog around the material a customer is repairing and puts how-to guides beside the products.",
+  "role": "Designed and built the information architecture, pages, filters, cart experience, and visual system.",
+  "stack": ["HTML", "CSS", "JavaScript", "Vercel"],
+  "links": [
+    { "label": "View preview", "href": "https://touchupsolutions.vercel.app", "kind": "preview" },
+    { "label": "GitHub showcase", "href": "https://github.com/DavisHiggins/Touch-Up-Solutions", "kind": "showcase" }
+  ],
+  "metrics": [
+    { "value": "24", "label": "Pages designed and built", "context": "Catalog, material shops, guides, programs, videos, and resources." }
+  ],
+  "problem": [
+    "Touch Up Solutions makes repair products for many materials. That breadth is a strength in a showroom and an obstacle online: buyers arrive knowing the material and the job in front of them, but a broad catalog makes the right item hard to find."
+  ],
+  "contribution": [
+    "I worked in Touch Up Solutions' warehouse from 2022 to 2024. For this redesign I designed and built the information architecture across 24 pages, a single catalog that feeds every category grid, filters, a persistent cart drawer, and the visual system."
+  ],
+  "solution": [
+    "Browsing starts with the material: dedicated shops for wood and furniture, leather and vinyl, metal, and accessories, each with filters by product type. A how-to library sits beside the categories it applies to, and every guide links back to the right products. Separate Home User and Industrial User paths serve both kinds of customer."
+  ],
+  "solutionPoints": [
+    "Material shops with filters for adhesives, burn-in sticks, fill sticks, markers, and more.",
+    "How-to guides for cabinets, furniture scratches, laminate flooring, burn-in tools, epoxy, and touch-up paint.",
+    "A quote request and quick-order path for trade buyers.",
+    "Dark walnut and cool-light surfaces with amber calls to action."
+  ],
+  "architecture": {
+    "summary": "One catalog feeds everything, and guides and products link in both directions.",
+    "flow": ["One product catalog", "Material category pages + filters", "How-to guides ⇄ products", "Cart drawer + checkout flow"]
+  },
+  "decisions": [
+    { "title": "Stay lightweight.", "text": "A catalog this size doesn't need heavy machinery; static pages load fast and are easy for the company's team to maintain." },
+    { "title": "One catalog feeds every page.", "text": "Adding or repricing a product is one change that appears wherever it is listed." },
+    { "title": "Link guides and products both ways.", "text": "A buyer who starts from a technique or from a product reaches the other in one click." }
+  ],
+  "outcomes": [
+    "The public preview demonstrates material-led discovery, product filters, and how-to content working together."
+  ],
+  "limits": [
+    "This is a redesign preview, not the company's production store. The cart demonstrates the shopping flow; it is not presented as live payment processing."
+  ],
+  "lessons": "Customers often search by the problem and material in front of them, not by a manufacturer's internal catalog structure.",
+  "relatedNotes": [],
+  "related": ["higgins-building-group", "y-not", "lakeside-sport-club"],
+  "media": { "cover": "touch-up-solutions-cover", "hero": "touch-up-solutions-cover", "detail": "touch-up-solutions-detail" },
+  "sources": ["https://touchupsolutions.vercel.app", "reference/readmes/Touch-Up-Solutions.md"]
+}

@@ -1,0 +1,51 @@
+{
+  "slug": "census-data-analysis",
+  "title": "Census Data Analysis",
+  "sortOrder": 23,
+  "categories": ["data-ml", "research-community"],
+  "status": "Academic research · team paper",
+  "period": "Dec 2024",
+  "summary": "A team research paper on how education, age, sex, and race relate to salary.",
+  "tagline": "A research paper for UNC Charlotte's Data and Society course that examines race, sex, years of education, and age as predictors of earning more than $50,000, using a subset of 1996 U.S. Census data.",
+  "role": "Co-authored the paper as part of a five-person team: data preparation, statistical analysis, visualization, and writing.",
+  "team": "Davis Higgins, Chris Loor-Luna, Cory Nguyen, Tam Khong, and Jeffrey Alvarez (DTSC 1302, December 2024).",
+  "stack": ["Python", "pandas", "Matplotlib", "seaborn", "Correlation", "ANOVA", "Chi-square"],
+  "links": [
+    { "label": "Read the final paper (PDF)", "href": "/docs/Census_Data_Analysis_Paper.pdf", "kind": "paper" }
+  ],
+  "metrics": [],
+  "problem": [
+    "Income disparities are easy to describe and hard to interpret. The research question was which predictor, or combination of predictors, has the most significant impact on salary: race, sex, years of education, or age."
+  ],
+  "contribution": [
+    "This was a five-person team paper. I co-authored it with Chris Loor-Luna, Cory Nguyen, Tam Khong, and Jeffrey Alvarez, contributing to the data preparation, analysis, visualizations, and written findings."
+  ],
+  "solution": [
+    "The team defined salary as a binary outcome (above or at most $50,000), one-hot encoded race categories, and treated years of education and age as continuous predictors. We used chi-square tests for categorical relationships, one-way ANOVA to compare means across groups, and Pearson correlation for continuous variables, supported by three visualizations."
+  ],
+  "solutionPoints": [
+    "An age distribution histogram with a kernel density estimate.",
+    "The share of people earning more than $50,000 at each education level.",
+    "A correlation heatmap of education, age, sex, and race against income class."
+  ],
+  "architecture": {
+    "summary": "Variables were defined first, then each relationship was tested with the method that fits its data type.",
+    "flow": ["1996 Census subset", "Variable definitions + encoding", "Chi-square · ANOVA · Pearson correlation", "Visualizations", "Written findings + limitations"]
+  },
+  "decisions": [
+    { "title": "Match the test to the variable.", "text": "Categorical pairs used chi-square, group mean comparisons used ANOVA, and continuous pairs used Pearson correlation." },
+    { "title": "Distinguish correlation from causation.", "text": "The paper reports which predictors are most strongly associated with income without claiming they cause it." },
+    { "title": "Keep the artifact available.", "text": "The full paper is published beside the case study so every claim can be checked." }
+  ],
+  "outcomes": [
+    "Years of education showed the strongest positive relationship with earning more than $50,000, followed by age, consistent with the hypothesis that education is a key determinant of earning potential. Sex and race showed weaker relationships, with disparities between categories."
+  ],
+  "limits": [
+    "The data is a 1996 Census subset with a binary income threshold, so the results describe associations in that sample rather than current wages or causal effects. The paper notes non-response bias and the binary classification as limitations."
+  ],
+  "lessons": "A clear statistical argument depends on explaining variables and uncertainty, not just ranking predictors.",
+  "relatedNotes": [],
+  "related": ["nypd-crime-data-analysis", "secondchance", "kewaunee-analytics"],
+  "media": { "cover": "census-data-analysis-cover", "hero": "census-data-analysis-cover", "detail": "census-data-analysis-detail" },
+  "sources": ["public/docs/Census_Data_Analysis_Paper.pdf (valid 17-page PDF; identical to the live file; authors on title page)"]
+}

@@ -1,0 +1,2860 @@
+{
+  "ai-workflow-system-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/ai-workflow-system-cover/card-480.avif",
+          "bytes": 7462
+        },
+        {
+          "w": 720,
+          "src": "/media/ai-workflow-system-cover/card-720.avif",
+          "bytes": 13840
+        },
+        {
+          "w": 960,
+          "src": "/media/ai-workflow-system-cover/card-960.avif",
+          "bytes": 20176
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/ai-workflow-system-cover/card-480.webp",
+          "bytes": 9630
+        },
+        {
+          "w": 720,
+          "src": "/media/ai-workflow-system-cover/card-720.webp",
+          "bytes": 17612
+        },
+        {
+          "w": 960,
+          "src": "/media/ai-workflow-system-cover/card-960.webp",
+          "bytes": 26776
+        }
+      ]
+    },
+    "og": "/media/ai-workflow-system-cover/og.jpg",
+    "hero": {
+      "width": 1672,
+      "height": 941,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/ai-workflow-system-cover/hero-960.avif",
+          "bytes": 21103
+        },
+        {
+          "w": 1440,
+          "src": "/media/ai-workflow-system-cover/hero-1440.avif",
+          "bytes": 36516
+        },
+        {
+          "w": 1672,
+          "src": "/media/ai-workflow-system-cover/hero-1672.avif",
+          "bytes": 46026
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/ai-workflow-system-cover/hero-960.webp",
+          "bytes": 28754
+        },
+        {
+          "w": 1440,
+          "src": "/media/ai-workflow-system-cover/hero-1440.webp",
+          "bytes": 48678
+        },
+        {
+          "w": 1672,
+          "src": "/media/ai-workflow-system-cover/hero-1672.webp",
+          "bytes": 60736
+        }
+      ]
+    }
+  },
+  "ai-workflow-system-detail": {
+    "detail": {
+      "width": 1600,
+      "height": 835,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/ai-workflow-system-detail/detail-800.avif",
+          "bytes": 7292
+        },
+        {
+          "w": 1200,
+          "src": "/media/ai-workflow-system-detail/detail-1200.avif",
+          "bytes": 13319
+        },
+        {
+          "w": 1600,
+          "src": "/media/ai-workflow-system-detail/detail-1600.avif",
+          "bytes": 20107
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/ai-workflow-system-detail/detail-800.webp",
+          "bytes": 9018
+        },
+        {
+          "w": 1200,
+          "src": "/media/ai-workflow-system-detail/detail-1200.webp",
+          "bytes": 16314
+        },
+        {
+          "w": 1600,
+          "src": "/media/ai-workflow-system-detail/detail-1600.webp",
+          "bytes": 25512
+        }
+      ]
+    }
+  },
+  "cade-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/cade-cover/card-480.avif",
+          "bytes": 15258
+        },
+        {
+          "w": 720,
+          "src": "/media/cade-cover/card-720.avif",
+          "bytes": 29094
+        },
+        {
+          "w": 960,
+          "src": "/media/cade-cover/card-960.avif",
+          "bytes": 45207
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/cade-cover/card-480.webp",
+          "bytes": 19230
+        },
+        {
+          "w": 720,
+          "src": "/media/cade-cover/card-720.webp",
+          "bytes": 37536
+        },
+        {
+          "w": 960,
+          "src": "/media/cade-cover/card-960.webp",
+          "bytes": 59408
+        }
+      ]
+    },
+    "og": "/media/cade-cover/og.jpg"
+  },
+  "cade-hero": {
+    "hero": {
+      "width": 1672,
+      "height": 941,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/cade-hero/hero-960.avif",
+          "bytes": 38899
+        },
+        {
+          "w": 1440,
+          "src": "/media/cade-hero/hero-1440.avif",
+          "bytes": 74766
+        },
+        {
+          "w": 1672,
+          "src": "/media/cade-hero/hero-1672.avif",
+          "bytes": 96899
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/cade-hero/hero-960.webp",
+          "bytes": 54402
+        },
+        {
+          "w": 1440,
+          "src": "/media/cade-hero/hero-1440.webp",
+          "bytes": 101664
+        },
+        {
+          "w": 1672,
+          "src": "/media/cade-hero/hero-1672.webp",
+          "bytes": 139054
+        }
+      ]
+    }
+  },
+  "cade-detail": {
+    "detail": {
+      "width": 1600,
+      "height": 830,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/cade-detail/detail-800.avif",
+          "bytes": 13868
+        },
+        {
+          "w": 1200,
+          "src": "/media/cade-detail/detail-1200.avif",
+          "bytes": 23941
+        },
+        {
+          "w": 1600,
+          "src": "/media/cade-detail/detail-1600.avif",
+          "bytes": 29962
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/cade-detail/detail-800.webp",
+          "bytes": 22482
+        },
+        {
+          "w": 1200,
+          "src": "/media/cade-detail/detail-1200.webp",
+          "bytes": 34096
+        },
+        {
+          "w": 1600,
+          "src": "/media/cade-detail/detail-1600.webp",
+          "bytes": 46544
+        }
+      ]
+    }
+  },
+  "census-data-analysis-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/census-data-analysis-cover/card-480.avif",
+          "bytes": 4607
+        },
+        {
+          "w": 720,
+          "src": "/media/census-data-analysis-cover/card-720.avif",
+          "bytes": 8488
+        },
+        {
+          "w": 960,
+          "src": "/media/census-data-analysis-cover/card-960.avif",
+          "bytes": 11358
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/census-data-analysis-cover/card-480.webp",
+          "bytes": 5678
+        },
+        {
+          "w": 720,
+          "src": "/media/census-data-analysis-cover/card-720.webp",
+          "bytes": 9910
+        },
+        {
+          "w": 960,
+          "src": "/media/census-data-analysis-cover/card-960.webp",
+          "bytes": 14224
+        }
+      ]
+    },
+    "og": "/media/census-data-analysis-cover/og.jpg",
+    "hero": {
+      "width": 1600,
+      "height": 900,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/census-data-analysis-cover/hero-960.avif",
+          "bytes": 11805
+        },
+        {
+          "w": 1440,
+          "src": "/media/census-data-analysis-cover/hero-1440.avif",
+          "bytes": 21124
+        },
+        {
+          "w": 1600,
+          "src": "/media/census-data-analysis-cover/hero-1600.avif",
+          "bytes": 19306
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/census-data-analysis-cover/hero-960.webp",
+          "bytes": 15104
+        },
+        {
+          "w": 1440,
+          "src": "/media/census-data-analysis-cover/hero-1440.webp",
+          "bytes": 25092
+        },
+        {
+          "w": 1600,
+          "src": "/media/census-data-analysis-cover/hero-1600.webp",
+          "bytes": 28480
+        }
+      ]
+    }
+  },
+  "census-data-analysis-detail": {
+    "detail": {
+      "width": 1047,
+      "height": 885,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/census-data-analysis-detail/detail-800.avif",
+          "bytes": 14013
+        },
+        {
+          "w": 1047,
+          "src": "/media/census-data-analysis-detail/detail-1047.avif",
+          "bytes": 17118
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/census-data-analysis-detail/detail-800.webp",
+          "bytes": 16196
+        },
+        {
+          "w": 1047,
+          "src": "/media/census-data-analysis-detail/detail-1047.webp",
+          "bytes": 20536
+        }
+      ]
+    }
+  },
+  "chaplain-platform-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/chaplain-platform-cover/card-480.avif",
+          "bytes": 6098
+        },
+        {
+          "w": 720,
+          "src": "/media/chaplain-platform-cover/card-720.avif",
+          "bytes": 10794
+        },
+        {
+          "w": 960,
+          "src": "/media/chaplain-platform-cover/card-960.avif",
+          "bytes": 15744
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/chaplain-platform-cover/card-480.webp",
+          "bytes": 7362
+        },
+        {
+          "w": 720,
+          "src": "/media/chaplain-platform-cover/card-720.webp",
+          "bytes": 12968
+        },
+        {
+          "w": 960,
+          "src": "/media/chaplain-platform-cover/card-960.webp",
+          "bytes": 19318
+        }
+      ]
+    },
+    "og": "/media/chaplain-platform-cover/og.jpg",
+    "hero": {
+      "width": 1672,
+      "height": 941,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/chaplain-platform-cover/hero-960.avif",
+          "bytes": 16587
+        },
+        {
+          "w": 1440,
+          "src": "/media/chaplain-platform-cover/hero-1440.avif",
+          "bytes": 29554
+        },
+        {
+          "w": 1672,
+          "src": "/media/chaplain-platform-cover/hero-1672.avif",
+          "bytes": 36822
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/chaplain-platform-cover/hero-960.webp",
+          "bytes": 20702
+        },
+        {
+          "w": 1440,
+          "src": "/media/chaplain-platform-cover/hero-1440.webp",
+          "bytes": 34944
+        },
+        {
+          "w": 1672,
+          "src": "/media/chaplain-platform-cover/hero-1672.webp",
+          "bytes": 43454
+        }
+      ]
+    }
+  },
+  "chaplain-platform-detail": {
+    "detail": {
+      "width": 1440,
+      "height": 900,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/chaplain-platform-detail/detail-800.avif",
+          "bytes": 18804
+        },
+        {
+          "w": 1200,
+          "src": "/media/chaplain-platform-detail/detail-1200.avif",
+          "bytes": 31264
+        },
+        {
+          "w": 1440,
+          "src": "/media/chaplain-platform-detail/detail-1440.avif",
+          "bytes": 30831
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/chaplain-platform-detail/detail-800.webp",
+          "bytes": 24202
+        },
+        {
+          "w": 1200,
+          "src": "/media/chaplain-platform-detail/detail-1200.webp",
+          "bytes": 40368
+        },
+        {
+          "w": 1440,
+          "src": "/media/chaplain-platform-detail/detail-1440.webp",
+          "bytes": 51270
+        }
+      ]
+    }
+  },
+  "contender-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/contender-cover/card-480.avif",
+          "bytes": 15130
+        },
+        {
+          "w": 720,
+          "src": "/media/contender-cover/card-720.avif",
+          "bytes": 29189
+        },
+        {
+          "w": 960,
+          "src": "/media/contender-cover/card-960.avif",
+          "bytes": 47185
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/contender-cover/card-480.webp",
+          "bytes": 22492
+        },
+        {
+          "w": 720,
+          "src": "/media/contender-cover/card-720.webp",
+          "bytes": 42506
+        },
+        {
+          "w": 960,
+          "src": "/media/contender-cover/card-960.webp",
+          "bytes": 65730
+        }
+      ]
+    },
+    "og": "/media/contender-cover/og.jpg"
+  },
+  "contender-hero": {
+    "hero": {
+      "width": 1672,
+      "height": 941,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/contender-hero/hero-960.avif",
+          "bytes": 35349
+        },
+        {
+          "w": 1440,
+          "src": "/media/contender-hero/hero-1440.avif",
+          "bytes": 65192
+        },
+        {
+          "w": 1672,
+          "src": "/media/contender-hero/hero-1672.avif",
+          "bytes": 81729
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/contender-hero/hero-960.webp",
+          "bytes": 51860
+        },
+        {
+          "w": 1440,
+          "src": "/media/contender-hero/hero-1440.webp",
+          "bytes": 91310
+        },
+        {
+          "w": 1672,
+          "src": "/media/contender-hero/hero-1672.webp",
+          "bytes": 119526
+        }
+      ]
+    }
+  },
+  "contender-detail": {
+    "detail": {
+      "width": 1440,
+      "height": 900,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/contender-detail/detail-800.avif",
+          "bytes": 13519
+        },
+        {
+          "w": 1200,
+          "src": "/media/contender-detail/detail-1200.avif",
+          "bytes": 23281
+        },
+        {
+          "w": 1440,
+          "src": "/media/contender-detail/detail-1440.avif",
+          "bytes": 25110
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/contender-detail/detail-800.webp",
+          "bytes": 17816
+        },
+        {
+          "w": 1200,
+          "src": "/media/contender-detail/detail-1200.webp",
+          "bytes": 28436
+        },
+        {
+          "w": 1440,
+          "src": "/media/contender-detail/detail-1440.webp",
+          "bytes": 34764
+        }
+      ]
+    }
+  },
+  "crowncode-ai-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/crowncode-ai-cover/card-480.avif",
+          "bytes": 13621
+        },
+        {
+          "w": 720,
+          "src": "/media/crowncode-ai-cover/card-720.avif",
+          "bytes": 26257
+        },
+        {
+          "w": 960,
+          "src": "/media/crowncode-ai-cover/card-960.avif",
+          "bytes": 41668
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/crowncode-ai-cover/card-480.webp",
+          "bytes": 18404
+        },
+        {
+          "w": 720,
+          "src": "/media/crowncode-ai-cover/card-720.webp",
+          "bytes": 35988
+        },
+        {
+          "w": 960,
+          "src": "/media/crowncode-ai-cover/card-960.webp",
+          "bytes": 57726
+        }
+      ]
+    },
+    "og": "/media/crowncode-ai-cover/og.jpg"
+  },
+  "crowncode-ai-hero": {
+    "hero": {
+      "width": 1672,
+      "height": 941,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/crowncode-ai-hero/hero-960.avif",
+          "bytes": 31872
+        },
+        {
+          "w": 1440,
+          "src": "/media/crowncode-ai-hero/hero-1440.avif",
+          "bytes": 60721
+        },
+        {
+          "w": 1672,
+          "src": "/media/crowncode-ai-hero/hero-1672.avif",
+          "bytes": 76906
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/crowncode-ai-hero/hero-960.webp",
+          "bytes": 42314
+        },
+        {
+          "w": 1440,
+          "src": "/media/crowncode-ai-hero/hero-1440.webp",
+          "bytes": 79130
+        },
+        {
+          "w": 1672,
+          "src": "/media/crowncode-ai-hero/hero-1672.webp",
+          "bytes": 104924
+        }
+      ]
+    }
+  },
+  "crowncode-ai-detail": {
+    "detail": {
+      "width": 1440,
+      "height": 900,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/crowncode-ai-detail/detail-800.avif",
+          "bytes": 11355
+        },
+        {
+          "w": 1200,
+          "src": "/media/crowncode-ai-detail/detail-1200.avif",
+          "bytes": 19963
+        },
+        {
+          "w": 1440,
+          "src": "/media/crowncode-ai-detail/detail-1440.avif",
+          "bytes": 22570
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/crowncode-ai-detail/detail-800.webp",
+          "bytes": 12374
+        },
+        {
+          "w": 1200,
+          "src": "/media/crowncode-ai-detail/detail-1200.webp",
+          "bytes": 22294
+        },
+        {
+          "w": 1440,
+          "src": "/media/crowncode-ai-detail/detail-1440.webp",
+          "bytes": 28388
+        }
+      ]
+    }
+  },
+  "curated-notes-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/curated-notes-cover/card-480.avif",
+          "bytes": 5968
+        },
+        {
+          "w": 720,
+          "src": "/media/curated-notes-cover/card-720.avif",
+          "bytes": 10801
+        },
+        {
+          "w": 960,
+          "src": "/media/curated-notes-cover/card-960.avif",
+          "bytes": 16811
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/curated-notes-cover/card-480.webp",
+          "bytes": 6498
+        },
+        {
+          "w": 720,
+          "src": "/media/curated-notes-cover/card-720.webp",
+          "bytes": 12246
+        },
+        {
+          "w": 960,
+          "src": "/media/curated-notes-cover/card-960.webp",
+          "bytes": 20386
+        }
+      ]
+    },
+    "og": "/media/curated-notes-cover/og.jpg",
+    "hero": {
+      "width": 1672,
+      "height": 941,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/curated-notes-cover/hero-960.avif",
+          "bytes": 18410
+        },
+        {
+          "w": 1440,
+          "src": "/media/curated-notes-cover/hero-1440.avif",
+          "bytes": 40460
+        },
+        {
+          "w": 1672,
+          "src": "/media/curated-notes-cover/hero-1672.avif",
+          "bytes": 53267
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/curated-notes-cover/hero-960.webp",
+          "bytes": 23116
+        },
+        {
+          "w": 1440,
+          "src": "/media/curated-notes-cover/hero-1440.webp",
+          "bytes": 50170
+        },
+        {
+          "w": 1672,
+          "src": "/media/curated-notes-cover/hero-1672.webp",
+          "bytes": 66558
+        }
+      ]
+    }
+  },
+  "curated-notes-detail": {
+    "detail": {
+      "width": 1440,
+      "height": 900,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/curated-notes-detail/detail-800.avif",
+          "bytes": 7885
+        },
+        {
+          "w": 1200,
+          "src": "/media/curated-notes-detail/detail-1200.avif",
+          "bytes": 12820
+        },
+        {
+          "w": 1440,
+          "src": "/media/curated-notes-detail/detail-1440.avif",
+          "bytes": 14690
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/curated-notes-detail/detail-800.webp",
+          "bytes": 11012
+        },
+        {
+          "w": 1200,
+          "src": "/media/curated-notes-detail/detail-1200.webp",
+          "bytes": 17400
+        },
+        {
+          "w": 1440,
+          "src": "/media/curated-notes-detail/detail-1440.webp",
+          "bytes": 22528
+        }
+      ]
+    }
+  },
+  "davishiggins-com-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/davishiggins-com-cover/card-480.avif",
+          "bytes": 9154
+        },
+        {
+          "w": 720,
+          "src": "/media/davishiggins-com-cover/card-720.avif",
+          "bytes": 17608
+        },
+        {
+          "w": 960,
+          "src": "/media/davishiggins-com-cover/card-960.avif",
+          "bytes": 27628
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/davishiggins-com-cover/card-480.webp",
+          "bytes": 11926
+        },
+        {
+          "w": 720,
+          "src": "/media/davishiggins-com-cover/card-720.webp",
+          "bytes": 23780
+        },
+        {
+          "w": 960,
+          "src": "/media/davishiggins-com-cover/card-960.webp",
+          "bytes": 38522
+        }
+      ]
+    },
+    "og": "/media/davishiggins-com-cover/og.jpg"
+  },
+  "davishiggins-com-hero": {
+    "hero": {
+      "width": 1672,
+      "height": 941,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/davishiggins-com-hero/hero-960.avif",
+          "bytes": 34739
+        },
+        {
+          "w": 1440,
+          "src": "/media/davishiggins-com-hero/hero-1440.avif",
+          "bytes": 63428
+        },
+        {
+          "w": 1672,
+          "src": "/media/davishiggins-com-hero/hero-1672.avif",
+          "bytes": 80394
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/davishiggins-com-hero/hero-960.webp",
+          "bytes": 48998
+        },
+        {
+          "w": 1440,
+          "src": "/media/davishiggins-com-hero/hero-1440.webp",
+          "bytes": 87042
+        },
+        {
+          "w": 1672,
+          "src": "/media/davishiggins-com-hero/hero-1672.webp",
+          "bytes": 116594
+        }
+      ]
+    }
+  },
+  "davishiggins-com-detail": {
+    "detail": {
+      "width": 1440,
+      "height": 900,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/davishiggins-com-detail/detail-800.avif",
+          "bytes": 32361
+        },
+        {
+          "w": 1200,
+          "src": "/media/davishiggins-com-detail/detail-1200.avif",
+          "bytes": 60528
+        },
+        {
+          "w": 1440,
+          "src": "/media/davishiggins-com-detail/detail-1440.avif",
+          "bytes": 79882
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/davishiggins-com-detail/detail-800.webp",
+          "bytes": 65300
+        },
+        {
+          "w": 1200,
+          "src": "/media/davishiggins-com-detail/detail-1200.webp",
+          "bytes": 118210
+        },
+        {
+          "w": 1440,
+          "src": "/media/davishiggins-com-detail/detail-1440.webp",
+          "bytes": 150148
+        }
+      ]
+    }
+  },
+  "dh-portfolio-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/dh-portfolio-cover/card-480.avif",
+          "bytes": 9528
+        },
+        {
+          "w": 720,
+          "src": "/media/dh-portfolio-cover/card-720.avif",
+          "bytes": 18072
+        },
+        {
+          "w": 960,
+          "src": "/media/dh-portfolio-cover/card-960.avif",
+          "bytes": 27709
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/dh-portfolio-cover/card-480.webp",
+          "bytes": 11714
+        },
+        {
+          "w": 720,
+          "src": "/media/dh-portfolio-cover/card-720.webp",
+          "bytes": 22748
+        },
+        {
+          "w": 960,
+          "src": "/media/dh-portfolio-cover/card-960.webp",
+          "bytes": 34214
+        }
+      ]
+    },
+    "og": "/media/dh-portfolio-cover/og.jpg",
+    "hero": {
+      "width": 1672,
+      "height": 941,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/dh-portfolio-cover/hero-960.avif",
+          "bytes": 28794
+        },
+        {
+          "w": 1440,
+          "src": "/media/dh-portfolio-cover/hero-1440.avif",
+          "bytes": 50552
+        },
+        {
+          "w": 1672,
+          "src": "/media/dh-portfolio-cover/hero-1672.avif",
+          "bytes": 61600
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/dh-portfolio-cover/hero-960.webp",
+          "bytes": 36132
+        },
+        {
+          "w": 1440,
+          "src": "/media/dh-portfolio-cover/hero-1440.webp",
+          "bytes": 62710
+        },
+        {
+          "w": 1672,
+          "src": "/media/dh-portfolio-cover/hero-1672.webp",
+          "bytes": 76480
+        }
+      ]
+    }
+  },
+  "dh-portfolio-detail": {
+    "detail": {
+      "width": 1440,
+      "height": 900,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/dh-portfolio-detail/detail-800.avif",
+          "bytes": 37772
+        },
+        {
+          "w": 1200,
+          "src": "/media/dh-portfolio-detail/detail-1200.avif",
+          "bytes": 72814
+        },
+        {
+          "w": 1440,
+          "src": "/media/dh-portfolio-detail/detail-1440.avif",
+          "bytes": 90253
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/dh-portfolio-detail/detail-800.webp",
+          "bytes": 50750
+        },
+        {
+          "w": 1200,
+          "src": "/media/dh-portfolio-detail/detail-1200.webp",
+          "bytes": 93296
+        },
+        {
+          "w": 1440,
+          "src": "/media/dh-portfolio-detail/detail-1440.webp",
+          "bytes": 121538
+        }
+      ]
+    }
+  },
+  "dhlm-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/dhlm-cover/card-480.avif",
+          "bytes": 15019
+        },
+        {
+          "w": 720,
+          "src": "/media/dhlm-cover/card-720.avif",
+          "bytes": 27936
+        },
+        {
+          "w": 960,
+          "src": "/media/dhlm-cover/card-960.avif",
+          "bytes": 42308
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/dhlm-cover/card-480.webp",
+          "bytes": 23376
+        },
+        {
+          "w": 720,
+          "src": "/media/dhlm-cover/card-720.webp",
+          "bytes": 43250
+        },
+        {
+          "w": 960,
+          "src": "/media/dhlm-cover/card-960.webp",
+          "bytes": 65398
+        }
+      ]
+    },
+    "og": "/media/dhlm-cover/og.jpg"
+  },
+  "dhlm-hero": {
+    "hero": {
+      "width": 1586,
+      "height": 892,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/dhlm-hero/hero-960.avif",
+          "bytes": 55432
+        },
+        {
+          "w": 1440,
+          "src": "/media/dhlm-hero/hero-1440.avif",
+          "bytes": 97461
+        },
+        {
+          "w": 1586,
+          "src": "/media/dhlm-hero/hero-1586.avif",
+          "bytes": 111356
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/dhlm-hero/hero-960.webp",
+          "bytes": 91430
+        },
+        {
+          "w": 1440,
+          "src": "/media/dhlm-hero/hero-1440.webp",
+          "bytes": 157046
+        },
+        {
+          "w": 1586,
+          "src": "/media/dhlm-hero/hero-1586.webp",
+          "bytes": 177312
+        }
+      ]
+    }
+  },
+  "dhlm-detail": {
+    "detail": {
+      "width": 1440,
+      "height": 900,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/dhlm-detail/detail-800.avif",
+          "bytes": 24487
+        },
+        {
+          "w": 1200,
+          "src": "/media/dhlm-detail/detail-1200.avif",
+          "bytes": 45433
+        },
+        {
+          "w": 1440,
+          "src": "/media/dhlm-detail/detail-1440.avif",
+          "bytes": 54230
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/dhlm-detail/detail-800.webp",
+          "bytes": 33132
+        },
+        {
+          "w": 1200,
+          "src": "/media/dhlm-detail/detail-1200.webp",
+          "bytes": 63302
+        },
+        {
+          "w": 1440,
+          "src": "/media/dhlm-detail/detail-1440.webp",
+          "bytes": 83646
+        }
+      ]
+    }
+  },
+  "flowcast-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/flowcast-cover/card-480.avif",
+          "bytes": 16688
+        },
+        {
+          "w": 720,
+          "src": "/media/flowcast-cover/card-720.avif",
+          "bytes": 30428
+        },
+        {
+          "w": 960,
+          "src": "/media/flowcast-cover/card-960.avif",
+          "bytes": 44815
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/flowcast-cover/card-480.webp",
+          "bytes": 26030
+        },
+        {
+          "w": 720,
+          "src": "/media/flowcast-cover/card-720.webp",
+          "bytes": 48170
+        },
+        {
+          "w": 960,
+          "src": "/media/flowcast-cover/card-960.webp",
+          "bytes": 72164
+        }
+      ]
+    },
+    "og": "/media/flowcast-cover/og.jpg"
+  },
+  "flowcast-hero": {
+    "hero": {
+      "width": 1586,
+      "height": 892,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/flowcast-hero/hero-960.avif",
+          "bytes": 82499
+        },
+        {
+          "w": 1440,
+          "src": "/media/flowcast-hero/hero-1440.avif",
+          "bytes": 155991
+        },
+        {
+          "w": 1586,
+          "src": "/media/flowcast-hero/hero-1586.avif",
+          "bytes": 184242
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/flowcast-hero/hero-960.webp",
+          "bytes": 128696
+        },
+        {
+          "w": 1440,
+          "src": "/media/flowcast-hero/hero-1440.webp",
+          "bytes": 255072
+        },
+        {
+          "w": 1586,
+          "src": "/media/flowcast-hero/hero-1586.webp",
+          "bytes": 305464
+        }
+      ]
+    }
+  },
+  "flowcast-detail": {
+    "detail": {
+      "width": 1440,
+      "height": 900,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/flowcast-detail/detail-800.avif",
+          "bytes": 22562
+        },
+        {
+          "w": 1200,
+          "src": "/media/flowcast-detail/detail-1200.avif",
+          "bytes": 37504
+        },
+        {
+          "w": 1440,
+          "src": "/media/flowcast-detail/detail-1440.avif",
+          "bytes": 41647
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/flowcast-detail/detail-800.webp",
+          "bytes": 30490
+        },
+        {
+          "w": 1200,
+          "src": "/media/flowcast-detail/detail-1200.webp",
+          "bytes": 51992
+        },
+        {
+          "w": 1440,
+          "src": "/media/flowcast-detail/detail-1440.webp",
+          "bytes": 63888
+        }
+      ]
+    }
+  },
+  "higgins-building-group-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/higgins-building-group-cover/card-480.avif",
+          "bytes": 16878
+        },
+        {
+          "w": 720,
+          "src": "/media/higgins-building-group-cover/card-720.avif",
+          "bytes": 35146
+        },
+        {
+          "w": 960,
+          "src": "/media/higgins-building-group-cover/card-960.avif",
+          "bytes": 59590
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/higgins-building-group-cover/card-480.webp",
+          "bytes": 26656
+        },
+        {
+          "w": 720,
+          "src": "/media/higgins-building-group-cover/card-720.webp",
+          "bytes": 55438
+        },
+        {
+          "w": 960,
+          "src": "/media/higgins-building-group-cover/card-960.webp",
+          "bytes": 92496
+        }
+      ]
+    },
+    "og": "/media/higgins-building-group-cover/og.jpg"
+  },
+  "higgins-building-group-hero": {
+    "hero": {
+      "width": 1672,
+      "height": 941,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/higgins-building-group-hero/hero-960.avif",
+          "bytes": 57853
+        },
+        {
+          "w": 1440,
+          "src": "/media/higgins-building-group-hero/hero-1440.avif",
+          "bytes": 110045
+        },
+        {
+          "w": 1672,
+          "src": "/media/higgins-building-group-hero/hero-1672.avif",
+          "bytes": 138988
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/higgins-building-group-hero/hero-960.webp",
+          "bytes": 92828
+        },
+        {
+          "w": 1440,
+          "src": "/media/higgins-building-group-hero/hero-1440.webp",
+          "bytes": 173420
+        },
+        {
+          "w": 1672,
+          "src": "/media/higgins-building-group-hero/hero-1672.webp",
+          "bytes": 227596
+        }
+      ]
+    }
+  },
+  "higgins-building-group-detail": {
+    "detail": {
+      "width": 1440,
+      "height": 900,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/higgins-building-group-detail/detail-800.avif",
+          "bytes": 61285
+        },
+        {
+          "w": 1200,
+          "src": "/media/higgins-building-group-detail/detail-1200.avif",
+          "bytes": 103424
+        },
+        {
+          "w": 1440,
+          "src": "/media/higgins-building-group-detail/detail-1440.avif",
+          "bytes": 125969
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/higgins-building-group-detail/detail-800.webp",
+          "bytes": 97366
+        },
+        {
+          "w": 1200,
+          "src": "/media/higgins-building-group-detail/detail-1200.webp",
+          "bytes": 164266
+        },
+        {
+          "w": 1440,
+          "src": "/media/higgins-building-group-detail/detail-1440.webp",
+          "bytes": 200518
+        }
+      ]
+    }
+  },
+  "higgins-digital-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/higgins-digital-cover/card-480.avif",
+          "bytes": 6763
+        },
+        {
+          "w": 720,
+          "src": "/media/higgins-digital-cover/card-720.avif",
+          "bytes": 11856
+        },
+        {
+          "w": 960,
+          "src": "/media/higgins-digital-cover/card-960.avif",
+          "bytes": 16747
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/higgins-digital-cover/card-480.webp",
+          "bytes": 7250
+        },
+        {
+          "w": 720,
+          "src": "/media/higgins-digital-cover/card-720.webp",
+          "bytes": 12574
+        },
+        {
+          "w": 960,
+          "src": "/media/higgins-digital-cover/card-960.webp",
+          "bytes": 18466
+        }
+      ]
+    },
+    "og": "/media/higgins-digital-cover/og.jpg",
+    "hero": {
+      "width": 1672,
+      "height": 941,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/higgins-digital-cover/hero-960.avif",
+          "bytes": 17272
+        },
+        {
+          "w": 1440,
+          "src": "/media/higgins-digital-cover/hero-1440.avif",
+          "bytes": 29697
+        },
+        {
+          "w": 1672,
+          "src": "/media/higgins-digital-cover/hero-1672.avif",
+          "bytes": 36361
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/higgins-digital-cover/hero-960.webp",
+          "bytes": 20014
+        },
+        {
+          "w": 1440,
+          "src": "/media/higgins-digital-cover/hero-1440.webp",
+          "bytes": 33568
+        },
+        {
+          "w": 1672,
+          "src": "/media/higgins-digital-cover/hero-1672.webp",
+          "bytes": 41270
+        }
+      ]
+    }
+  },
+  "higgins-digital-detail": {
+    "detail": {
+      "width": 1600,
+      "height": 1056,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/higgins-digital-detail/detail-800.avif",
+          "bytes": 21421
+        },
+        {
+          "w": 1200,
+          "src": "/media/higgins-digital-detail/detail-1200.avif",
+          "bytes": 34974
+        },
+        {
+          "w": 1600,
+          "src": "/media/higgins-digital-detail/detail-1600.avif",
+          "bytes": 48448
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/higgins-digital-detail/detail-800.webp",
+          "bytes": 29558
+        },
+        {
+          "w": 1200,
+          "src": "/media/higgins-digital-detail/detail-1200.webp",
+          "bytes": 49282
+        },
+        {
+          "w": 1600,
+          "src": "/media/higgins-digital-detail/detail-1600.webp",
+          "bytes": 66868
+        }
+      ]
+    }
+  },
+  "kewaunee-analytics-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/kewaunee-analytics-cover/card-480.avif",
+          "bytes": 4292
+        },
+        {
+          "w": 720,
+          "src": "/media/kewaunee-analytics-cover/card-720.avif",
+          "bytes": 7235
+        },
+        {
+          "w": 960,
+          "src": "/media/kewaunee-analytics-cover/card-960.avif",
+          "bytes": 10186
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/kewaunee-analytics-cover/card-480.webp",
+          "bytes": 4614
+        },
+        {
+          "w": 720,
+          "src": "/media/kewaunee-analytics-cover/card-720.webp",
+          "bytes": 7652
+        },
+        {
+          "w": 960,
+          "src": "/media/kewaunee-analytics-cover/card-960.webp",
+          "bytes": 10672
+        }
+      ]
+    },
+    "og": "/media/kewaunee-analytics-cover/og.jpg",
+    "hero": {
+      "width": 1600,
+      "height": 900,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/kewaunee-analytics-cover/hero-960.avif",
+          "bytes": 10639
+        },
+        {
+          "w": 1440,
+          "src": "/media/kewaunee-analytics-cover/hero-1440.avif",
+          "bytes": 16324
+        },
+        {
+          "w": 1600,
+          "src": "/media/kewaunee-analytics-cover/hero-1600.avif",
+          "bytes": 15655
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/kewaunee-analytics-cover/hero-960.webp",
+          "bytes": 11276
+        },
+        {
+          "w": 1440,
+          "src": "/media/kewaunee-analytics-cover/hero-1440.webp",
+          "bytes": 18494
+        },
+        {
+          "w": 1600,
+          "src": "/media/kewaunee-analytics-cover/hero-1600.webp",
+          "bytes": 21238
+        }
+      ]
+    }
+  },
+  "kewaunee-analytics-detail": {
+    "detail": {
+      "width": 1600,
+      "height": 900,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/kewaunee-analytics-detail/detail-800.avif",
+          "bytes": 20256
+        },
+        {
+          "w": 1200,
+          "src": "/media/kewaunee-analytics-detail/detail-1200.avif",
+          "bytes": 34646
+        },
+        {
+          "w": 1600,
+          "src": "/media/kewaunee-analytics-detail/detail-1600.avif",
+          "bytes": 45120
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/kewaunee-analytics-detail/detail-800.webp",
+          "bytes": 22574
+        },
+        {
+          "w": 1200,
+          "src": "/media/kewaunee-analytics-detail/detail-1200.webp",
+          "bytes": 38746
+        },
+        {
+          "w": 1600,
+          "src": "/media/kewaunee-analytics-detail/detail-1600.webp",
+          "bytes": 57342
+        }
+      ]
+    }
+  },
+  "lakeside-sport-club-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/lakeside-sport-club-cover/card-480.avif",
+          "bytes": 14720
+        },
+        {
+          "w": 720,
+          "src": "/media/lakeside-sport-club-cover/card-720.avif",
+          "bytes": 27704
+        },
+        {
+          "w": 960,
+          "src": "/media/lakeside-sport-club-cover/card-960.avif",
+          "bytes": 43320
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/lakeside-sport-club-cover/card-480.webp",
+          "bytes": 23334
+        },
+        {
+          "w": 720,
+          "src": "/media/lakeside-sport-club-cover/card-720.webp",
+          "bytes": 43862
+        },
+        {
+          "w": 960,
+          "src": "/media/lakeside-sport-club-cover/card-960.webp",
+          "bytes": 66790
+        }
+      ]
+    },
+    "og": "/media/lakeside-sport-club-cover/og.jpg"
+  },
+  "lakeside-sport-club-hero": {
+    "hero": {
+      "width": 1672,
+      "height": 941,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/lakeside-sport-club-hero/hero-960.avif",
+          "bytes": 44492
+        },
+        {
+          "w": 1440,
+          "src": "/media/lakeside-sport-club-hero/hero-1440.avif",
+          "bytes": 79481
+        },
+        {
+          "w": 1672,
+          "src": "/media/lakeside-sport-club-hero/hero-1672.avif",
+          "bytes": 98907
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/lakeside-sport-club-hero/hero-960.webp",
+          "bytes": 69498
+        },
+        {
+          "w": 1440,
+          "src": "/media/lakeside-sport-club-hero/hero-1440.webp",
+          "bytes": 121454
+        },
+        {
+          "w": 1672,
+          "src": "/media/lakeside-sport-club-hero/hero-1672.webp",
+          "bytes": 156812
+        }
+      ]
+    }
+  },
+  "lakeside-sport-club-detail": {
+    "detail": {
+      "width": 1440,
+      "height": 900,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/lakeside-sport-club-detail/detail-800.avif",
+          "bytes": 13983
+        },
+        {
+          "w": 1200,
+          "src": "/media/lakeside-sport-club-detail/detail-1200.avif",
+          "bytes": 23547
+        },
+        {
+          "w": 1440,
+          "src": "/media/lakeside-sport-club-detail/detail-1440.avif",
+          "bytes": 28278
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/lakeside-sport-club-detail/detail-800.webp",
+          "bytes": 14928
+        },
+        {
+          "w": 1200,
+          "src": "/media/lakeside-sport-club-detail/detail-1200.webp",
+          "bytes": 26066
+        },
+        {
+          "w": 1440,
+          "src": "/media/lakeside-sport-club-detail/detail-1440.webp",
+          "bytes": 32932
+        }
+      ]
+    }
+  },
+  "nypd-crime-data-analysis-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/nypd-crime-data-analysis-cover/card-480.avif",
+          "bytes": 5229
+        },
+        {
+          "w": 720,
+          "src": "/media/nypd-crime-data-analysis-cover/card-720.avif",
+          "bytes": 9143
+        },
+        {
+          "w": 960,
+          "src": "/media/nypd-crime-data-analysis-cover/card-960.avif",
+          "bytes": 13778
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/nypd-crime-data-analysis-cover/card-480.webp",
+          "bytes": 5182
+        },
+        {
+          "w": 720,
+          "src": "/media/nypd-crime-data-analysis-cover/card-720.webp",
+          "bytes": 9230
+        },
+        {
+          "w": 960,
+          "src": "/media/nypd-crime-data-analysis-cover/card-960.webp",
+          "bytes": 13488
+        }
+      ]
+    },
+    "og": "/media/nypd-crime-data-analysis-cover/og.jpg",
+    "hero": {
+      "width": 1600,
+      "height": 900,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/nypd-crime-data-analysis-cover/hero-960.avif",
+          "bytes": 14269
+        },
+        {
+          "w": 1440,
+          "src": "/media/nypd-crime-data-analysis-cover/hero-1440.avif",
+          "bytes": 21885
+        },
+        {
+          "w": 1600,
+          "src": "/media/nypd-crime-data-analysis-cover/hero-1600.avif",
+          "bytes": 21354
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/nypd-crime-data-analysis-cover/hero-960.webp",
+          "bytes": 14544
+        },
+        {
+          "w": 1440,
+          "src": "/media/nypd-crime-data-analysis-cover/hero-1440.webp",
+          "bytes": 24546
+        },
+        {
+          "w": 1600,
+          "src": "/media/nypd-crime-data-analysis-cover/hero-1600.webp",
+          "bytes": 28230
+        }
+      ]
+    }
+  },
+  "nypd-crime-data-analysis-detail": {
+    "detail": {
+      "width": 1249,
+      "height": 790,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/nypd-crime-data-analysis-detail/detail-800.avif",
+          "bytes": 19420
+        },
+        {
+          "w": 1200,
+          "src": "/media/nypd-crime-data-analysis-detail/detail-1200.avif",
+          "bytes": 30571
+        },
+        {
+          "w": 1249,
+          "src": "/media/nypd-crime-data-analysis-detail/detail-1249.avif",
+          "bytes": 26944
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/nypd-crime-data-analysis-detail/detail-800.webp",
+          "bytes": 23378
+        },
+        {
+          "w": 1200,
+          "src": "/media/nypd-crime-data-analysis-detail/detail-1200.webp",
+          "bytes": 39612
+        },
+        {
+          "w": 1249,
+          "src": "/media/nypd-crime-data-analysis-detail/detail-1249.webp",
+          "bytes": 42086
+        }
+      ]
+    }
+  },
+  "one-chaptr-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/one-chaptr-cover/card-480.avif",
+          "bytes": 4554
+        },
+        {
+          "w": 720,
+          "src": "/media/one-chaptr-cover/card-720.avif",
+          "bytes": 8019
+        },
+        {
+          "w": 960,
+          "src": "/media/one-chaptr-cover/card-960.avif",
+          "bytes": 11050
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/one-chaptr-cover/card-480.webp",
+          "bytes": 4060
+        },
+        {
+          "w": 720,
+          "src": "/media/one-chaptr-cover/card-720.webp",
+          "bytes": 7088
+        },
+        {
+          "w": 960,
+          "src": "/media/one-chaptr-cover/card-960.webp",
+          "bytes": 10404
+        }
+      ]
+    },
+    "og": "/media/one-chaptr-cover/og.jpg",
+    "hero": {
+      "width": 1600,
+      "height": 900,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/one-chaptr-cover/hero-960.avif",
+          "bytes": 11513
+        },
+        {
+          "w": 1440,
+          "src": "/media/one-chaptr-cover/hero-1440.avif",
+          "bytes": 18827
+        },
+        {
+          "w": 1600,
+          "src": "/media/one-chaptr-cover/hero-1600.avif",
+          "bytes": 18641
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/one-chaptr-cover/hero-960.webp",
+          "bytes": 11046
+        },
+        {
+          "w": 1440,
+          "src": "/media/one-chaptr-cover/hero-1440.webp",
+          "bytes": 18624
+        },
+        {
+          "w": 1600,
+          "src": "/media/one-chaptr-cover/hero-1600.webp",
+          "bytes": 21686
+        }
+      ]
+    }
+  },
+  "one-chaptr-detail": {
+    "detail": {
+      "width": 1600,
+      "height": 900,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/one-chaptr-detail/detail-800.avif",
+          "bytes": 17358
+        },
+        {
+          "w": 1200,
+          "src": "/media/one-chaptr-detail/detail-1200.avif",
+          "bytes": 30714
+        },
+        {
+          "w": 1600,
+          "src": "/media/one-chaptr-detail/detail-1600.avif",
+          "bytes": 40720
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/one-chaptr-detail/detail-800.webp",
+          "bytes": 22188
+        },
+        {
+          "w": 1200,
+          "src": "/media/one-chaptr-detail/detail-1200.webp",
+          "bytes": 39470
+        },
+        {
+          "w": 1600,
+          "src": "/media/one-chaptr-detail/detail-1600.webp",
+          "bytes": 56616
+        }
+      ]
+    }
+  },
+  "phi-delta-theta-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/phi-delta-theta-cover/card-480.avif",
+          "bytes": 9112
+        },
+        {
+          "w": 720,
+          "src": "/media/phi-delta-theta-cover/card-720.avif",
+          "bytes": 16023
+        },
+        {
+          "w": 960,
+          "src": "/media/phi-delta-theta-cover/card-960.avif",
+          "bytes": 23044
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/phi-delta-theta-cover/card-480.webp",
+          "bytes": 12422
+        },
+        {
+          "w": 720,
+          "src": "/media/phi-delta-theta-cover/card-720.webp",
+          "bytes": 21438
+        },
+        {
+          "w": 960,
+          "src": "/media/phi-delta-theta-cover/card-960.webp",
+          "bytes": 30820
+        }
+      ]
+    },
+    "og": "/media/phi-delta-theta-cover/og.jpg"
+  },
+  "phi-delta-theta-hero": {
+    "hero": {
+      "width": 1672,
+      "height": 941,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/phi-delta-theta-hero/hero-960.avif",
+          "bytes": 40790
+        },
+        {
+          "w": 1440,
+          "src": "/media/phi-delta-theta-hero/hero-1440.avif",
+          "bytes": 68449
+        },
+        {
+          "w": 1672,
+          "src": "/media/phi-delta-theta-hero/hero-1672.avif",
+          "bytes": 84290
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/phi-delta-theta-hero/hero-960.webp",
+          "bytes": 60556
+        },
+        {
+          "w": 1440,
+          "src": "/media/phi-delta-theta-hero/hero-1440.webp",
+          "bytes": 98376
+        },
+        {
+          "w": 1672,
+          "src": "/media/phi-delta-theta-hero/hero-1672.webp",
+          "bytes": 120630
+        }
+      ]
+    }
+  },
+  "phi-delta-theta-detail": {
+    "detail": {
+      "width": 1440,
+      "height": 900,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/phi-delta-theta-detail/detail-800.avif",
+          "bytes": 50637
+        },
+        {
+          "w": 1200,
+          "src": "/media/phi-delta-theta-detail/detail-1200.avif",
+          "bytes": 97991
+        },
+        {
+          "w": 1440,
+          "src": "/media/phi-delta-theta-detail/detail-1440.avif",
+          "bytes": 130461
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/phi-delta-theta-detail/detail-800.webp",
+          "bytes": 72738
+        },
+        {
+          "w": 1200,
+          "src": "/media/phi-delta-theta-detail/detail-1200.webp",
+          "bytes": 140638
+        },
+        {
+          "w": 1440,
+          "src": "/media/phi-delta-theta-detail/detail-1440.webp",
+          "bytes": 186326
+        }
+      ]
+    }
+  },
+  "photos-and-frames-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/photos-and-frames-cover/card-480.avif",
+          "bytes": 5313
+        },
+        {
+          "w": 720,
+          "src": "/media/photos-and-frames-cover/card-720.avif",
+          "bytes": 9087
+        },
+        {
+          "w": 960,
+          "src": "/media/photos-and-frames-cover/card-960.avif",
+          "bytes": 13855
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/photos-and-frames-cover/card-480.webp",
+          "bytes": 6174
+        },
+        {
+          "w": 720,
+          "src": "/media/photos-and-frames-cover/card-720.webp",
+          "bytes": 11124
+        },
+        {
+          "w": 960,
+          "src": "/media/photos-and-frames-cover/card-960.webp",
+          "bytes": 16388
+        }
+      ]
+    },
+    "og": "/media/photos-and-frames-cover/og.jpg"
+  },
+  "photos-and-frames-hero": {
+    "hero": {
+      "width": 1672,
+      "height": 941,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/photos-and-frames-hero/hero-960.avif",
+          "bytes": 21722
+        },
+        {
+          "w": 1440,
+          "src": "/media/photos-and-frames-hero/hero-1440.avif",
+          "bytes": 39792
+        },
+        {
+          "w": 1672,
+          "src": "/media/photos-and-frames-hero/hero-1672.avif",
+          "bytes": 50075
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/photos-and-frames-hero/hero-960.webp",
+          "bytes": 29732
+        },
+        {
+          "w": 1440,
+          "src": "/media/photos-and-frames-hero/hero-1440.webp",
+          "bytes": 52568
+        },
+        {
+          "w": 1672,
+          "src": "/media/photos-and-frames-hero/hero-1672.webp",
+          "bytes": 67740
+        }
+      ]
+    }
+  },
+  "photos-and-frames-detail": {
+    "detail": {
+      "width": 1440,
+      "height": 900,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/photos-and-frames-detail/detail-800.avif",
+          "bytes": 13939
+        },
+        {
+          "w": 1200,
+          "src": "/media/photos-and-frames-detail/detail-1200.avif",
+          "bytes": 23854
+        },
+        {
+          "w": 1440,
+          "src": "/media/photos-and-frames-detail/detail-1440.avif",
+          "bytes": 29168
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/photos-and-frames-detail/detail-800.webp",
+          "bytes": 18988
+        },
+        {
+          "w": 1200,
+          "src": "/media/photos-and-frames-detail/detail-1200.webp",
+          "bytes": 33494
+        },
+        {
+          "w": 1440,
+          "src": "/media/photos-and-frames-detail/detail-1440.webp",
+          "bytes": 43040
+        }
+      ]
+    }
+  },
+  "prospectiq-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/prospectiq-cover/card-480.avif",
+          "bytes": 10438
+        },
+        {
+          "w": 720,
+          "src": "/media/prospectiq-cover/card-720.avif",
+          "bytes": 19024
+        },
+        {
+          "w": 960,
+          "src": "/media/prospectiq-cover/card-960.avif",
+          "bytes": 30180
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/prospectiq-cover/card-480.webp",
+          "bytes": 11840
+        },
+        {
+          "w": 720,
+          "src": "/media/prospectiq-cover/card-720.webp",
+          "bytes": 22118
+        },
+        {
+          "w": 960,
+          "src": "/media/prospectiq-cover/card-960.webp",
+          "bytes": 34540
+        }
+      ]
+    },
+    "og": "/media/prospectiq-cover/og.jpg",
+    "hero": {
+      "width": 1659,
+      "height": 933,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/prospectiq-cover/hero-960.avif",
+          "bytes": 31405
+        },
+        {
+          "w": 1440,
+          "src": "/media/prospectiq-cover/hero-1440.avif",
+          "bytes": 55860
+        },
+        {
+          "w": 1659,
+          "src": "/media/prospectiq-cover/hero-1659.avif",
+          "bytes": 69105
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/prospectiq-cover/hero-960.webp",
+          "bytes": 36882
+        },
+        {
+          "w": 1440,
+          "src": "/media/prospectiq-cover/hero-1440.webp",
+          "bytes": 66234
+        },
+        {
+          "w": 1659,
+          "src": "/media/prospectiq-cover/hero-1659.webp",
+          "bytes": 81954
+        }
+      ]
+    }
+  },
+  "prospectiq-detail": {
+    "detail": {
+      "width": 1600,
+      "height": 900,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/prospectiq-detail/detail-800.avif",
+          "bytes": 20394
+        },
+        {
+          "w": 1200,
+          "src": "/media/prospectiq-detail/detail-1200.avif",
+          "bytes": 37437
+        },
+        {
+          "w": 1600,
+          "src": "/media/prospectiq-detail/detail-1600.avif",
+          "bytes": 49971
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/prospectiq-detail/detail-800.webp",
+          "bytes": 22512
+        },
+        {
+          "w": 1200,
+          "src": "/media/prospectiq-detail/detail-1200.webp",
+          "bytes": 41512
+        },
+        {
+          "w": 1600,
+          "src": "/media/prospectiq-detail/detail-1600.webp",
+          "bytes": 60826
+        }
+      ]
+    }
+  },
+  "secondchance-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/secondchance-cover/card-480.avif",
+          "bytes": 13213
+        },
+        {
+          "w": 720,
+          "src": "/media/secondchance-cover/card-720.avif",
+          "bytes": 24146
+        },
+        {
+          "w": 960,
+          "src": "/media/secondchance-cover/card-960.avif",
+          "bytes": 37444
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/secondchance-cover/card-480.webp",
+          "bytes": 20686
+        },
+        {
+          "w": 720,
+          "src": "/media/secondchance-cover/card-720.webp",
+          "bytes": 36730
+        },
+        {
+          "w": 960,
+          "src": "/media/secondchance-cover/card-960.webp",
+          "bytes": 55004
+        }
+      ]
+    },
+    "og": "/media/secondchance-cover/og.jpg"
+  },
+  "secondchance-hero": {
+    "hero": {
+      "width": 1672,
+      "height": 941,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/secondchance-hero/hero-960.avif",
+          "bytes": 48140
+        },
+        {
+          "w": 1440,
+          "src": "/media/secondchance-hero/hero-1440.avif",
+          "bytes": 85899
+        },
+        {
+          "w": 1672,
+          "src": "/media/secondchance-hero/hero-1672.avif",
+          "bytes": 108119
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/secondchance-hero/hero-960.webp",
+          "bytes": 74390
+        },
+        {
+          "w": 1440,
+          "src": "/media/secondchance-hero/hero-1440.webp",
+          "bytes": 128252
+        },
+        {
+          "w": 1672,
+          "src": "/media/secondchance-hero/hero-1672.webp",
+          "bytes": 169574
+        }
+      ]
+    }
+  },
+  "secondchance-detail": {
+    "detail": {
+      "width": 1440,
+      "height": 900,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/secondchance-detail/detail-800.avif",
+          "bytes": 25550
+        },
+        {
+          "w": 1200,
+          "src": "/media/secondchance-detail/detail-1200.avif",
+          "bytes": 50698
+        },
+        {
+          "w": 1440,
+          "src": "/media/secondchance-detail/detail-1440.avif",
+          "bytes": 62688
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/secondchance-detail/detail-800.webp",
+          "bytes": 25330
+        },
+        {
+          "w": 1200,
+          "src": "/media/secondchance-detail/detail-1200.webp",
+          "bytes": 49584
+        },
+        {
+          "w": 1440,
+          "src": "/media/secondchance-detail/detail-1440.webp",
+          "bytes": 65342
+        }
+      ]
+    }
+  },
+  "touch-up-solutions-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/touch-up-solutions-cover/card-480.avif",
+          "bytes": 13274
+        },
+        {
+          "w": 720,
+          "src": "/media/touch-up-solutions-cover/card-720.avif",
+          "bytes": 24618
+        },
+        {
+          "w": 960,
+          "src": "/media/touch-up-solutions-cover/card-960.avif",
+          "bytes": 38902
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/touch-up-solutions-cover/card-480.webp",
+          "bytes": 19058
+        },
+        {
+          "w": 720,
+          "src": "/media/touch-up-solutions-cover/card-720.webp",
+          "bytes": 35876
+        },
+        {
+          "w": 960,
+          "src": "/media/touch-up-solutions-cover/card-960.webp",
+          "bytes": 54868
+        }
+      ]
+    },
+    "og": "/media/touch-up-solutions-cover/og.jpg",
+    "hero": {
+      "width": 1672,
+      "height": 941,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/touch-up-solutions-cover/hero-960.avif",
+          "bytes": 40967
+        },
+        {
+          "w": 1440,
+          "src": "/media/touch-up-solutions-cover/hero-1440.avif",
+          "bytes": 75195
+        },
+        {
+          "w": 1672,
+          "src": "/media/touch-up-solutions-cover/hero-1672.avif",
+          "bytes": 95046
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/touch-up-solutions-cover/hero-960.webp",
+          "bytes": 58992
+        },
+        {
+          "w": 1440,
+          "src": "/media/touch-up-solutions-cover/hero-1440.webp",
+          "bytes": 108790
+        },
+        {
+          "w": 1672,
+          "src": "/media/touch-up-solutions-cover/hero-1672.webp",
+          "bytes": 135046
+        }
+      ]
+    }
+  },
+  "touch-up-solutions-detail": {
+    "detail": {
+      "width": 1440,
+      "height": 900,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/touch-up-solutions-detail/detail-800.avif",
+          "bytes": 17078
+        },
+        {
+          "w": 1200,
+          "src": "/media/touch-up-solutions-detail/detail-1200.avif",
+          "bytes": 29021
+        },
+        {
+          "w": 1440,
+          "src": "/media/touch-up-solutions-detail/detail-1440.avif",
+          "bytes": 31613
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/touch-up-solutions-detail/detail-800.webp",
+          "bytes": 20130
+        },
+        {
+          "w": 1200,
+          "src": "/media/touch-up-solutions-detail/detail-1200.webp",
+          "bytes": 35536
+        },
+        {
+          "w": 1440,
+          "src": "/media/touch-up-solutions-detail/detail-1440.webp",
+          "bytes": 44872
+        }
+      ]
+    }
+  },
+  "wy-not-pics-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/wy-not-pics-cover/card-480.avif",
+          "bytes": 5609
+        },
+        {
+          "w": 720,
+          "src": "/media/wy-not-pics-cover/card-720.avif",
+          "bytes": 10992
+        },
+        {
+          "w": 960,
+          "src": "/media/wy-not-pics-cover/card-960.avif",
+          "bytes": 16087
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/wy-not-pics-cover/card-480.webp",
+          "bytes": 5570
+        },
+        {
+          "w": 720,
+          "src": "/media/wy-not-pics-cover/card-720.webp",
+          "bytes": 11432
+        },
+        {
+          "w": 960,
+          "src": "/media/wy-not-pics-cover/card-960.webp",
+          "bytes": 17590
+        }
+      ]
+    },
+    "og": "/media/wy-not-pics-cover/og.jpg",
+    "hero": {
+      "width": 1920,
+      "height": 1080,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/wy-not-pics-cover/hero-960.avif",
+          "bytes": 16853
+        },
+        {
+          "w": 1440,
+          "src": "/media/wy-not-pics-cover/hero-1440.avif",
+          "bytes": 27828
+        },
+        {
+          "w": 1920,
+          "src": "/media/wy-not-pics-cover/hero-1920.avif",
+          "bytes": 39555
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/wy-not-pics-cover/hero-960.webp",
+          "bytes": 19310
+        },
+        {
+          "w": 1440,
+          "src": "/media/wy-not-pics-cover/hero-1440.webp",
+          "bytes": 33282
+        },
+        {
+          "w": 1920,
+          "src": "/media/wy-not-pics-cover/hero-1920.webp",
+          "bytes": 48348
+        }
+      ]
+    }
+  },
+  "wy-not-pics-detail": {
+    "detail": {
+      "width": 1440,
+      "height": 900,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/wy-not-pics-detail/detail-800.avif",
+          "bytes": 19506
+        },
+        {
+          "w": 1200,
+          "src": "/media/wy-not-pics-detail/detail-1200.avif",
+          "bytes": 34111
+        },
+        {
+          "w": 1440,
+          "src": "/media/wy-not-pics-detail/detail-1440.avif",
+          "bytes": 42408
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/wy-not-pics-detail/detail-800.webp",
+          "bytes": 26254
+        },
+        {
+          "w": 1200,
+          "src": "/media/wy-not-pics-detail/detail-1200.webp",
+          "bytes": 45550
+        },
+        {
+          "w": 1440,
+          "src": "/media/wy-not-pics-detail/detail-1440.webp",
+          "bytes": 60746
+        }
+      ]
+    }
+  },
+  "y-not-cover": {
+    "card": {
+      "width": 960,
+      "height": 540,
+      "avif": [
+        {
+          "w": 480,
+          "src": "/media/y-not-cover/card-480.avif",
+          "bytes": 9603
+        },
+        {
+          "w": 720,
+          "src": "/media/y-not-cover/card-720.avif",
+          "bytes": 18593
+        },
+        {
+          "w": 960,
+          "src": "/media/y-not-cover/card-960.avif",
+          "bytes": 28610
+        }
+      ],
+      "webp": [
+        {
+          "w": 480,
+          "src": "/media/y-not-cover/card-480.webp",
+          "bytes": 13042
+        },
+        {
+          "w": 720,
+          "src": "/media/y-not-cover/card-720.webp",
+          "bytes": 24520
+        },
+        {
+          "w": 960,
+          "src": "/media/y-not-cover/card-960.webp",
+          "bytes": 37426
+        }
+      ]
+    },
+    "og": "/media/y-not-cover/og.jpg",
+    "hero": {
+      "width": 1440,
+      "height": 810,
+      "avif": [
+        {
+          "w": 960,
+          "src": "/media/y-not-cover/hero-960.avif",
+          "bytes": 29875
+        },
+        {
+          "w": 1440,
+          "src": "/media/y-not-cover/hero-1440.avif",
+          "bytes": 52947
+        }
+      ],
+      "webp": [
+        {
+          "w": 960,
+          "src": "/media/y-not-cover/hero-960.webp",
+          "bytes": 40112
+        },
+        {
+          "w": 1440,
+          "src": "/media/y-not-cover/hero-1440.webp",
+          "bytes": 71346
+        }
+      ]
+    }
+  },
+  "y-not-detail": {
+    "detail": {
+      "width": 1440,
+      "height": 900,
+      "avif": [
+        {
+          "w": 800,
+          "src": "/media/y-not-detail/detail-800.avif",
+          "bytes": 27530
+        },
+        {
+          "w": 1200,
+          "src": "/media/y-not-detail/detail-1200.avif",
+          "bytes": 53446
+        },
+        {
+          "w": 1440,
+          "src": "/media/y-not-detail/detail-1440.avif",
+          "bytes": 71176
+        }
+      ],
+      "webp": [
+        {
+          "w": 800,
+          "src": "/media/y-not-detail/detail-800.webp",
+          "bytes": 36142
+        },
+        {
+          "w": 1200,
+          "src": "/media/y-not-detail/detail-1200.webp",
+          "bytes": 65636
+        },
+        {
+          "w": 1440,
+          "src": "/media/y-not-detail/detail-1440.webp",
+          "bytes": 86888
+        }
+      ]
+    }
+  }
+}

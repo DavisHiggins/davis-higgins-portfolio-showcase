@@ -1,0 +1,53 @@
+{
+  "slug": "lakeside-sport-club",
+  "title": "Lakeside Sport Club",
+  "sortOrder": 7,
+  "categories": ["web-commerce"],
+  "status": "Live public site",
+  "period": "2026 – Present",
+  "summary": "A sport and lifestyle apparel brand with a custom storefront and order system.",
+  "tagline": "A brand system and direct-to-consumer storefront for a sport and lifestyle apparel label, built so the brand carries through product discovery, checkout, and order fulfillment.",
+  "role": "Creative director: brand direction, storefront design and development, and the commerce and order platform, delivered through Higgins Digital.",
+  "stack": ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "Cloudflare", "Vercel"],
+  "links": [
+    { "label": "Live website", "href": "https://lakesidesportclub.com", "kind": "website" },
+    { "label": "GitHub showcase", "href": "https://github.com/DavisHiggins/Lakeside-Sport-Club", "kind": "showcase" }
+  ],
+  "metrics": [],
+  "problem": [
+    "A new apparel label has to look established before anyone will buy from it. Shoppers decide in seconds whether a brand is real, and a default storefront theme with a logo dropped in says the opposite."
+  ],
+  "contribution": [
+    "As creative director, I lead the brand's visual direction and digital commerce, and I designed and built the storefront end to end: brand application, product and collection pages, the commerce platform, and the admin tools the business runs orders from."
+  ],
+  "solution": [
+    "The brand is built into the shopping experience itself: a forest-green, gold, and cream identity, full-width product imagery, drop-style collections, and a phone-first buying path from size and color selection through a slide-out bag to secure hosted checkout.",
+    "Behind the storefront, every paid order lands in a durable order system with customer status links, transactional email, and an admin area for fulfillment, delays, cancellations, refunds, and exports."
+  ],
+  "solutionPoints": [
+    "Collection, category, and product pages with variants, color selection, and quick view.",
+    "Pre-order model with clear production and fulfillment communication.",
+    "Size guide, FAQ, shipping and returns, privacy, and ordering policies.",
+    "Editorial storytelling through campaign imagery and The Journal, with email capture for releases."
+  ],
+  "architecture": {
+    "summary": "The store, not the browser, decides prices, and every order is recorded exactly once.",
+    "flow": ["Shopping bag", "Lakeside commerce platform", "Secure hosted checkout (Stripe)", "Order system", "Customer email · status link · admin tools"]
+  },
+  "decisions": [
+    { "title": "Never trust prices from the browser.", "text": "The store calculates what a shopper pays, so a modified cart cannot change the total." },
+    { "title": "Keep card data off the site.", "text": "Payment happens on a hosted checkout and the store records only the confirmed result." },
+    { "title": "Handle every order exactly once.", "text": "Payments, emails, and status updates are designed so retries or slow services cannot drop or duplicate an order." }
+  ],
+  "outcomes": [
+    "Lakeside Sport Club is live at lakesidesportclub.com with a complete buying path, order management, and a consistent brand across product presentation, checkout, and customer communication."
+  ],
+  "limits": [
+    "Sales, conversion, and order figures are not published here."
+  ],
+  "lessons": "A commerce experience needs consistent product information and clear fulfillment expectations as much as a strong visual identity.",
+  "relatedNotes": [],
+  "related": ["y-not", "higgins-digital", "one-chaptr"],
+  "media": { "cover": "lakeside-sport-club-cover", "hero": "lakeside-sport-club-hero", "detail": "lakeside-sport-club-detail" },
+  "sources": ["https://lakesidesportclub.com", "reference/readmes/Lakeside-Sport-Club.md", "Existing portfolio Lakeside entry"]
+}

@@ -1,0 +1,51 @@
+{
+  "slug": "wy-not-pics",
+  "title": "wy_not_pics",
+  "sortOrder": 20,
+  "categories": ["web-commerce"],
+  "status": "Live public site · client work",
+  "summary": "A client photography portfolio with masonry galleries, pricing, and inquiry paths.",
+  "tagline": "A photography website for Wyatt Bullock (@wy_not_pics) that moves his sports, portrait, and lifestyle work out of a square-cropped social feed and gives clients a clear path to book.",
+  "role": "Designed and built the website. The photography is Wyatt Bullock's.",
+  "stack": ["React", "Vite", "CSS", "Framer Motion", "Vercel"],
+  "links": [
+    { "label": "Live website", "href": "https://wynotpics.vercel.app", "kind": "website" },
+    { "label": "GitHub showcase", "href": "https://github.com/DavisHiggins/wy_not_pics", "kind": "showcase" }
+  ],
+  "metrics": [],
+  "problem": [
+    "Wyatt's photography was strong, but it lived in a social feed: square crops inside someone else's interface, with no simple way for a prospective client to see packages or book a shoot."
+  ],
+  "contribution": [
+    "I designed and built the site for Wyatt: its structure, visual system, galleries, pricing and contact pages, and an update workflow that lets new work drop in without a redesign."
+  ],
+  "solution": [
+    "Portfolio sections for sports, portraits, and lifestyle use a masonry grid that keeps each photo's real proportions, with a full-screen lightbox. A pricing page lays out session packages, and every page leads to direct email and the Instagram handle the brand grew from."
+  ],
+  "solutionPoints": [
+    "Home, portfolio with three collections, about, pricing, and contact.",
+    "Deep ink-blue surfaces, ivory text, cyan and amber accents, and a film-grain texture.",
+    "Masonry gallery, lightbox, portfolio sub-tabs, and page transitions.",
+    "Galleries and pricing that update without layout changes."
+  ],
+  "architecture": {
+    "summary": "Collections and packages are data; the layout stays fixed.",
+    "flow": ["Gallery collections: sports · portraits · lifestyle", "Masonry grid + lightbox", "Session packages → pricing page", "Contact: email + Instagram"]
+  },
+  "decisions": [
+    { "title": "Every photo keeps its composition.", "text": "Portrait and landscape frames are shown at their real proportions instead of square crops." },
+    { "title": "A real page for every collection.", "text": "Each portfolio section has its own address, and older links keep working." },
+    { "title": "Updates without redesigns.", "text": "New shoots and packages drop into place without touching the layout." }
+  ],
+  "outcomes": [
+    "The site gives Wyatt an owned, browsable home for his work with a direct inquiry path."
+  ],
+  "limits": [
+    "All photographs on the site are Wyatt Bullock's. Booking or revenue results are not claimed."
+  ],
+  "lessons": "An owned photography site can preserve image composition while giving prospective clients a clear next step.",
+  "relatedNotes": [],
+  "related": ["photos-and-frames", "higgins-building-group", "higgins-digital"],
+  "media": { "cover": "wy-not-pics-cover", "hero": "wy-not-pics-cover", "detail": "wy-not-pics-detail" },
+  "sources": ["https://wynotpics.vercel.app", "reference/readmes/wy_not_pics.md"]
+}

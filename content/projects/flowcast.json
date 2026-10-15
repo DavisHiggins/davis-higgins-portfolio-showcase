@@ -1,0 +1,70 @@
+{
+  "slug": "flowcast",
+  "title": "Flowcast",
+  "sortOrder": 0,
+  "categories": ["data-ml", "software-tools"],
+  "status": "Live public site",
+  "period": "Aug – Oct 2026",
+  "summary": "Hourly taxi-demand forecasts for all 262 NYC zones, with a public model card.",
+  "tagline": "An end-to-end AWS machine-learning platform that forecasts hourly yellow-taxi pickup demand for every NYC taxi zone 1, 6, and 24 hours ahead, and makes the model's performance inspectable by zone, horizon, and hour.",
+  "role": "Solo build: data pipeline, feature engineering, model training and evaluation, cloud serving path, and the web product.",
+  "stack": ["Python", "XGBoost", "pandas", "SHAP", "AWS SageMaker", "Amazon S3", "AWS Lambda", "API Gateway", "Next.js", "TypeScript", "MapLibre", "Recharts"],
+  "links": [
+    { "label": "Live website", "href": "https://flowcastweb.vercel.app", "kind": "website" },
+    { "label": "Model card", "href": "https://flowcastweb.vercel.app/model", "kind": "model-card" },
+    { "label": "Performance dashboard", "href": "https://flowcastweb.vercel.app/dashboard", "kind": "dashboard" },
+    { "label": "GitHub showcase", "href": "https://github.com/DavisHiggins/Flowcast", "kind": "showcase" }
+  ],
+  "metrics": [
+    { "value": "262", "label": "NYC taxi zones forecast", "context": "Every canonical five-borough TLC zone." },
+    { "value": "24.8%", "label": "Lower held-out WAPE", "context": "0.186 vs. 0.247 for a 168-hour seasonal-naive baseline, Mar–Jul 2026 test period." },
+    { "value": "13.8M", "label": "Training examples", "context": "Zone × hour × horizon examples, built from 116.3M raw trip records." }
+  ],
+  "problem": [
+    "Monthly trip files tell you what already happened. They do not answer the operational question: how many pickups should a zone expect in the next hour, six hours, or day, and how much should you trust that number?",
+    "A forecast is only useful if it beats a sensible baseline, respects time when it is evaluated, and shows its uncertainty. I wanted a system where every one of those claims could be checked from the product itself."
+  ],
+  "contribution": [
+    "I built Flowcast alone, from raw data to the public interface: the S3 data lake, leakage-safe feature engineering, the SageMaker training and evaluation pipeline, the serverless inference path, and the Next.js product with its map, dashboard, and model card."
+  ],
+  "solution": [
+    "Flowcast joins 31 months of NYC TLC yellow-taxi trips (January 2024 through July 2026, 116.3M trips) with NOAA hourly weather, then trains one global XGBoost model across all 262 zones and all three horizons. A quality gate only registers a model that beats the baseline by a set margin.",
+    "The web product connects the forecast to evidence: a citywide map for any origin hour and horizon, per-zone drivers from SHAP, calibrated prediction intervals, a held-out performance dashboard, and a public model card."
+  ],
+  "solutionPoints": [
+    "Citywide MapLibre forecast map with historical replay against actuals and the baseline.",
+    "Per-zone drivers from SHAP and prediction intervals calibrated on validation data only.",
+    "Performance dashboard with error by horizon and borough, residuals, and the largest misses.",
+    "Public model card covering data, features, time-based splits, the baseline, the quality gate, and limitations."
+  ],
+  "architecture": {
+    "summary": "Each stage hands a versioned artifact to the next, and the model never reaches the endpoint without passing its evaluation gate.",
+    "flow": ["TLC trips + NOAA weather", "S3 data lake", "SageMaker Pipeline: features → XGBoost → evaluation", "Quality gate + Model Registry", "Serverless endpoint → Lambda → API Gateway", "Next.js + MapLibre product"],
+    "layers": [
+      { "label": "Data", "text": "Monthly TLC trip records and NOAA GHCNh hourly weather in a private S3 bucket, aggregated to zone-hour demand." },
+      { "label": "Features", "text": "Shifted lags and rolling windows, train-only encodings, and calendar and weather features, built so no future information leaks into a prediction." },
+      { "label": "Training", "text": "One global XGBoost model in a SageMaker Pipeline with chronological train, validation, and test periods." },
+      { "label": "Evaluation", "text": "Test metrics against a 168-hour seasonal-naive baseline, validation-calibrated intervals, SHAP, drift checks, and a gate requiring at least a 5% improvement." },
+      { "label": "Serving", "text": "A serverless endpoint behind Lambda and API Gateway that scores all 262 zones in one batched request." }
+    ]
+  },
+  "decisions": [
+    { "title": "Compare against a baseline people already use.", "text": "The benchmark is the same zone and hour one week earlier. It is simple, hard to beat in a city with strong weekly rhythms, and makes the improvement easy to interpret." },
+    { "title": "Split by time, never at random.", "text": "Training, validation, and test periods are chronological, and intervals are calibrated on validation only, so the reported test results reflect genuinely unseen months." },
+    { "title": "One global model instead of 262 small ones.", "text": "A single XGBoost model learns shared patterns across zones and horizons, which keeps sparse outer-borough zones from being modeled on a handful of trips." },
+    { "title": "Make every claim inspectable.", "text": "Predictions, actuals, baseline values, intervals, and the model version stay visible in the product, so a reader can check the results instead of trusting a headline number." }
+  ],
+  "outcomes": [
+    "On the held-out test period (March 1 through July 31, 2026), Flowcast reached a WAPE of 0.186 against 0.247 for the seasonal-naive baseline, a 24.8% relative reduction. It beat the baseline at every horizon (1h, 6h, and 24h) and in every borough, and the 80% and 95% prediction intervals covered 83% and 96% of test outcomes.",
+    "The 13,779,890 training examples are zone-hour-horizon rows, not trips; the raw data behind them is 116.3M trip records. Those numbers come from the project's own model card and evaluation artifacts."
+  ],
+  "limits": [
+    "These are offline, project-reported results, not measured operational impact; no taxi operator uses Flowcast. TLC data is published with a delay and covers yellow taxis only, so this is not a real-time citywide mobility feed.",
+    "Historical backtests use the weather that was actually observed for the target hour. An operational system would need forecast weather available at prediction time, which the model card states plainly."
+  ],
+  "lessons": "A forecast earns trust through a credible baseline, a time-respecting evaluation, and visible limits as much as through a sophisticated model.",
+  "relatedNotes": [],
+  "related": ["secondchance", "contender", "kewaunee-analytics"],
+  "media": { "cover": "flowcast-cover", "hero": "flowcast-hero", "detail": "flowcast-detail" },
+  "sources": ["public/davis-resume.pdf", "https://flowcastweb.vercel.app/model", "source-review/flowcast/README.md"]
+}

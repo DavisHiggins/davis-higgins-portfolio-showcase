@@ -1,0 +1,55 @@
+{
+  "slug": "dh-portfolio",
+  "title": "DH Portfolio",
+  "sortOrder": 18,
+  "categories": ["ai-automation", "web-commerce"],
+  "status": "Live public site",
+  "summary": "This portfolio: conventional browsing plus a grounded, server-controlled assistant.",
+  "tagline": "The portfolio you are reading: a React and Vite site where every page can be browsed normally, and Davis Intelligence answers questions from a maintained, reviewed set of public facts.",
+  "role": "Designed and built the portfolio, its content registries, the assistant experience, and the server-side chat integration.",
+  "stack": ["React", "Vite", "TypeScript", "Tailwind CSS", "Framer Motion", "React Router", "Claude API", "Vercel"],
+  "links": [
+    { "label": "You are here", "href": "/", "kind": "internal" },
+    { "label": "GitHub showcase", "href": "https://github.com/DavisHiggins/DH-Portfolio", "kind": "showcase" }
+  ],
+  "metrics": [
+    { "value": "24", "label": "Project case studies", "context": "Each with its own shareable page." },
+    { "value": "16", "label": "Notes reproduced verbatim", "context": "Checked against the source text and structure at build time." }
+  ],
+  "problem": [
+    "Recruiters and collaborators want direct answers about relevant work without reading every page. A chatbot alone is a poor portfolio, though: the work has to stay browsable, and the answers have to stay accurate as the work changes."
+  ],
+  "contribution": [
+    "I designed and built the site and its assistant. In October 2026 I rebuilt the information architecture around shareable routes: a filterable project gallery with individual case studies, a Writing section, a direct resume link, and a server-owned knowledge layer for the assistant."
+  ],
+  "solution": [
+    "Projects, profile facts, and notes live in versioned content registries. The same registries generate the pages, the sitemap, pre-rendered route metadata, and the assistant's knowledge on the server, so one edit updates everything that depends on it.",
+    "Davis Intelligence runs through a server endpoint that owns its instructions and facts, validates every request, and returns answers with links to the relevant case study, note, or contact path."
+  ],
+  "solutionPoints": [
+    "Real URLs for every page, case study, and note, with Back, refresh, and filter state that survive reloads.",
+    "Pre-rendered pages so each route ships its own title, description, and content before JavaScript runs.",
+    "Responsive AVIF and WebP images sized to each card and page.",
+    "A server-controlled assistant prompt that client requests cannot override."
+  ],
+  "architecture": {
+    "summary": "One set of reviewed registries feeds the browsable site and the assistant.",
+    "flow": ["Content registries: profile · projects · notes", "Build: validation, pre-rendering, sitemap, assistant knowledge", "React + Vite pages on Vercel", "/api/chat: validated request → server prompt + retrieved facts → Claude"]
+  },
+  "decisions": [
+    { "title": "Keep browsing complete without AI.", "text": "Every answer the assistant can give also exists on a page with a stable URL." },
+    { "title": "Ground answers in maintained facts.", "text": "The assistant retrieves from the same reviewed registries the pages use, with a visible review date." },
+    { "title": "Never trust client instructions.", "text": "The browser sends only conversation messages; the system prompt and facts are owned by the server." }
+  ],
+  "outcomes": [
+    "The portfolio now presents 24 projects as compact cards with full case studies, 16 professional notes in their original reading layout, and an assistant whose knowledge is regenerated from the same sources on every build."
+  ],
+  "limits": [
+    "The assistant answers from public portfolio knowledge only. It cannot reach Cade, DHLM, or any private account, and it does not update itself; new facts are added to the registries and rebuilt."
+  ],
+  "lessons": "A conversational interface should shorten the path to evidence while leaving conventional browsing complete.",
+  "relatedNotes": ["digital-presence", "building-davishiggins"],
+  "related": ["davishiggins-com", "cade", "ai-workflow-system"],
+  "media": { "cover": "dh-portfolio-cover", "hero": "dh-portfolio-cover", "detail": "dh-portfolio-detail" },
+  "sources": ["This repository", "https://portfolio.davishiggins.com"]
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "nypd-crime-data-analysis",
+  "title": "NYPD Crime Data Analysis",
+  "sortOrder": 22,
+  "categories": ["data-ml", "research-community"],
+  "status": "Academic research",
+  "summary": "A statistical study of reported hate-crime patterns before, during, and after COVID-19.",
+  "tagline": "An analysis of the NYPD Hate Crimes open dataset that compares reported incidents, bias motives, and offense severity across pre-COVID, during-COVID, and post-COVID periods.",
+  "role": "Performed the data cleaning, exploratory analysis, visualizations, statistical testing, and modeling, and wrote the final report.",
+  "stack": ["Python", "pandas", "NumPy", "Matplotlib", "seaborn", "SciPy", "scikit-learn", "Jupyter"],
+  "links": [],
+  "metrics": [
+    { "value": "36.0 → 49.9", "label": "Reported incidents per month", "context": "Pre-COVID vs. post-COVID, normalized by period length." },
+    { "value": "p < 0.001", "label": "Chi-square: bias motive vs. period", "context": "Bias-motive distributions differed across periods." }
+  ],
+  "problem": [
+    "Raw incident counts can mislead when the periods being compared have different lengths and when reporting practices change. The questions were whether hate-crime frequency changed across the pandemic periods, whether bias motives and offense types shifted, and whether offense severity could be predicted from those factors."
+  ],
+  "contribution": [
+    "I cleaned the NYPD data, defined the three periods, built the exploratory visualizations, ran the statistical tests and model, and wrote up the findings and limitations."
+  ],
+  "solution": [
+    "I converted dates, removed records missing key values, and assigned each incident to Pre-COVID (before March 2020), During COVID (March 2020 through December 2021), or Post-COVID (January 2022 through April 2025). Because the periods differ in length, I normalized counts to incidents per month before comparing them, then examined bias motives and offense severity within each period."
+  ],
+  "solutionPoints": [
+    "Distributions of incidents by period, bias motive, and offense severity.",
+    "A heatmap and normalized stacked bars of bias motives across periods.",
+    "A chi-square test of whether bias-motive distributions differ by period.",
+    "A logistic regression classifying felony vs. misdemeanor from period and bias motive."
+  ],
+  "architecture": {
+    "summary": "The analysis moves from cleaning and period definitions to normalized comparisons before any statistical claim.",
+    "flow": ["NYPD Hate Crimes open data", "Cleaning + period assignment", "Normalized exploratory comparisons", "Chi-square testing", "Logistic regression + limitations"]
+  },
+  "decisions": [
+    { "title": "Normalize before comparing.", "text": "The post-COVID period is far longer than the others, so incidents per month, not raw totals, carry the comparison." },
+    { "title": "Separate association from cause.", "text": "The report describes changes across periods without claiming the pandemic caused them." },
+    { "title": "Report a modest model honestly.", "text": "The severity classifier reached 56% accuracy, which the report presents as a limited result rather than a predictive success." }
+  ],
+  "outcomes": [
+    "Normalized by period length, reported hate crimes rose from 36.0 per month pre-COVID and 36.6 during COVID to 49.9 per month post-COVID. A chi-square test showed bias-motive distributions differed significantly across periods: anti-Jewish incidents were the most common throughout and rose post-COVID, while anti-Asian incidents peaked during COVID.",
+    "The logistic regression for offense severity reached 56% accuracy, a modest result that points to the need for richer contextual variables."
+  ],
+  "limits": [
+    "The dataset reflects reported incidents, which can be affected by underreporting and changing classification practices, and the period boundaries are approximations. The public repository linked from the previous portfolio is not currently available; the figures here come from the final report."
+  ],
+  "lessons": "Statistical comparisons need explicit definitions, normalized measures, and an honest boundary between association and cause.",
+  "relatedNotes": [],
+  "related": ["census-data-analysis", "secondchance", "flowcast"],
+  "media": { "cover": "nypd-crime-data-analysis-cover", "hero": "nypd-crime-data-analysis-cover", "detail": "nypd-crime-data-analysis-detail" },
+  "sources": ["C:/Users/Davis Higgins/Downloads/NYPD_Hate_Crimes_Report_Final.ipynb (final report, May 2026 PDF export)", "Existing portfolio NYPD entry", "github.com/DavisHiggins/HateCrimeDataAnalysis returned 404 (Oct 15, 2026)"]
+}

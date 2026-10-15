@@ -1,0 +1,72 @@
+{
+  "slug": "contender",
+  "title": "Contender",
+  "sortOrder": 1,
+  "categories": ["data-ml", "software-tools"],
+  "status": "Live public site",
+  "period": "Jan 2026 – Present",
+  "summary": "NBA player-prop and parlay analysis that shows the evidence behind every estimate.",
+  "tagline": "A full-stack sports-analytics platform that analyzes NBA player props and two- to four-leg parlays, keeping the projection, the historical evidence, and the probability estimate visibly separate.",
+  "role": "Solo build: the analysis engine and FastAPI service, data ingestion, the Next.js product, and accounts and billing.",
+  "stack": ["Python", "FastAPI", "scikit-learn", "Random Forest", "Ridge regression", "nba_api", "Next.js", "TypeScript", "Tailwind CSS", "React Query", "Supabase", "Postgres", "Clerk", "Stripe", "Render", "Vercel"],
+  "links": [
+    { "label": "Live website", "href": "https://contender.davishiggins.com", "kind": "website" },
+    { "label": "Methodology", "href": "https://contender.davishiggins.com/methodology", "kind": "methodology" },
+    { "label": "GitHub showcase", "href": "https://github.com/DavisHiggins/Contender", "kind": "showcase" }
+  ],
+  "metrics": [
+    { "value": "68 / 18", "label": "Metrics preserved / corrected", "context": "Parity registry from porting the original engine; every correction documented." },
+    { "value": "433", "label": "Backfill jobs, zero failures", "context": "Two NBA seasons of team and player logs, September 2026." },
+    { "value": "580+", "label": "Automated backend tests", "context": "Counted in the backend source, October 2026." }
+  ],
+  "problem": [
+    "Most prop tools hand you stats, matchup notes, and a confident-looking number, but very few show where a probability came from or how much to trust it. A projection, a historical hit rate, and an estimated probability are three different things, and blending them into one figure hides the evidence a user needs.",
+    "Contender started as Propify, a Streamlit prototype with a hybrid prediction engine. The challenge was turning it into a real product without silently changing what the engine produced."
+  ],
+  "contribution": [
+    "I designed and built the whole platform: the ported analysis engine and typed FastAPI service, the NBA ingestion pipeline, the Next.js interface, saved history, and the account, quota, and billing workflows."
+  ],
+  "solution": [
+    "Each analysis combines a rules-based projection with a Random Forest model (Ridge regression as the fallback for limited history), recent form, and matchup context, then returns the projection, the observed hit rate, and the estimated probability side by side. Results are saved as immutable snapshots rather than being recomputed later.",
+    "Parlays of two to four legs state their independence assumption next to dependence bounds and flags for linked legs, instead of presenting an unvalidated joint probability."
+  ],
+  "solutionPoints": [
+    "Ingestion from stats.nba.com into a normalized Supabase Postgres store, with raw snapshots, content hashes, and correction tracking.",
+    "Analyses run as background jobs: cached results return immediately and new ones are queued and polled.",
+    "Saved picks and parlays are stored as they were produced and settled against final box scores.",
+    "Clerk authentication, Stripe subscriptions, and quota-enforced plans with an idempotent reservation ledger."
+  ],
+  "architecture": {
+    "summary": "The engine sits behind a versioned API, so the product, the background workers, and the saved history all read the same analysis contract.",
+    "flow": ["stats.nba.com", "Ingestion worker → Supabase Postgres", "Rules projection + Random Forest (Ridge fallback)", "FastAPI /api/v1: jobs · quotas · auth", "Next.js product + saved history"],
+    "layers": [
+      { "label": "Data", "text": "nba_api ingestion with normalized headers, validation, idempotent upserts, and stored provider snapshots." },
+      { "label": "Modeling", "text": "Python and scikit-learn: a seeded Random Forest blended with a rules engine, with Ridge as the regularized fallback." },
+      { "label": "Service", "text": "Typed FastAPI service with background jobs, ownership-scoped repositories, and per-user quotas." },
+      { "label": "Product", "text": "Next.js, TypeScript, Tailwind CSS, and React Query, with Clerk and Stripe for accounts and billing." }
+    ]
+  },
+  "decisions": [
+    { "title": "Port the engine before improving it.", "text": "I recorded real NBA responses as fixtures and wrote parity tests against the original prototype. The resulting registry lists 68 metrics preserved exactly and 18 corrected, each with a documented reason and example, so nothing changed silently." },
+    { "title": "Use Ridge regression as the fallback path.", "text": "For players with limited history, a regularized linear model gives steadier output than an undertrained Random Forest." },
+    { "title": "Label probabilities honestly.", "text": "Every probability carries its calibration status. The public example labels its estimate as heuristic and uncalibrated rather than presenting it as a calibrated forecast." },
+    { "title": "Keep evidence immutable.", "text": "A saved analysis is a snapshot of what the engine produced at that moment, including visible misses, so the history can be inspected rather than rewritten." }
+  ],
+  "tradeoffs": [
+    { "title": "Speed vs. depth", "text": "Heavy feature work runs as a background job so it never blocks a request; the cost is a short polling step for new analyses." },
+    { "title": "Joint model vs. honesty", "text": "Parlay probabilities multiply leg estimates under a stated independence assumption, shown beside dependence bounds, instead of shipping an unvalidated joint model." },
+    { "title": "Cost vs. always-on", "text": "Running the worker in-process on Render keeps hosting simple and inexpensive, at the cost of pauses when the instance sleeps." }
+  ],
+  "outcomes": [
+    "Contender is live at contender.davishiggins.com with a public NBA product, a methodology page, and a replayed historical analysis that includes a visible miss. The backend source contains more than 580 automated tests, and the September 2026 backfill of two NBA seasons completed 433 ingestion jobs with zero failures.",
+    "The project's original Propify write-up is preserved in Writing as a dated build story."
+  ],
+  "limits": [
+    "NBA is the public product. MLB and NFL work exists on a shared multi-sport foundation but is not a public release. Contender does not promise accuracy, profit, or betting outcomes, and its probabilities are labeled by calibration status."
+  ],
+  "lessons": "Preserving the evidence behind a result makes an analytics product easier to inspect and improve after both hits and misses.",
+  "relatedNotes": ["propify-breakdown"],
+  "related": ["flowcast", "cade", "dhlm"],
+  "media": { "cover": "contender-cover", "hero": "contender-hero", "detail": "contender-detail" },
+  "sources": ["public/davis-resume.pdf", "https://contender.davishiggins.com", "source-review/contender/docs/propify-status.md", "source-review/contender/docs/evidence/nba_backfill_2026-09-25.json", "backend test count: 596 test functions at da93df0"]
+}

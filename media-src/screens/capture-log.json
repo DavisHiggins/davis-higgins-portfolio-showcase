@@ -1,0 +1,194 @@
+[
+  {
+    "id": "flowcast-dashboard",
+    "url": "https://flowcastweb.vercel.app/dashboard",
+    "capturedAt": "2026-10-15T19:23:43.725Z",
+    "status": 200,
+    "finalUrl": "https://flowcastweb.vercel.app/dashboard",
+    "file": "media-src/screens/flowcast-dashboard.png"
+  },
+  {
+    "id": "contender-home",
+    "url": "https://contender.davishiggins.com",
+    "capturedAt": "2026-10-15T19:23:54.826Z",
+    "status": 200,
+    "finalUrl": "https://contender.davishiggins.com/",
+    "file": "media-src/screens/contender-home.png"
+  },
+  {
+    "id": "dhlm-home",
+    "url": "https://dhlm.davishiggins.com",
+    "capturedAt": "2026-10-15T19:24:05.005Z",
+    "status": 200,
+    "finalUrl": "https://dhlm.davishiggins.com/",
+    "file": "media-src/screens/dhlm-home.png"
+  },
+  {
+    "id": "secondchance-queue",
+    "url": "https://secondc.vercel.app/queue",
+    "capturedAt": "2026-10-15T19:24:13.346Z",
+    "status": 200,
+    "finalUrl": "https://secondc.vercel.app/queue",
+    "file": "media-src/screens/secondchance-queue.png"
+  },
+  {
+    "id": "secondchance-home",
+    "url": "https://secondc.vercel.app",
+    "capturedAt": "2026-10-15T19:24:23.035Z",
+    "status": 200,
+    "finalUrl": "https://secondc.vercel.app/",
+    "file": "media-src/screens/secondchance-home.png"
+  },
+  {
+    "id": "lakeside-shop",
+    "url": "https://lakesidesportclub.com/shop",
+    "capturedAt": "2026-10-15T19:24:32.321Z",
+    "status": 200,
+    "finalUrl": "https://lakesidesportclub.com/shop",
+    "file": "media-src/screens/lakeside-shop.png"
+  },
+  {
+    "id": "ynot-home",
+    "url": "https://ynot.lifestyle",
+    "capturedAt": "2026-10-15T19:25:35.739Z",
+    "status": 200,
+    "finalUrl": "https://www.ynot.lifestyle/",
+    "file": "media-src/screens/ynot-home.png"
+  },
+  {
+    "id": "ynot-collections",
+    "url": "https://ynot.lifestyle/collections",
+    "capturedAt": "2026-10-15T19:25:46.961Z",
+    "status": 404,
+    "finalUrl": "https://www.ynot.lifestyle/collections",
+    "file": "media-src/screens/ynot-collections.png"
+  },
+  {
+    "id": "crowncode-home",
+    "url": "https://crowncode.higginsd.com",
+    "capturedAt": "2026-10-15T19:26:12.986Z",
+    "status": 200,
+    "finalUrl": "https://crowncode.higginsd.com/",
+    "file": "media-src/screens/crowncode-home.png"
+  },
+  {
+    "id": "ai-workflow-home",
+    "url": "https://ai.davishiggins.com",
+    "capturedAt": "2026-10-15T19:26:24.077Z",
+    "status": 200,
+    "finalUrl": "https://ai.davishiggins.com/",
+    "file": "media-src/screens/ai-workflow-home.png"
+  },
+  {
+    "id": "pdt-home",
+    "url": "https://cltphidelt.vercel.app",
+    "capturedAt": "2026-10-15T19:26:41.571Z",
+    "status": 200,
+    "finalUrl": "https://cltphidelt.vercel.app/",
+    "file": "media-src/screens/pdt-home.png"
+  },
+  {
+    "id": "chaplain-home",
+    "url": "https://chaplain.davishiggins.com",
+    "capturedAt": "2026-10-15T19:26:54.735Z",
+    "status": 200,
+    "finalUrl": "https://chaplain.davishiggins.com/",
+    "file": "media-src/screens/chaplain-home.png"
+  },
+  {
+    "id": "notes-home",
+    "url": "https://notes.davishiggins.com",
+    "capturedAt": "2026-10-15T19:27:06.849Z",
+    "status": 200,
+    "finalUrl": "https://notes.davishiggins.com/",
+    "file": "media-src/screens/notes-home.png"
+  },
+  {
+    "id": "dhcom-home",
+    "url": "https://davishiggins.com",
+    "capturedAt": "2026-10-15T19:27:15.380Z",
+    "status": 200,
+    "finalUrl": "https://davishiggins.com/",
+    "file": "media-src/screens/dhcom-home.png"
+  },
+  {
+    "id": "tus-wood",
+    "url": "https://touchupsolutions.vercel.app/wood-repair.html",
+    "capturedAt": "2026-10-15T19:27:26.802Z",
+    "status": 200,
+    "finalUrl": "https://touchupsolutions.vercel.app/wood-repair.html",
+    "file": "media-src/screens/tus-wood.png"
+  },
+  {
+    "id": "tus-howto",
+    "url": "https://touchupsolutions.vercel.app/howto.html",
+    "capturedAt": "2026-10-15T19:27:35.109Z",
+    "status": 200,
+    "finalUrl": "https://touchupsolutions.vercel.app/howto.html",
+    "file": "media-src/screens/tus-howto.png"
+  },
+  {
+    "id": "wnp-home",
+    "url": "https://wynotpics.vercel.app",
+    "capturedAt": "2026-10-15T19:27:42.284Z",
+    "status": 200,
+    "finalUrl": "https://wynotpics.vercel.app/",
+    "file": "media-src/screens/wnp-home.png"
+  },
+  {
+    "id": "wnp-portfolio",
+    "url": "https://wynotpics.vercel.app/portfolio",
+    "capturedAt": "2026-10-15T19:27:51.729Z",
+    "status": 200,
+    "finalUrl": "https://wynotpics.vercel.app/portfolio/sports",
+    "file": "media-src/screens/wnp-portfolio.png"
+  },
+  {
+    "id": "photos-home",
+    "url": "https://photos.davishiggins.com",
+    "capturedAt": "2026-10-15T19:28:00.603Z",
+    "status": 200,
+    "finalUrl": "https://photos.davishiggins.com/",
+    "file": "media-src/screens/photos-home.png"
+  },
+  {
+    "id": "cade-home",
+    "url": "https://cade.davishiggins.com",
+    "capturedAt": "2026-10-15T19:28:11.650Z",
+    "status": 200,
+    "finalUrl": "https://cade.davishiggins.com/",
+    "file": "media-src/screens/cade-home.png"
+  },
+  {
+    "id": "higgins-digital-work",
+    "url": "https://higginsd.com/work",
+    "capturedAt": "2026-10-15T19:29:32.955Z",
+    "status": 200,
+    "finalUrl": "https://www.higginsd.com/work",
+    "file": "media-src/screens/higgins-digital-work.png"
+  },
+  {
+    "id": "hbg-home",
+    "url": "https://www.higginsbuildinggroup.com",
+    "capturedAt": "2026-10-15T19:29:44.991Z",
+    "status": 200,
+    "finalUrl": "https://www.higginsbuildinggroup.com/",
+    "file": "media-src/screens/hbg-home.png"
+  },
+  {
+    "id": "crowncode-builder",
+    "url": "https://crowncode.higginsd.com/builder",
+    "capturedAt": "2026-10-15T19:29:54.918Z",
+    "status": 200,
+    "finalUrl": "https://crowncode.higginsd.com/builder",
+    "file": "media-src/screens/crowncode-builder.png"
+  },
+  {
+    "id": "ynot-product",
+    "url": "https://www.ynot.lifestyle/products/flame-script-hoodie",
+    "capturedAt": "2026-10-15T19:35:56.507Z",
+    "status": 200,
+    "finalUrl": "https://www.ynot.lifestyle/products/flame-script-hoodie",
+    "file": "media-src/screens/ynot-product.png"
+  }
+]

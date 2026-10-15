@@ -1,0 +1,9 @@
+{
+  "_comment": "Related Project blocks rendered at the end of the original source articles (curated-notes production source b0de9c2, MDX frontmatter relatedProject/relatedProjectLabel). Destinations are historical and kept verbatim.",
+  "ai-workflow-system": { "href": "https://ai.davishiggins.com", "label": "View AI Workflow System" },
+  "building-cade": { "href": "https://cade.davishiggins.com", "label": "View the Cade Case Study" },
+  "building-davishiggins": { "href": "https://davishiggins.com", "label": "View davishiggins.com" },
+  "crowncode-build": { "href": "https://crowncode.higginsd.com", "label": "View CrownCode AI" },
+  "higgins-digital-building": { "href": "https://higginsd.com", "label": "View Higgins Digital" },
+  "propify-breakdown": { "href": "https://propifyai.davishiggins.com", "label": "View Propify" }
+}

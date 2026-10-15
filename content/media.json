@@ -1,0 +1,562 @@
+{
+  "_comment": "Explicit project media map. Every id is referenced from content/projects/*.json. Run `npm run media` to regenerate the derivatives in public/media.",
+  "media": {
+    "cade-cover": {
+      "source": "media-src/supplied/covers/cade.webp",
+      "kind": "art",
+      "width": 1672,
+      "height": 941,
+      "alt": "Glowing orange circuitry surrounding a central figure, representing a connected working system.",
+      "position": "50% 50%",
+      "provenance": "Supplied by Davis: handoff covers/cade.webp"
+    },
+    "cade-hero": {
+      "source": "media-src/supplied/individual/cade.webp",
+      "kind": "art",
+      "width": 1672,
+      "height": 941,
+      "alt": "Illuminated orange architecture of rooms and pathways, representing Cade's memory structure.",
+      "position": "50% 50%",
+      "provenance": "Supplied by Davis: handoff covers/individualprojectimages/cade.webp"
+    },
+    "contender-cover": {
+      "source": "media-src/supplied/covers/contender.webp",
+      "kind": "art",
+      "width": 1672,
+      "height": 941,
+      "alt": "Lime Contender mark over silhouetted athletes in a stadium.",
+      "position": "50% 50%",
+      "provenance": "Supplied by Davis: handoff covers/contender.webp"
+    },
+    "contender-hero": {
+      "source": "media-src/supplied/individual/contender.webp",
+      "kind": "art",
+      "width": 1672,
+      "height": 941,
+      "alt": "An empty stadium under floodlights with lime accents.",
+      "position": "50% 50%",
+      "provenance": "Supplied by Davis: handoff covers/individualprojectimages/contender.webp"
+    },
+    "crowncode-ai-cover": {
+      "source": "media-src/supplied/covers/crowncode-ai.webp",
+      "kind": "art",
+      "width": 1672,
+      "height": 941,
+      "alt": "A gold crown surrounded by floating website interface panels.",
+      "position": "50% 50%",
+      "provenance": "Supplied by Davis: handoff covers/crowncode-ai.webp"
+    },
+    "crowncode-ai-hero": {
+      "source": "media-src/supplied/individual/crowncode-ai.webp",
+      "kind": "art",
+      "width": 1672,
+      "height": 941,
+      "alt": "A crown linked to a sequence of generated website screens.",
+      "position": "50% 50%",
+      "provenance": "Supplied by Davis: handoff covers/individualprojectimages/crowncode-ai.webp"
+    },
+    "davishiggins-com-cover": {
+      "source": "media-src/supplied/covers/davishiggins-com.webp",
+      "kind": "art",
+      "width": 1672,
+      "height": 941,
+      "alt": "Glass-like DH monogram and data shapes on a white field.",
+      "position": "50% 50%",
+      "provenance": "Supplied by Davis: handoff covers/davishiggins-com.webp"
+    },
+    "davishiggins-com-hero": {
+      "source": "media-src/supplied/individual/davishiggins-com.webp",
+      "kind": "art",
+      "width": 1672,
+      "height": 941,
+      "alt": "Floating dashboard panels and charts around the DH monogram.",
+      "position": "50% 50%",
+      "provenance": "Supplied by Davis: handoff covers/individualprojectimages/davishiggins-com.webp"
+    },
+    "dhlm-cover": {
+      "source": "media-src/supplied/covers/dhlm.webp",
+      "kind": "art",
+      "width": 1586,
+      "height": 992,
+      "alt": "The LM mark at the center of flowing paths that connect mail, calendar, document, and lock icons.",
+      "position": "50% 50%",
+      "provenance": "Supplied by Davis: handoff covers/dhlm.webp"
+    },
+    "dhlm-hero": {
+      "source": "media-src/supplied/individual/dhlm.webp",
+      "kind": "art",
+      "width": 1586,
+      "height": 992,
+      "alt": "A routing hub connecting mail, calendar, document, and lock nodes.",
+      "position": "50% 50%",
+      "provenance": "Supplied by Davis: handoff covers/individualprojectimages/dhlm.webp"
+    },
+    "flowcast-cover": {
+      "source": "media-src/supplied/covers/flowcast.webp",
+      "kind": "art",
+      "width": 1586,
+      "height": 992,
+      "alt": "Blue data streams flowing through a stylized forecast line.",
+      "position": "50% 50%",
+      "provenance": "Supplied by Davis: handoff covers/flowcast.webp"
+    },
+    "flowcast-hero": {
+      "source": "media-src/supplied/individual/flowcast.webp",
+      "kind": "art",
+      "width": 1586,
+      "height": 992,
+      "alt": "The New York City skyline and Brooklyn Bridge at night.",
+      "position": "50% 50%",
+      "provenance": "Supplied by Davis: handoff covers/individualprojectimages/flowcast.webp"
+    },
+    "higgins-building-group-cover": {
+      "source": "media-src/supplied/covers/higgins-building-group.webp",
+      "kind": "art",
+      "width": 1672,
+      "height": 941,
+      "alt": "A lit custom mountain home at dusk.",
+      "position": "50% 50%",
+      "provenance": "Supplied by Davis: handoff covers/higgins-building-group.webp"
+    },
+    "higgins-building-group-hero": {
+      "source": "media-src/supplied/individual/higgins-building-group.webp",
+      "kind": "art",
+      "width": 1672,
+      "height": 941,
+      "alt": "An architect's desk with a house model and plans, overlooking a finished home.",
+      "position": "50% 50%",
+      "provenance": "Supplied by Davis: handoff covers/individualprojectimages/higgins-building-group.webp"
+    },
+    "lakeside-sport-club-cover": {
+      "source": "media-src/supplied/covers/lakeside-sport-club.webp",
+      "kind": "art",
+      "width": 1672,
+      "height": 941,
+      "alt": "Lakeside apparel, rackets, and bags on a bench beside a lake clubhouse.",
+      "position": "50% 50%",
+      "provenance": "Supplied by Davis: handoff covers/lakeside-sport-club.webp"
+    },
+    "lakeside-sport-club-hero": {
+      "source": "media-src/supplied/individual/lakeside-sport-club.webp",
+      "kind": "art",
+      "width": 1672,
+      "height": 941,
+      "alt": "Three people in Lakeside apparel walking along a lakeside dock.",
+      "position": "50% 50%",
+      "provenance": "Supplied by Davis: handoff covers/individualprojectimages/lakeside-sport-club.webp"
+    },
+    "phi-delta-theta-cover": {
+      "source": "media-src/supplied/covers/phi-delta-theta.webp",
+      "kind": "art",
+      "width": 1672,
+      "height": 941,
+      "alt": "Phi Delta Theta shield in blue and silver.",
+      "position": "50% 50%",
+      "provenance": "Supplied by Davis: handoff covers/phi-delta-theta.webp"
+    },
+    "phi-delta-theta-hero": {
+      "source": "media-src/supplied/individual/phi-delta-theta.webp",
+      "kind": "art",
+      "width": 1672,
+      "height": 941,
+      "alt": "Chapter members at an outdoor table beneath a Phi Delta Theta flag.",
+      "position": "50% 50%",
+      "provenance": "Supplied by Davis: handoff covers/individualprojectimages/phi-delta-theta.webp"
+    },
+    "photos-and-frames-cover": {
+      "source": "media-src/supplied/covers/photos-and-frames.webp",
+      "kind": "art",
+      "width": 1672,
+      "height": 941,
+      "alt": "Black-and-white photographs in floating frames.",
+      "position": "50% 50%",
+      "provenance": "Supplied by Davis: handoff covers/photos-and-frames.webp"
+    },
+    "photos-and-frames-hero": {
+      "source": "media-src/supplied/individual/photos-and-frames.webp",
+      "kind": "art",
+      "width": 1672,
+      "height": 941,
+      "alt": "A dark gallery hall lined with framed black-and-white photographs.",
+      "position": "50% 50%",
+      "provenance": "Supplied by Davis: handoff covers/individualprojectimages/photos-and-frames.webp"
+    },
+    "secondchance-cover": {
+      "source": "media-src/supplied/covers/secondchance.webp",
+      "kind": "art",
+      "width": 1448,
+      "height": 1086,
+      "alt": "A dog and a cat in a bright shelter lobby beneath the SecondChance logo.",
+      "position": "50% 62%",
+      "provenance": "Supplied by Davis: handoff covers/secondchance.webp"
+    },
+    "secondchance-hero": {
+      "source": "media-src/supplied/individual/secondchance.webp",
+      "kind": "art",
+      "width": 1672,
+      "height": 941,
+      "alt": "A dog and cat in a sunlit shelter space with the SecondChance logo.",
+      "position": "50% 50%",
+      "provenance": "Supplied by Davis: handoff covers/individualprojectimages/secondchance.webp"
+    },
+    "higgins-digital-cover": {
+      "source": "media-src/external/higgins-digital-cover.webp",
+      "kind": "art",
+      "width": 1672,
+      "height": 941,
+      "alt": "Blue Higgins Digital H mark over a dark technical background.",
+      "position": "50% 50%",
+      "provenance": "Main-site project cover (davishiggins.com work data): source-review/davis-higgins-portfolio/public/davis/higginsdigitalcover2.png (sha256 40f5281b9db93ad4...)"
+    },
+    "ai-workflow-system-cover": {
+      "source": "media-src/external/ai-workflow-system-cover.webp",
+      "kind": "art",
+      "width": 1672,
+      "height": 941,
+      "alt": "Glowing DH monogram labeled AI Builder OS.",
+      "position": "50% 50%",
+      "provenance": "Main-site project cover (davishiggins.com work data): source-review/davis-higgins-portfolio/public/davis/aibuilderoscover2.png (sha256 efb4538ce2881b5b...)"
+    },
+    "prospectiq-cover": {
+      "source": "media-src/external/prospectiq-cover.webp",
+      "kind": "art",
+      "width": 1659,
+      "height": 948,
+      "alt": "ProspectIQ wordmark surrounded by lead-scoring interface panels.",
+      "position": "50% 50%",
+      "provenance": "Main-site project cover (davishiggins.com work data): source-review/davis-higgins-portfolio/public/davis/piqcover.png (sha256 103a7b996cad2868...)"
+    },
+    "chaplain-platform-cover": {
+      "source": "media-src/external/chaplain-platform-cover.webp",
+      "kind": "art",
+      "width": 1672,
+      "height": 941,
+      "alt": "Phi Delta Theta crest above the words Chaplain Platform.",
+      "position": "50% 50%",
+      "provenance": "Main-site project cover (davishiggins.com work data): source-review/davis-higgins-portfolio/public/davis/chaplainplatformcover2.png (sha256 f00216ed5bfb5502...)"
+    },
+    "curated-notes-cover": {
+      "source": "media-src/external/curated-notes-cover.webp",
+      "kind": "art",
+      "width": 1672,
+      "height": 941,
+      "alt": "A dark notebook embossed with a gold dh mark beside the Curated Notes wordmark.",
+      "position": "50% 50%",
+      "provenance": "Main-site project cover (davishiggins.com work data): source-review/davis-higgins-portfolio/public/davis/curatednotescover2.png (sha256 057cfeafdad7d12a...)"
+    },
+    "dh-portfolio-cover": {
+      "source": "media-src/external/dh-portfolio-cover.webp",
+      "kind": "art",
+      "width": 1672,
+      "height": 941,
+      "alt": "Collage of the portfolio homepage, analytics panels, and the Davis Intelligence assistant.",
+      "position": "50% 50%",
+      "provenance": "Main-site project cover (davishiggins.com work data): source-review/davis-higgins-portfolio/public/davis/portfoliocover2.png (sha256 eec54a4ba8c8544e...)"
+    },
+    "touch-up-solutions-cover": {
+      "source": "media-src/external/touch-up-solutions-cover.webp",
+      "kind": "art",
+      "width": 1672,
+      "height": 941,
+      "alt": "Touch Up Solutions redesign shown on desktop and phone beside repair-product shop panels.",
+      "position": "50% 50%",
+      "provenance": "Main-site project image: source-review/davis-higgins-portfolio/public/newflyingpics/touchup.png (sha256 47bd99e7cb53dbb1...)"
+    },
+    "wy-not-pics-cover": {
+      "source": "media-src/external/wy-not-pics-cover.webp",
+      "kind": "screen",
+      "width": 2527,
+      "height": 1348,
+      "alt": "The wy_not_pics homepage: Wyatt Bullock Photography over a seaside photo.",
+      "position": "60% 50%",
+      "credit": "Photograph by Wyatt Bullock",
+      "provenance": "Higgins Digital asset inventory screenshot: source-review/higgins-digital/ASSET_INVENTORY/wyattpicture.png (sha256 eac7766e120954bb...)"
+    },
+    "higgins-digital-detail": {
+      "source": "media-src/external/higgins-digital-detail.webp",
+      "kind": "screen",
+      "width": 2032,
+      "height": 1341,
+      "alt": "Higgins Digital homepage headline, High-performance websites for real businesses, with quote and pricing buttons.",
+      "caption": "The Higgins Digital homepage at higginsd.com.",
+      "position": "50% 50%",
+      "provenance": "Main-site asset (screenshot of higginsd.com): source-review/davis-higgins-portfolio/public/davis/higgins-digital-cover.png (sha256 a3ccff3f4774a17a...)"
+    },
+    "ai-workflow-system-detail": {
+      "source": "media-src/external/ai-workflow-system-detail.webp",
+      "kind": "screen",
+      "width": 2527,
+      "height": 1318,
+      "alt": "AI Workflow System curriculum page listing modules with lesson counts in a sidebar layout.",
+      "caption": "The curriculum page on ai.davishiggins.com, which starts with setup and builds toward a reusable Claude Code operating system.",
+      "position": "50% 50%",
+      "provenance": "Higgins Digital asset inventory screenshot: source-review/higgins-digital/ASSET_INVENTORY/aiworkflowscreeshot.png (sha256 a37b9d8884e92227...)"
+    },
+    "kewaunee-analytics-cover": {
+      "source": "media-src/designed/kewaunee-analytics-cover.png",
+      "kind": "illustrative",
+      "width": 1600,
+      "height": 900,
+      "alt": "Illustrative executive dashboard layout with KPI tiles, a bar chart, a donut chart, and ranked bars. Labeled illustrative, no company data.",
+      "position": "50% 50%",
+      "provenance": "Code-native visual: scripts/render-designed-media.mjs"
+    },
+    "one-chaptr-cover": {
+      "source": "media-src/designed/one-chaptr-cover.png",
+      "kind": "illustrative",
+      "width": 1600,
+      "height": 900,
+      "alt": "Three illustrative storefront layouts in different brand colors built from the same components.",
+      "position": "50% 50%",
+      "provenance": "Code-native visual: scripts/render-designed-media.mjs"
+    },
+    "nypd-crime-data-analysis-cover": {
+      "source": "media-src/designed/nypd-crime-data-analysis-cover.png",
+      "kind": "diagram",
+      "width": 1600,
+      "height": 900,
+      "alt": "Bar chart of reported hate crimes per month: 36.0 pre-COVID, 36.6 during COVID, 49.9 post-COVID.",
+      "position": "50% 50%",
+      "provenance": "Code-native visual: scripts/render-designed-media.mjs"
+    },
+    "census-data-analysis-cover": {
+      "source": "media-src/designed/census-data-analysis-cover.png",
+      "kind": "diagram",
+      "width": 1600,
+      "height": 900,
+      "alt": "Title page of the team paper The Impact of Race, Sex, Years of Education, and Age on Salary.",
+      "position": "50% 50%",
+      "provenance": "Code-native visual: scripts/render-designed-media.mjs"
+    },
+    "kewaunee-analytics-detail": {
+      "source": "media-src/designed/kewaunee-analytics-detail.png",
+      "kind": "illustrative",
+      "width": 1600,
+      "height": 900,
+      "alt": "Workflow diagram: stakeholder question, validated records, model and definitions, executive reporting.",
+      "caption": "Illustrative reporting workflow. No company dashboards, data, or schemas are shown.",
+      "position": "50% 50%",
+      "provenance": "Code-native visual: scripts/render-designed-media.mjs"
+    },
+    "one-chaptr-detail": {
+      "source": "media-src/designed/one-chaptr-detail.png",
+      "kind": "illustrative",
+      "width": 1600,
+      "height": 900,
+      "alt": "Architecture diagram: tenant configuration, shared codebase with 63 components, typed provider boundary, and a planned InkSoft integration.",
+      "caption": "Illustrative platform architecture. The InkSoft integration is planned, not live.",
+      "position": "50% 50%",
+      "provenance": "Code-native visual: scripts/render-designed-media.mjs"
+    },
+    "prospectiq-detail": {
+      "source": "media-src/designed/prospectiq-detail.png",
+      "kind": "diagram",
+      "width": 1600,
+      "height": 900,
+      "alt": "Seven-stage pipeline diagram from CLI input to CSV export, with notes on provenance, observed versus inferred data, and responsible limits.",
+      "caption": "The pipeline as documented in the project: every stage reads the structured record produced by the stage before it.",
+      "position": "50% 50%",
+      "provenance": "Code-native visual: scripts/render-designed-media.mjs"
+    },
+    "nypd-crime-data-analysis-detail": {
+      "source": "media-src/artifacts/nypd/chart-3.png",
+      "kind": "artifact",
+      "width": 1249,
+      "height": 790,
+      "alt": "Heatmap of bias motive counts across Pre-COVID, During COVID, and Post-COVID periods, with anti-Jewish incidents highest in every period.",
+      "caption": "From the final report: bias motives across the three periods. Anti-Asian incidents peaked during COVID; anti-Jewish incidents were the most common throughout.",
+      "position": "50% 50%",
+      "provenance": "Chart output extracted from NYPD_Hate_Crimes_Report_Final.ipynb"
+    },
+    "census-data-analysis-detail": {
+      "source": "media-src/artifacts/census-heatmap.png",
+      "kind": "artifact",
+      "width": 1047,
+      "height": 885,
+      "alt": "Correlation heatmap of income class with age, years of education, race, and sex.",
+      "caption": "Figure 3 from the paper: education (0.34), age (0.23), and sex (0.22) correlate more strongly with income class than race (0.07).",
+      "position": "50% 50%",
+      "provenance": "Cropped from page 12 of public/docs/Census_Data_Analysis_Paper.pdf"
+    },
+    "cade-detail": {
+      "source": "media-src/artifacts/cade-architecture.png",
+      "kind": "diagram",
+      "width": 1600,
+      "height": 830,
+      "alt": "Cade architecture diagram: two boot layers, CLAUDE.md and VAULT-INDEX.md, above the path from boot config to persisted outcome.",
+      "caption": "From Cade's own documentation: two boot layers feeding one memory system.",
+      "position": "50% 50%",
+      "provenance": "Static frame of source-review/cade/docs/assets/readme/cade-architecture.svg (script-free SVG)"
+    },
+    "flowcast-detail": {
+      "source": "media-src/screens/flowcast-dashboard.png",
+      "kind": "screen",
+      "width": 1440,
+      "height": 900,
+      "alt": "Flowcast performance dashboard showing actual and predicted pickups, WAPE, MAE, RMSE, and the improvement over the baseline for the selected window.",
+      "caption": "The public performance dashboard: held-out results against the seasonal baseline, filterable by window, horizon, borough, and zone.",
+      "position": "50% 50%",
+      "provenance": "Public site screenshot, see media-src/screens/capture-log.json (flowcast-dashboard)"
+    },
+    "contender-detail": {
+      "source": "media-src/screens/contender-home.png",
+      "kind": "screen",
+      "width": 1440,
+      "height": 900,
+      "alt": "Contender homepage: See the numbers behind every pick.",
+      "caption": "The public homepage at contender.davishiggins.com, which introduces inspectable, saved analyses.",
+      "position": "50% 50%",
+      "provenance": "Public site screenshot, see media-src/screens/capture-log.json (contender-home)"
+    },
+    "dhlm-detail": {
+      "source": "media-src/screens/dhlm-home.png",
+      "kind": "screen",
+      "width": 1440,
+      "height": 900,
+      "alt": "DHLM case-study homepage with a synthetic calendar question and a cited answer.",
+      "caption": "The public case study uses a synthetic preview: a calendar question answered with its source marked read-only.",
+      "position": "50% 50%",
+      "provenance": "Public site screenshot, see media-src/screens/capture-log.json (dhlm-home)"
+    },
+    "secondchance-detail": {
+      "source": "media-src/screens/secondchance-queue.png",
+      "kind": "screen",
+      "width": 1440,
+      "height": 900,
+      "alt": "SecondChance support queue with filters and open stays showing intake-time estimates and days waiting.",
+      "caption": "The support queue: open stays with intake-time estimates beside actual waits, built on public City of Austin records.",
+      "position": "50% 50%",
+      "provenance": "Public site screenshot, see media-src/screens/capture-log.json (secondchance-queue)"
+    },
+    "lakeside-sport-club-detail": {
+      "source": "media-src/screens/lakeside-shop.png",
+      "kind": "screen",
+      "width": 1440,
+      "height": 900,
+      "alt": "Lakeside Sport Club collection page with category filters and product cards.",
+      "caption": "The Collection page: every piece from the club, filterable by category.",
+      "position": "50% 50%",
+      "provenance": "Public site screenshot, see media-src/screens/capture-log.json (lakeside-shop)"
+    },
+    "higgins-building-group-detail": {
+      "source": "media-src/screens/hbg-home.png",
+      "kind": "screen",
+      "width": 1440,
+      "height": 900,
+      "alt": "Higgins Building Group homepage with a full-width photo of a timber-frame home.",
+      "caption": "The rebuilt homepage leads with the company's own project photography and a clear path to view the work.",
+      "position": "50% 50%",
+      "provenance": "Public site screenshot, see media-src/screens/capture-log.json (hbg-home)"
+    },
+    "y-not-cover": {
+      "source": "media-src/screens/ynot-home.png",
+      "kind": "screen",
+      "width": 1440,
+      "height": 900,
+      "alt": "Y NOT? featured collection: hoodies, a bomber jacket, and cargo shorts with colorway swatches.",
+      "position": "50% 50%",
+      "provenance": "Public site screenshot, see media-src/screens/capture-log.json (ynot-home)"
+    },
+    "y-not-detail": {
+      "source": "media-src/screens/ynot-product.png",
+      "kind": "screen",
+      "width": 1440,
+      "height": 900,
+      "alt": "Y NOT? Flame Script Hoodie product page with gallery, colorway swatches, and size selection.",
+      "caption": "A product page: each colorway has its own photography, and sizes are chosen per variant.",
+      "position": "50% 50%",
+      "provenance": "Public site screenshot, see media-src/screens/capture-log.json (ynot-product)"
+    },
+    "crowncode-ai-detail": {
+      "source": "media-src/screens/crowncode-builder.png",
+      "kind": "screen",
+      "width": 1440,
+      "height": 900,
+      "alt": "CrownCode intake wizard on step one, Business Basics, with fields for business name, industry, and target customer.",
+      "caption": "Step one of the six-step intake wizard. Answers auto-save locally so a refresh never loses them.",
+      "position": "50% 50%",
+      "provenance": "Public site screenshot, see media-src/screens/capture-log.json (crowncode-builder)"
+    },
+    "phi-delta-theta-detail": {
+      "source": "media-src/screens/pdt-home.png",
+      "kind": "screen",
+      "width": 1440,
+      "height": 900,
+      "alt": "Chapter site homepage: members on a beach with the Phi Delta Theta letters and NC Epsilon.",
+      "caption": "The chapter site's photography-led homepage.",
+      "position": "50% 50%",
+      "provenance": "Public site screenshot, see media-src/screens/capture-log.json (pdt-home)"
+    },
+    "chaplain-platform-detail": {
+      "source": "media-src/screens/chaplain-home.png",
+      "kind": "screen",
+      "width": 1440,
+      "height": 900,
+      "alt": "Chaplain Platform home with this week's message and the current scripture, Philippians.",
+      "caption": "The home page leads with this week's study and current scripture, then links to the calendar and the plan.",
+      "position": "50% 50%",
+      "provenance": "Public site screenshot, see media-src/screens/capture-log.json (chaplain-home)"
+    },
+    "curated-notes-detail": {
+      "source": "media-src/screens/notes-home.png",
+      "kind": "screen",
+      "width": 1440,
+      "height": 900,
+      "alt": "Curated Notes homepage with the Curated Notes wordmark and featured and all-notes links.",
+      "caption": "The Curated Notes homepage at notes.davishiggins.com.",
+      "position": "50% 50%",
+      "provenance": "Public site screenshot, see media-src/screens/capture-log.json (notes-home)"
+    },
+    "davishiggins-com-detail": {
+      "source": "media-src/screens/dhcom-home.png",
+      "kind": "screen",
+      "width": 1440,
+      "height": 900,
+      "alt": "davishiggins.com homepage with wave-line artwork above the Davis DH Higgins wordmark.",
+      "caption": "The davishiggins.com homepage.",
+      "position": "50% 50%",
+      "provenance": "Public site screenshot, see media-src/screens/capture-log.json (dhcom-home)"
+    },
+    "touch-up-solutions-detail": {
+      "source": "media-src/screens/tus-howto.png",
+      "kind": "screen",
+      "width": 1440,
+      "height": 900,
+      "alt": "Touch Up Solutions How To Guides page with repair guides for cabinets, furniture, and laminate flooring.",
+      "caption": "The how-to library places guides beside the material categories they apply to.",
+      "position": "50% 50%",
+      "provenance": "Public site screenshot, see media-src/screens/capture-log.json (tus-howto)"
+    },
+    "wy-not-pics-detail": {
+      "source": "media-src/screens/wnp-portfolio.png",
+      "kind": "screen",
+      "width": 1440,
+      "height": 900,
+      "alt": "wy_not_pics portfolio page on the Sports collection, with sub-tabs for Portraits and Lifestyle.",
+      "caption": "The Sports collection. Every portfolio section has its own address.",
+      "position": "50% 50%",
+      "credit": "Photographs by Wyatt Bullock",
+      "provenance": "Public site screenshot, see media-src/screens/capture-log.json (wnp-portfolio)"
+    },
+    "photos-and-frames-detail": {
+      "source": "media-src/screens/photos-home.png",
+      "kind": "screen",
+      "width": 1440,
+      "height": 900,
+      "alt": "photos & frames homepage with black-and-white photographs in an animated stack.",
+      "caption": "The homepage composition: monochrome first, color on intent.",
+      "position": "50% 50%",
+      "provenance": "Public site screenshot, see media-src/screens/capture-log.json (photos-home)"
+    },
+    "dh-portfolio-detail": {
+      "source": "media-src/screens/dh-portfolio-gallery.png",
+      "kind": "screen",
+      "width": 1440,
+      "height": 900,
+      "alt": "The rebuilt Projects gallery: category filters with counts above image-first project cards for Flowcast, Contender, and Cade.",
+      "caption": "The October 2026 Projects gallery: URL-backed category filters and image-first cards, each linking to its own case study.",
+      "position": "50% 50%",
+      "provenance": "Screenshot of this build's /projects page at 1440x900 (local preview, Oct 15, 2026)"
+    }
+  }
+}

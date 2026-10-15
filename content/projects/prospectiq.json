@@ -1,0 +1,134 @@
+{
+  "slug": "prospectiq",
+  "title": "ProspectIQ",
+  "sortOrder": 13,
+  "categories": [
+    "data-ml",
+    "software-tools"
+  ],
+  "status": "Python CLI · source not currently public",
+  "summary": "A Python lead-data pipeline built around normalization, enrichment, scoring, and provenance.",
+  "tagline": "A modular command-line pipeline that collects publicly available lead information, normalizes it into one record format, enriches it, scores it with explainable signals, and exports it with its provenance intact.",
+  "role": "Designed and built the CLI pipeline, its schema, enrichment and scoring logic, and its test and CI setup.",
+  "stack": [
+    "Python",
+    "HTTPX",
+    "Rich",
+    "dnspython",
+    "pytest",
+    "Ruff",
+    "mypy",
+    "GitHub Actions"
+  ],
+  "links": [],
+  "metrics": [
+    {
+      "value": "8",
+      "label": "Source modules",
+      "context": "Social, developer, video, and link-in-bio platforms."
+    },
+    {
+      "value": "272",
+      "label": "Automated tests",
+      "context": "Collected from the project source (Sep 2026 snapshot)."
+    },
+    {
+      "value": "3",
+      "label": "Python versions in CI",
+      "context": "3.10, 3.11, and 3.12 on GitHub Actions."
+    }
+  ],
+  "problem": [
+    "Useful lead information is spread across social profiles, developer platforms, video channels, company websites, and link-in-bio pages, each with different field names, data types, and limits. Combining it into a trustworthy dataset takes more than copying names into a spreadsheet.",
+    "Many enrichment tools return a contact with an opaque confidence score, so the user cannot tell whether an address was publicly observed, inferred from a pattern, guessed, or verified. I wanted every result to keep its origin visible."
+  ],
+  "contribution": [
+    "I built ProspectIQ as a personal open-source project: the source modules, the normalization boundary, the enrichment and verification pipeline, the scoring model, the CSV exporter, and the testing and CI setup."
+  ],
+  "solution": [
+    "ProspectIQ runs as a sequence of independent stages. Source modules collect public information, one normalization boundary turns every response into a single Lead model, and an enrichment layer looks for stronger contact and company signals. Each final record carries its email source, confidence, verification status, company domain, score, original platform, and collection time."
+  ],
+  "solutionPoints": [
+    "Source modules for social, developer, video, and link-in-bio platforms behind one CLI and interactive menu.",
+    "Website and domain enrichment, email-pattern inference, optional SMTP verification, and catch-all detection.",
+    "A documented 0–100 lead score in which every point maps to a named signal.",
+    "A stable, spreadsheet-safe CSV export with provenance fields and formula-injection protection."
+  ],
+  "architecture": {
+    "summary": "Each stage depends only on the structured result of the stage before it, so platform-specific complexity stays inside the source modules.",
+    "flow": [
+      "CLI input",
+      "Source scrapers",
+      "Normalized Lead model",
+      "Website + domain enrichment",
+      "Email candidate verification",
+      "Lead scoring",
+      "CSV export"
+    ],
+    "layers": [
+      {
+        "label": "Collection",
+        "text": "Source modules share an HTTP layer, central configuration, conservative pacing, typed errors, and a declarative source registry."
+      },
+      {
+        "label": "Normalization",
+        "text": "Lead.from_raw maps aliases, coerces inconsistent types, and preserves unmodeled fields so every later stage receives the same shape."
+      },
+      {
+        "label": "Quality",
+        "text": "pytest without live network dependencies, Ruff, mypy, and GitHub Actions across supported Python versions."
+      }
+    ]
+  },
+  "decisions": [
+    {
+      "title": "Preserve provenance instead of presenting guesses as facts.",
+      "text": "An address found in a public bio is treated differently from one inferred from a company's naming pattern, and the export says which is which."
+    },
+    {
+      "title": "Use one normalization boundary.",
+      "text": "Source modules may return platform-specific data, but only one function translates it, which keeps platform assumptions out of every later stage."
+    },
+    {
+      "title": "Keep the registry as the single source of truth.",
+      "text": "The CLI, interactive menu, and source listing all read one registry, so adding a source means one module and one entry."
+    },
+    {
+      "title": "Build responsible-use limits into the system.",
+      "text": "ProspectIQ does not solve CAPTCHAs, evade blocks, access private data, or send messages; it stops at access restrictions and rate limits."
+    }
+  ],
+  "tradeoffs": [
+    {
+      "title": "Coverage vs. reliability",
+      "text": "More sources add value, but public pages change. Typed errors and source isolation keep one failure from corrupting the dataset."
+    },
+    {
+      "title": "Usefulness vs. certainty",
+      "text": "Inferred addresses are useful candidates but not confirmed contacts, so uncertainty is preserved instead of collapsed into valid or invalid."
+    }
+  ],
+  "outcomes": [
+    "ProspectIQ became one workflow instead of a set of disconnected scrapers: collection, normalization, enrichment, scoring, and export through a single command-line interface, with an offline demo and automated tests."
+  ],
+  "limits": [
+    "The public GitHub repository that previously hosted ProspectIQ is not currently available, so this page does not link to source code. The figures above were re-checked against the project's own source snapshot from September 2026."
+  ],
+  "lessons": "When several sources contribute to one record, normalized structure and visible provenance matter more than raw volume.",
+  "relatedNotes": [],
+  "related": [
+    "contender",
+    "nypd-crime-data-analysis",
+    "flowcast"
+  ],
+  "media": {
+    "cover": "prospectiq-cover",
+    "hero": "prospectiq-cover",
+    "detail": "prospectiq-detail"
+  },
+  "sources": [
+    "Existing portfolio ProspectIQ entry and deep dive",
+    "Local source C:/Users/Davis Higgins/Downloads/prospectiq @ fc8907f (2026-09-25): 8 scrapers, pytest --collect-only = 272, CI matrix 3.10/3.11/3.12",
+    "github.com/DavisHiggins/ProspectIQ returned 404 (Oct 15, 2026)"
+  ]
+}

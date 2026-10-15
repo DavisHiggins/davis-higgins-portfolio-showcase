@@ -1,0 +1,52 @@
+{
+  "slug": "one-chaptr",
+  "title": "One Chaptr Storefront Platform",
+  "sortOrder": 6,
+  "categories": ["web-commerce", "software-tools"],
+  "status": "In development · professional work",
+  "period": "Aug 2026 – Present",
+  "summary": "A reusable multi-tenant storefront foundation in Next.js and TypeScript.",
+  "tagline": "A shared storefront platform for One Chaptr Creative that lets each university and client organization run a distinctly branded shop from one reusable codebase.",
+  "role": "Software Engineer at One Chaptr Group, co-developing the platform, its 63-component UI system, and its typed data and API contracts.",
+  "team": "Co-developed with the One Chaptr engineering team.",
+  "stack": ["Next.js", "React", "TypeScript", "Reusable UI system", "Typed data models", "API contracts"],
+  "links": [],
+  "metrics": [
+    { "value": "63", "label": "Components in the UI system", "context": "Reusable, schema-backed storefront components." }
+  ],
+  "problem": [
+    "Multiple university and client storefronts need their own branding and catalog presentation, but rebuilding core commerce behavior for every client duplicates work and lets each store drift into slightly different behavior."
+  ],
+  "contribution": [
+    "I joined One Chaptr Group as a software engineer in August 2026 and co-develop the platform. My work focuses on reusable storefront templates, component schemas and data contracts across the 63-component UI system, and the typed boundaries that will connect the storefront to commerce services."
+  ],
+  "solution": [
+    "The platform separates tenant configuration (brand, catalog presentation, and storefront settings) from shared behavior. Customer-facing routes are built from reusable components whose props and data are defined by explicit schemas, and every component handles loading, empty, error, and success states consistently."
+  ],
+  "solutionPoints": [
+    "Reusable storefront templates in one Next.js and TypeScript codebase.",
+    "Component schemas and data contracts that standardize behavior across client sites.",
+    "Typed data models and mock providers so the interface can be built and tested before live services are connected.",
+    "API boundaries prepared for a future InkSoft commerce integration."
+  ],
+  "architecture": {
+    "summary": "Configuration decides how a store looks; shared contracts decide how it behaves.",
+    "flow": ["Tenant configuration", "Shared Next.js / TypeScript codebase", "Reusable components + schemas", "Typed provider boundary (mock today)", "Planned InkSoft integration"]
+  },
+  "decisions": [
+    { "title": "Separate tenant configuration from behavior.", "text": "A new storefront is configured, not copied, so a fix to shared behavior reaches every client." },
+    { "title": "Make contracts explicit.", "text": "Component schemas and typed data models define exactly what each piece accepts, which keeps a growing component system predictable." },
+    { "title": "Design every state up front.", "text": "Loading, empty, error, and success states are part of each component's contract instead of being added later." }
+  ],
+  "outcomes": [
+    "The platform foundation and the 63-component UI system are in active development, with mock providers and typed boundaries in place for the commerce integration that comes next."
+  ],
+  "limits": [
+    "This is in-progress professional work that I co-develop, and its source and preview environments are not public. The InkSoft integration is planned and prepared through typed boundaries; it is not yet a completed live integration. The visuals on this page are illustrative."
+  ],
+  "lessons": "Reusable storefront behavior depends on explicit contracts and configuration boundaries, not on copying components between clients.",
+  "relatedNotes": [],
+  "related": ["y-not", "lakeside-sport-club", "kewaunee-analytics"],
+  "media": { "cover": "one-chaptr-cover", "hero": "one-chaptr-cover", "detail": "one-chaptr-detail" },
+  "sources": ["public/davis-resume.pdf", "Existing portfolio experience entry (One Chaptr Creative)"]
+}

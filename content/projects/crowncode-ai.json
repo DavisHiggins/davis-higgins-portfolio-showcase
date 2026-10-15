@@ -1,0 +1,51 @@
+{
+  "slug": "crowncode-ai",
+  "title": "CrownCode AI",
+  "sortOrder": 11,
+  "categories": ["ai-automation", "software-tools"],
+  "status": "Live public site",
+  "summary": "A Claude-powered website builder with guided intake and targeted revisions.",
+  "tagline": "A website builder under Higgins Digital that guides a business through a structured intake, generates a complete website package with Claude, and supports targeted revisions before deployment.",
+  "role": "Designed and built the intake wizard, generation and revision flows, the package presentation, and the server-side Claude integration.",
+  "stack": ["Next.js", "TypeScript", "Tailwind CSS", "Anthropic Claude API", "lucide-react", "Vercel"],
+  "links": [
+    { "label": "Live website", "href": "https://crowncode.higginsd.com", "kind": "website" },
+    { "label": "GitHub showcase", "href": "https://github.com/DavisHiggins/CrownCode-AI", "kind": "showcase" }
+  ],
+  "metrics": [],
+  "problem": [
+    "People who need a website often struggle to turn their business, content, and brand preferences into a brief a developer, or a model, can act on. A single open-ended prompt produces something fast, but rarely something they can review and refine."
+  ],
+  "contribution": [
+    "I designed and built the full flow: the landing page, the six-step intake wizard, the Claude generation and revision engine in server-side API routes, and the results experience with exports and a deployment guide."
+  ],
+  "solution": [
+    "CrownCode collects structured requirements first (Business Basics, Brand Direction, Website Structure, Content Details, Build Preferences, and Final Review), with local auto-save so a refresh never loses answers. Each generation returns a structured package rather than raw text, and a revision step changes only what the user asks for."
+  ],
+  "solutionPoints": [
+    "A package with project name, brand summary, strategy, sitemap, design system, page copy, file tree, code files, README, and a deployment guide.",
+    "Collapsible result sections, per-file copy buttons, and a full-project JSON export.",
+    "A plain-English GitHub and Vercel deployment guide for non-technical users.",
+    "A guided revision workflow for copy, layout, branding, and deployment readiness."
+  ],
+  "architecture": {
+    "summary": "Validated input reaches Claude only through server routes, and revisions are scoped to the requested change.",
+    "flow": ["Structured intake wizard", "Validated server API route", "Anthropic Claude generation", "Structured website package", "Scoped revision → export and deploy guide"]
+  },
+  "decisions": [
+    { "title": "Collect structure before generating.", "text": "A guided intake produces a far more reviewable result than an unconstrained first prompt." },
+    { "title": "Keep credentials on the server.", "text": "The Claude integration runs in server-side routes with validated request bodies, length limits, and server-only error logging." },
+    { "title": "Preserve what the user didn't ask to change.", "text": "Revisions target the requested change and keep the rest of the package stable." }
+  ],
+  "outcomes": [
+    "CrownCode is live at crowncode.higginsd.com and demonstrates a guided path from business information to a website draft with supporting strategy, files, and deployment guidance."
+  ],
+  "limits": [
+    "Generated sites still need human review before production. CrownCode does not claim that every generated site is automatically secure, accessible, or ready to ship."
+  ],
+  "lessons": "Structured requirements and controlled revision make generated work much easier to review.",
+  "relatedNotes": ["crowncode-build"],
+  "related": ["higgins-digital", "ai-workflow-system", "dhlm"],
+  "media": { "cover": "crowncode-ai-cover", "hero": "crowncode-ai-hero", "detail": "crowncode-ai-detail" },
+  "sources": ["https://crowncode.higginsd.com", "source-review/crowncode-ai", "Existing portfolio CrownCode entry"]
+}

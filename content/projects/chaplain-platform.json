@@ -1,0 +1,54 @@
+{
+  "slug": "chaplain-platform",
+  "title": "Phi Delta Theta Chaplain Platform",
+  "sortOrder": 15,
+  "categories": ["research-community", "web-commerce"],
+  "status": "Live public site",
+  "period": "2026 – Present",
+  "summary": "A chapter resource hub for weekly Bible study, scripture planning, and chaplain materials.",
+  "tagline": "A purpose-built site that gives NC Epsilon's spiritual life one home: this week's study first, a Thursday calendar, and a 16-week scripture plan underneath.",
+  "role": "As chapter chaplain, designed and built the platform and wrote and maintain the semester plan it presents.",
+  "stack": ["React", "Vite", "Tailwind CSS", "Vercel"],
+  "links": [
+    { "label": "Live website", "href": "https://chaplain.davishiggins.com", "kind": "website" },
+    { "label": "GitHub showcase", "href": "https://github.com/DavisHiggins/Chaplain-Platform", "kind": "showcase" }
+  ],
+  "metrics": [
+    { "value": "16", "label": "Week scripture plan", "context": "John, Philippians, and Colossians." }
+  ],
+  "problem": [
+    "As chaplain, I found that everything the chapter needed for its spiritual life was scattered across group chats and documents. Weekly direction lived wherever it was last posted, and the same information was re-shared every week."
+  ],
+  "contribution": [
+    "I designed and built the site end to end, and I wrote and maintain the semester scripture plan it presents."
+  ],
+  "solution": [
+    "The home page leads with this week's message and passage and moves to the next study automatically. A month calendar marks every Thursday study with its passage, and a 16-week plan gives each week a title, theme, and short summary for discussion."
+  ],
+  "solutionPoints": [
+    "Home, calendar, scripture plan, about, and contact views.",
+    "Scheduling that always shows the right study for the current week.",
+    "One data source for the whole semester plan.",
+    "Chapter-branded visuals and a phone-first layout."
+  ],
+  "architecture": {
+    "summary": "The semester plan is the single source; the calendar decides what each page shows.",
+    "flow": ["Semester plan: 16 weeks · passage · theme · summary", "Weekly scheduling", "Home: this week · Calendar: Thursday studies · Full scripture plan"]
+  },
+  "decisions": [
+    { "title": "Let the calendar drive the content.", "text": "The current study updates itself on schedule, so the site stays accurate all semester without manual edits." },
+    { "title": "Keep one plan for the whole semester.", "text": "Planning next semester means replacing one plan, not editing pages." },
+    { "title": "Use the chapter's dates.", "text": "A Thursday study always shows on Thursday, wherever a member's phone thinks it is." }
+  ],
+  "outcomes": [
+    "The chapter's weekly Bible study and scripture plan now live in one place at chaplain.davishiggins.com, supporting the weekly studies I lead as chaplain."
+  ],
+  "limits": [
+    "This is a focused tool for one chapter's chaplain work, separate from the chapter's main public website."
+  ],
+  "lessons": "A focused tool for a recurring community task can be more useful than a large, generic resource site.",
+  "relatedNotes": [],
+  "related": ["phi-delta-theta", "curated-notes", "photos-and-frames"],
+  "media": { "cover": "chaplain-platform-cover", "hero": "chaplain-platform-cover", "detail": "chaplain-platform-detail" },
+  "sources": ["https://chaplain.davishiggins.com", "reference/readmes/Chaplain-Platform.md"]
+}

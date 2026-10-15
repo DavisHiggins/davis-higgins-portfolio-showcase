@@ -17,7 +17,10 @@
       "period": "Aug 2024 to May 2027",
       "expectedGraduation": "May 2027",
       "gpaDisplay": "3.9",
-      "honors": ["5x Chancellor's List", "1x Dean's List"],
+      "honors": [
+        "5x Chancellor's List",
+        "1x Dean's List"
+      ],
       "description": "Building a technical foundation in analytics, machine learning, statistical thinking, and applied business problem solving while pairing coursework with internships, product development, and independent projects."
     },
     {
@@ -25,7 +28,9 @@
       "institution": "Catawba Valley Community College",
       "period": "Aug 2022 to May 2024",
       "gpaDisplay": "4.0",
-      "honors": ["4x President's List"],
+      "honors": [
+        "4x President's List"
+      ],
       "description": "Selected for a dual-enrollment program to gain college credits while completing high school."
     }
   ],
@@ -54,7 +59,10 @@
             "Designing reusable component schemas and data contracts across a 63-component UI system, with responsive customer-facing routes, accessible interactions, and complete loading, empty, error, and success states.",
             "Creating typed data models, mock providers, and API boundaries that prepare the storefront for a future InkSoft commerce integration."
           ],
-          "link": { "label": "Storefront platform case study", "href": "/projects/one-chaptr" }
+          "link": {
+            "label": "Storefront platform case study",
+            "href": "/projects/one-chaptr"
+          }
         }
       ],
       "assistantNote": "In progress and co-developed. The InkSoft integration is prepared through typed boundaries; it is not a completed live integration."
@@ -78,7 +86,10 @@
             "Developed standardized KPI definitions and data dictionaries and automated recurring metric reports, strengthening data governance while reducing manual reporting effort.",
             "Meet directly with executives and stakeholders to understand which reports and automations would make their work easier, then translate those requests into practical tools."
           ],
-          "link": { "label": "Analytics suite case study", "href": "/projects/kewaunee-analytics" }
+          "link": {
+            "label": "Analytics suite case study",
+            "href": "/projects/kewaunee-analytics"
+          }
         }
       ],
       "assistantNote": "The role began as an internship in June 2025: full-time during summers and part-time during academic terms. Do not describe it as permanent full-time employment or count it as years of full-time tenure."
@@ -101,7 +112,10 @@
             "Manage project lifecycles from client requests and UI/UX design to backend logic, DNS and SSL setup, and custom domains.",
             "Deploy and maintain client sites for performance, reliability, and cross-device compatibility."
           ],
-          "link": { "label": "Company Website", "href": "https://higginsd.com/" }
+          "link": {
+            "label": "Company Website",
+            "href": "https://higginsd.com/"
+          }
         },
         {
           "period": "Jan 2026 – Present",
@@ -132,7 +146,10 @@
             "Lead the creative direction and digital commerce strategy for a sport and lifestyle apparel brand, overseeing brand identity, product presentation, website experience, and campaign assets.",
             "Designed and developed the brand's e-commerce platform, connecting product discovery, merchandising, and checkout in one cohesive experience."
           ],
-          "link": { "label": "Lakeside Sport Club case study", "href": "/projects/lakeside-sport-club" }
+          "link": {
+            "label": "Lakeside Sport Club case study",
+            "href": "/projects/lakeside-sport-club"
+          }
         }
       ]
     },
@@ -152,7 +169,10 @@
             "Plan and deliver weekly Bible studies focused on faith, discipline, brotherhood, and personal growth.",
             "Built a semester-long scripture plan and the Chaplain Platform that keeps weekly studies and chapter resources in one place."
           ],
-          "link": { "label": "Chaplain Platform", "href": "/projects/chaplain-platform" }
+          "link": {
+            "label": "Chaplain Platform",
+            "href": "/projects/chaplain-platform"
+          }
         },
         {
           "period": "Began Jan 2026 · Former office",
@@ -228,16 +248,85 @@
   ],
   "skills": {
     "rule": "Skills are shown through the work that used them, not proficiency percentages.",
-    "programming": ["Python", "SQL", "TypeScript", "JavaScript", "R", "Java"],
-    "dataAndML": ["pandas", "NumPy", "Matplotlib", "scikit-learn", "Random Forests", "XGBoost", "regression", "feature engineering", "statistical modeling"],
-    "analytics": ["Power BI", "DAX", "Zoho Analytics", "Excel", "Google Analytics", "data modeling", "ETL", "KPI reporting", "data governance"],
-    "ai": ["RAG systems", "LLM workflows", "agentic systems", "context retrieval", "workflow automation", "Claude API", "Gemini API"],
-    "web": ["Next.js", "React", "Tailwind CSS", "FastAPI", "REST APIs", "Three.js", "GSAP", "Framer Motion"],
-    "cloudAndData": ["Amazon S3", "AWS SageMaker", "SQL Server", "PostgreSQL", "Supabase", "Vercel", "Netlify", "Railway", "Cloudflare"],
-    "tools": ["Git", "GitHub", "GitHub Actions", "VS Code", "Salesforce", "Zoho CRM", "Zoho Creator", "Stripe"]
+    "programming": [
+      "Python",
+      "SQL",
+      "TypeScript",
+      "JavaScript",
+      "R",
+      "Java"
+    ],
+    "dataAndML": [
+      "pandas",
+      "NumPy",
+      "Matplotlib",
+      "scikit-learn",
+      "Random Forests",
+      "XGBoost",
+      "regression",
+      "feature engineering",
+      "statistical modeling"
+    ],
+    "analytics": [
+      "Power BI",
+      "DAX",
+      "Zoho Analytics",
+      "Excel",
+      "Google Analytics",
+      "data modeling",
+      "ETL",
+      "KPI reporting",
+      "data governance"
+    ],
+    "ai": [
+      "RAG systems",
+      "LLM workflows",
+      "agentic systems",
+      "context retrieval",
+      "workflow automation",
+      "Claude API",
+      "Gemini API"
+    ],
+    "web": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "FastAPI",
+      "REST APIs",
+      "Three.js",
+      "GSAP",
+      "Framer Motion"
+    ],
+    "cloudAndData": [
+      "Amazon S3",
+      "AWS SageMaker",
+      "SQL Server",
+      "PostgreSQL",
+      "Supabase",
+      "Vercel",
+      "Netlify",
+      "Railway",
+      "Cloudflare"
+    ],
+    "tools": [
+      "Git",
+      "GitHub",
+      "GitHub Actions",
+      "VS Code",
+      "Salesforce",
+      "Zoho CRM",
+      "Zoho Creator",
+      "Stripe"
+    ]
   },
   "careerDirection": {
-    "targets": ["Data Analyst", "Data Scientist", "Software Engineer", "AI Engineer", "Web Developer"],
+    "targets": [
+      "Data Analyst",
+      "Data Scientist",
+      "Software Engineer",
+      "AI Engineer",
+      "Web Developer"
+    ],
     "summary": "Open to early-career data, software, and AI roles aligned with his experience. Graduate study in data science or business analytics is a stated future goal, not an earned credential."
   },
   "contact": {
@@ -251,17 +340,106 @@
     "instagram": "https://instagram.com/daviscoded"
   },
   "aliases": [
-    { "name": "Propify", "meaning": "The original name of Contender. Dated writing keeps the old name; the current product is Contender at contender.davishiggins.com." },
-    { "name": "Davis Intelligence", "meaning": "This public portfolio assistant. The older portfolio project card with this name is now listed as AI Workflow System (ai.davishiggins.com)." },
-    { "name": "DH Portfolio", "meaning": "This conversational portfolio at portfolio.davishiggins.com." },
-    { "name": "DavisHiggins/Portfolio repository", "meaning": "A public showcase repository for the main davishiggins.com site, not this portfolio's application source." }
+    {
+      "name": "Propify",
+      "meaning": "The original name of Contender. Dated writing keeps the old name; the current product is Contender at contender.davishiggins.com."
+    },
+    {
+      "name": "Davis Intelligence",
+      "meaning": "This public portfolio assistant. The older portfolio project card with this name is now listed as AI Workflow System (ai.davishiggins.com)."
+    },
+    {
+      "name": "DH Portfolio",
+      "meaning": "This conversational portfolio at portfolio.davishiggins.com."
+    },
+    {
+      "name": "DavisHiggins/Portfolio repository",
+      "meaning": "A public showcase repository for the main davishiggins.com site, not this portfolio's application source."
+    }
   ],
   "siteGuide": [
-    { "label": "Projects gallery", "href": "/projects", "about": "All 24 projects with filters and individual case studies at /projects/<slug>." },
-    { "label": "Writing", "href": "/writing", "about": "Sixteen professional and career notes reproduced from Curated Notes. Writing replaced the old Impact page." },
-    { "label": "Resume PDF", "href": "/davis-resume.pdf", "about": "The resume is a direct PDF link from the document icon in the header. There is no separate resume page." },
-    { "label": "Experience", "href": "/experience", "about": "Roles and responsibilities. Skills are shown within experience and project case studies; the old Skills page was removed." },
-    { "label": "Education", "href": "/education", "about": "UNC Charlotte and Catawba Valley Community College, plus honors." },
-    { "label": "Contact", "href": "/contact", "about": "Email, LinkedIn, GitHub, and other direct links." }
+    {
+      "label": "Projects gallery",
+      "href": "/projects",
+      "about": "All 24 projects with filters and individual case studies at /projects/<slug>."
+    },
+    {
+      "label": "Writing",
+      "href": "/writing",
+      "about": "Sixteen professional and career notes reproduced from Curated Notes. Writing replaced the old Impact page."
+    },
+    {
+      "label": "Resume PDF",
+      "href": "/davis-resume.pdf",
+      "about": "The resume is a direct PDF link from the document icon in the header. There is no separate resume page."
+    },
+    {
+      "label": "Experience",
+      "href": "/experience",
+      "about": "Roles and responsibilities. Skills are shown within experience and project case studies; the old Skills page was removed."
+    },
+    {
+      "label": "Education",
+      "href": "/education",
+      "about": "UNC Charlotte and Catawba Valley Community College, plus honors."
+    },
+    {
+      "label": "Contact",
+      "href": "/contact",
+      "about": "Email, LinkedIn, GitHub, and other direct links."
+    }
+  ],
+  "assistantGuides": [
+    {
+      "id": "class-standing",
+      "keywords": [
+        "junior",
+        "senior",
+        "sophomore",
+        "freshman",
+        "year",
+        "class",
+        "standing",
+        "age",
+        "old"
+      ],
+      "text": "The portfolio does not state a class standing or age. State the facts instead: Davis started at UNC Charlotte in August 2024 after dual enrollment at Catawba Valley Community College and expects to graduate in May 2027, so the 2026-27 academic year is his final year. Older notes that mention being a junior or a specific age are dated writing."
+    },
+    {
+      "id": "full-stack",
+      "keywords": [
+        "full-stack",
+        "fullstack",
+        "full",
+        "stack",
+        "backend",
+        "frontend",
+        "end-to-end",
+        "engineering",
+        "software",
+        "developer",
+        "apis"
+      ],
+      "text": "Projects that best show full-stack work (data or backend through a production web interface), all built by Davis unless noted: Contender (/projects/contender): FastAPI analysis service, NBA ingestion into Supabase Postgres, background jobs, Next.js and TypeScript product, Clerk and Stripe. Flowcast (/projects/flowcast): data pipeline, SageMaker training, serverless inference API, and a Next.js and MapLibre product. DHLM (/projects/dhlm): Next.js workspace with source routing, Google Workspace integrations, Supabase, and confirmed actions. Y NOT? (/projects/y-not) and Lakeside Sport Club (/projects/lakeside-sport-club): storefronts with server-side pricing, Stripe checkout, and order and inventory workflows. CrownCode AI (/projects/crowncode-ai): Next.js app with a server-side Claude integration. SecondChance (/projects/secondchance): Davis built the Next.js web application for a four-person team project."
+    },
+    {
+      "id": "ml-data",
+      "keywords": [
+        "machine",
+        "learning",
+        "ml",
+        "model",
+        "models",
+        "data",
+        "science",
+        "analytics",
+        "statistics",
+        "statistical",
+        "forecast",
+        "prediction",
+        "dashboards"
+      ],
+      "text": "Machine-learning and data work: Flowcast (XGBoost demand forecasting on AWS SageMaker), Contender (rules projection blended with a Random Forest, Ridge fallback), SecondChance (team LightGBM models; Davis built the web app), the Kewaunee analytics suite (Power BI and Zoho Analytics dashboards, DAX, data quality), the NYPD crime analysis (chi-square testing and logistic regression), the Census team paper (correlation, ANOVA, chi-square), and ProspectIQ (data normalization, enrichment, and scoring pipeline)."
+    }
   ]
 }

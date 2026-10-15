@@ -62,7 +62,8 @@ function renderInline(text: string, onNavigate?: () => void): ReactNode[] {
     last = index + match[0].length
     const [, mdLabel, mdHref, bareUrl, bareDomain, localPath, bold] = match
     if (bold) {
-      out.push(<strong key={key++}>{bold}</strong>)
+      // Bold may wrap a link (**[Label](/path)**), so render its content too.
+      out.push(<strong key={key++}>{renderInline(bold, onNavigate)}</strong>)
       continue
     }
     const target = mdHref ?? bareUrl ?? bareDomain ?? localPath ?? ''

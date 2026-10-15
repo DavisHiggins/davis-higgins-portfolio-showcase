@@ -113,7 +113,7 @@
   padding: 12px 14px 6px; border-top: 1px solid #e5e7eb; background: #fff;
 }
 .di-input-row textarea {
-  flex: 1; max-height: 96px; resize: none; overflow-y: auto;
+  flex: 1; max-height: 96px; resize: none; overflow-y: hidden;
   border: 1px solid #d1d5db; border-radius: 8px; padding: 8px 12px;
   color: #1a1a1a; background: #fff; font: inherit; font-size: 14px; line-height: 1.5;
   transition: border-color 0.15s ease;

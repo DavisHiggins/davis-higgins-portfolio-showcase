@@ -2,15 +2,34 @@
   "slug": "y-not",
   "title": "Y NOT?",
   "sortOrder": 10,
-  "categories": ["web-commerce"],
+  "categories": [
+    "web-commerce"
+  ],
   "status": "Live public site",
   "summary": "A streetwear storefront built around drops, colorways, and inventory that can't be oversold.",
   "tagline": "A storefront and commerce platform for an independent streetwear label, where every colorway has its own photography and stock is held for a shopper during checkout.",
   "role": "Developed the label's web brand system and designed and built the storefront and commerce platform.",
-  "stack": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "Stripe", "GSAP", "Vercel"],
+  "stack": [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Supabase",
+    "Stripe",
+    "GSAP",
+    "Vercel"
+  ],
   "links": [
-    { "label": "Live website", "href": "https://ynot.lifestyle", "kind": "website" },
-    { "label": "GitHub showcase", "href": "https://github.com/DavisHiggins/Y-NOT", "kind": "showcase" }
+    {
+      "label": "Live website",
+      "href": "https://ynot.lifestyle",
+      "kind": "website"
+    },
+    {
+      "label": "GitHub showcase",
+      "href": "https://github.com/DavisHiggins/Y-NOT",
+      "kind": "showcase"
+    }
   ],
   "metrics": [],
   "problem": [
@@ -30,12 +49,27 @@
   ],
   "architecture": {
     "summary": "Stock is held for the shopper during checkout and settled when payment completes.",
-    "flow": ["Cart", "Y NOT? commerce platform (Supabase)", "Stock held for the shopper", "Secure hosted checkout (Stripe)", "Order confirmed · stock committed or released"]
+    "flow": [
+      "Cart",
+      "Y NOT? commerce platform (Supabase)",
+      "Stock held for the shopper",
+      "Secure hosted checkout (Stripe)",
+      "Order confirmed · stock committed or released"
+    ]
   },
   "decisions": [
-    { "title": "The store sets every price.", "text": "Prices, sale prices, and shipping thresholds are decided on the server, so a modified cart cannot change what someone pays." },
-    { "title": "No two shoppers get the last item.", "text": "Inventory is held during checkout and released automatically if the shopper doesn't finish." },
-    { "title": "Record every order exactly once.", "text": "Payment updates that arrive twice or out of order still produce a single, correct order." }
+    {
+      "title": "The store sets every price.",
+      "text": "Prices, sale prices, and shipping thresholds are decided on the server, so a modified cart cannot change what someone pays."
+    },
+    {
+      "title": "No two shoppers get the last item.",
+      "text": "Inventory is held during checkout and released automatically if the shopper doesn't finish."
+    },
+    {
+      "title": "Record every order exactly once.",
+      "text": "Payment updates that arrive twice or out of order still produce a single, correct order."
+    }
   ],
   "outcomes": [
     "The storefront is live at ynot.lifestyle with the current catalog, colorway galleries, and a complete checkout path."
@@ -45,7 +79,20 @@
   ],
   "lessons": "Brand presentation and dependable commerce behavior have to be designed together.",
   "relatedNotes": [],
-  "related": ["lakeside-sport-club", "one-chaptr", "touch-up-solutions"],
-  "media": { "cover": "y-not-cover", "hero": "y-not-cover", "detail": "y-not-detail" },
-  "sources": ["https://ynot.lifestyle", "reference/readmes/Y-NOT.md", "source-review/ynot"]
+  "related": [
+    "lakeside-sport-club",
+    "one-chaptr",
+    "touch-up-solutions"
+  ],
+  "media": {
+    "cover": "y-not-cover",
+    "hero": "y-not-cover",
+    "detail": "y-not-detail"
+  },
+  "sources": [
+    "https://ynot.lifestyle",
+    "reference/readmes/Y-NOT.md",
+    "source-review/ynot"
+  ],
+  "assistantNote": "ynotbrand.co is a possible newer domain for Y NOT?. In an October 15, 2026 check it returned an error (HTTP 502), so the migration is not confirmed; the verified live store is https://ynot.lifestyle. Y NOT? is unrelated to wy_not_pics."
 }

@@ -1,0 +1,10 @@
+handoff
+media-src
+.verify
+test-results
+playwright-report
+dist
+dist-ssr
+node_modules
+tests
+docs

@@ -351,6 +351,10 @@ for (const employer of profile.experience) {
   })
 }
 
+for (const guide of profile.assistantGuides ?? []) {
+  chunks.push({ id: `guide-${guide.id}`, title: `Guide: ${guide.id.replace(/-/g, ' ')}`, keywords: guide.keywords, text: guide.text, links: [{ label: 'Projects', href: '/projects' }] })
+}
+
 chunks.push({
   id: 'education',
   title: 'Education and awards',
@@ -388,7 +392,7 @@ for (const project of projects) {
     id: `project-${project.slug}`,
     title: `${project.title} (project)`,
     slug: project.slug,
-    keywords: [project.title, project.slug, ...project.categories.map(label), ...project.stack, project.status].join(' ').toLowerCase().split(/[^a-z0-9&+.#]+/).filter(Boolean),
+    keywords: [project.title, project.slug, ...project.categories.map(label), ...project.stack, project.status, project.assistantNote ?? ''].join(' ').toLowerCase().split(/[^a-z0-9&+.#]+/).filter(Boolean),
     text: [
       `${project.title} [${project.categories.map(label).join(', ')}; ${project.status}${project.period ? `; ${project.period}` : ''}]: ${project.tagline}`,
       `Davis's role: ${project.role}${project.team ? ` Team: ${project.team}` : ''}`,
@@ -401,6 +405,7 @@ for (const project of projects) {
       project.limits?.length ? `Scope and limits: ${sentence(project.limits)}` : '',
       `Technology: ${project.stack.join(', ')}.`,
       project.links.some((l) => l.kind === 'showcase') ? 'The GitHub link is a public showcase repository, not necessarily the full application source.' : '',
+      project.assistantNote ?? '',
     ].filter(Boolean).join(' '),
     links,
   })

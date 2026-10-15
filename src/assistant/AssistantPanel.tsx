@@ -50,6 +50,8 @@ export default function AssistantPanel() {
     if (!el) return
     el.style.height = 'auto'
     el.style.height = `${Math.min(el.scrollHeight, 96)}px`
+    // Only show a scrollbar once the input reaches its maximum height.
+    el.style.overflowY = el.scrollHeight > 96 ? 'auto' : 'hidden'
   }, [draft])
 
   const submit = (text = draft) => {

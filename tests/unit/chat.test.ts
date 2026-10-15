@@ -87,6 +87,12 @@ describe('retrieval', () => {
     expect(ids('When does Davis graduate and what is his GPA?')).toContain('education')
   })
 
+  it('retrieves maintained guidance for standing, full-stack, and domain questions', () => {
+    expect(ids('Is Davis a junior?')).toContain('guide-class-standing')
+    expect(ids('Which projects show his full-stack skills?')).toContain('guide-full-stack')
+    expect(ids('Is ynotbrand.co live?')).toContain('project-y-not')
+  })
+
   it('keeps follow-up questions on the earlier topic', () => {
     const history: Turn[] = [
       { role: 'user', content: 'Tell me about Flowcast' },

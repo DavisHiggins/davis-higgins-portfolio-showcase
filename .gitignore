@@ -15,3 +15,6 @@ playwright-report
 # regenerable masters (scripts/capture-screens.mjs, scripts/render-designed-media.mjs)
 media-src/screens/*.png
 media-src/designed/*.png
+.vercel
+
+.vercel

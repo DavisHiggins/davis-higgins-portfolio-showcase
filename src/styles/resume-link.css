@@ -1,0 +1,132 @@
+/* Folded-paper resume glyph, adapted from davishiggins.com's `.sb-resume` control
+   (three lines, folded corner, Carolina Blue border) to this header's dark styling. */
+
+.resume-link {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.3rem 0.55rem;
+  border-radius: 12px;
+  color: #cbd5e1;
+  text-decoration: none;
+}
+.resume-link--compact {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+}
+.resume-link__viz {
+  position: relative;
+  display: grid;
+  width: 2.1rem;
+  height: 2.3rem;
+  place-items: center;
+}
+.resume-link--compact .resume-link__viz {
+  width: 1.25rem;
+  height: 1.5rem;
+}
+.resume-link__doc {
+  position: relative;
+  display: block;
+  width: 1.6rem;
+  height: 2rem;
+  overflow: hidden;
+  border: 1px solid rgba(75, 156, 211, 0.82);
+  border-radius: 0.18rem;
+  background: linear-gradient(180deg, #fffffff5, #edf5fbe0);
+  box-shadow: 0 0 0 1px #4b9cd324, 0 0 1rem #4b9cd324;
+  transform-origin: 50% 80%;
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+.resume-link--compact .resume-link__doc {
+  width: 1.05rem;
+  height: 1.35rem;
+}
+.resume-link__fold {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-bottom: 1px solid rgba(75, 156, 211, 0.5);
+  border-left: 1px solid rgba(75, 156, 211, 0.5);
+  background: #edf5fb;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+.resume-link--compact .resume-link__fold {
+  width: 0.34rem;
+  height: 0.34rem;
+}
+.resume-link__line {
+  position: absolute;
+  left: 0.28rem;
+  height: 2px;
+  border-radius: 99rem;
+  background: #4b9cd3;
+}
+.resume-link__line:nth-child(2) { top: 0.68rem; width: 0.9rem; }
+.resume-link__line:nth-child(3) { top: 0.99rem; width: 1.03rem; }
+.resume-link__line:nth-child(4) { top: 1.3rem; width: 0.7rem; }
+.resume-link--compact .resume-link__line { left: 0.18rem; height: 1.5px; }
+.resume-link--compact .resume-link__line:nth-child(2) { top: 0.45rem; width: 0.6rem; }
+.resume-link--compact .resume-link__line:nth-child(3) { top: 0.66rem; width: 0.68rem; }
+.resume-link--compact .resume-link__line:nth-child(4) { top: 0.87rem; width: 0.46rem; }
+.resume-link__label {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.resume-link:hover .resume-link__doc,
+.resume-link:focus-visible .resume-link__doc {
+  border-color: #7dd3fc;
+  transform: translateY(-0.12rem) rotate(-2deg);
+}
+.resume-link:hover,
+.resume-link:focus-visible {
+  color: #fff;
+}
+.resume-link:focus-visible {
+  outline: 2px solid #7dd3fc;
+  outline-offset: 4px;
+}
+.resume-link__tip {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  z-index: 60;
+  transform: translate(-50%, -4px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: #0a1628;
+  padding: 6px 10px;
+  color: #e2e8f0;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 150ms ease, transform 150ms ease;
+}
+.resume-link:hover .resume-link__tip,
+.resume-link:focus-visible .resume-link__tip {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .resume-link__doc,
+  .resume-link__tip { transition: none; }
+  .resume-link:hover .resume-link__doc,
+  .resume-link:focus-visible .resume-link__doc { transform: none; }
+}

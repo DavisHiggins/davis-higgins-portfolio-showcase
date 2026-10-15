@@ -250,7 +250,7 @@ export function Component() {
               <div className="rounded-[2rem] border border-white/10 bg-[#5f7ea4]/95 p-5 shadow-glow">
                 <div className="overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#a8b9d5]">
                   <div className="aspect-[4/5] bg-[#a8b9d5]">
-                    <img src={headshot} alt="Professional headshot of Davis Higgins" width={800} height={1056} {...{ fetchpriority: 'high' }} className="h-full w-full object-cover" />
+                    <img src={headshot} alt="Professional headshot of Davis Higgins" width={800} height={1056} className="h-full w-full object-cover" />
                   </div>
                 </div>
 

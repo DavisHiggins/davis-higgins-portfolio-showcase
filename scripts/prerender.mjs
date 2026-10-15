@@ -37,6 +37,12 @@ function chunkFiles(key, seen = new Set()) {
   return files
 }
 
+const READER_FONTS = fs
+  .readdirSync(path.join(dist, 'assets'))
+  .filter((file) => /^(syne-latin-800-normal|lora-latin-400-normal)-.*\.woff2$/.test(file))
+  .map((file) => `assets/${file}`)
+if (READER_FONTS.length !== 2) throw new Error(`expected 2 reader fonts, found ${READER_FONTS.length}`)
+
 const PAGE_MODULES = [
   [/^\/$/, 'src/pages/Home.tsx'],
   [/^\/experience$/, 'src/pages/Experience.tsx'],
@@ -57,7 +63,11 @@ function preloadsFor(pathname) {
   const note = /^\/writing\/([a-z0-9-]+)$/.exec(pathname)
   if (note) keys.push(Object.keys(manifest).find((k) => k.startsWith(`src/generated/notes/${note[1]}.html`)))
   const files = new Set(keys.filter(Boolean).flatMap((key) => chunkFiles(key)))
-  return [...files].map((file) => `<link rel="modulepreload" crossorigin href="/${file}" />`).join('\n    ')
+  const links = [...files].map((file) => `<link rel="modulepreload" crossorigin href="/${file}" />`)
+  // Note pages: preload the two reader faces that render first (title and body)
+  // to avoid a layout shift when they swap in.
+  if (note) for (const font of READER_FONTS) links.push(`<link rel="preload" as="font" type="font/woff2" crossorigin href="/${font}" />`)
+  return links.join('\n    ')
 }
 
 function outputFile(pathname) {

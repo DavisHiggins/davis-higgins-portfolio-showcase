@@ -54,7 +54,7 @@ export function Component() {
                   }`}
                 >
                   {c ?? 'All'}
-                  <span className={`text-xs tabular-nums ${pressed ? 'text-slate-600' : 'text-slate-500'}`}>{count}</span>
+                  <span className={`text-xs tabular-nums ${pressed ? 'text-slate-600' : 'text-slate-400'}`}>{count}</span>
                 </button>
               )
             })}

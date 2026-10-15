@@ -9,6 +9,7 @@ export function ResponsiveImage({
   image,
   sizes,
   priority = false,
+  eager = false,
   decorative = false,
   className = '',
   fit = 'cover',
@@ -16,6 +17,8 @@ export function ResponsiveImage({
   image: ImageAsset
   sizes: string
   priority?: boolean
+  /** Load immediately without raising fetch priority (e.g. the rest of the first row). */
+  eager?: boolean
   decorative?: boolean
   className?: string
   fit?: 'cover' | 'contain'
@@ -29,7 +32,7 @@ export function ResponsiveImage({
         width={image.width}
         height={image.height}
         alt={decorative ? '' : image.alt}
-        loading={priority ? 'eager' : 'lazy'}
+        loading={priority || eager ? 'eager' : 'lazy'}
         decoding={priority ? 'sync' : 'async'}
         // React 18 does not know fetchPriority; pass it through as a DOM attribute.
         {...{ fetchpriority: priority ? 'high' : 'auto' }}

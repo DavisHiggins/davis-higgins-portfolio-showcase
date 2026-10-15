@@ -23,7 +23,7 @@ function FilterButton({ label, count, pressed, onSelect }: { label: string; coun
       }`}
     >
       {label}
-      <span className={`text-xs tabular-nums ${pressed ? 'text-slate-600' : 'text-slate-500'}`}>{count}</span>
+      <span className={`text-xs tabular-nums ${pressed ? 'text-slate-600' : 'text-slate-400'}`}>{count}</span>
     </button>
   )
 }
@@ -42,7 +42,8 @@ function ProjectCard({ project, index, search }: { project: ProjectIndexItem; in
             <ResponsiveImage
               image={project.cover}
               sizes={CARD_SIZES}
-              priority={index < 3}
+              priority={index === 0}
+              eager={index < 3}
               decorative
               className="h-full w-full transition-transform duration-[250ms] ease-out group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
             />

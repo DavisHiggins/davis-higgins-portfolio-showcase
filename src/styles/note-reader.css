@@ -7,7 +7,10 @@
 
 .reader-shell {
   --reader-text: #f2efe9;
-  --reader-muted: rgba(242, 239, 233, 0.45);
+  /* Source value is 0.45 alpha (about 4:1 on this background). Raised to meet
+     WCAG AA 4.5:1 for the 12-13px metadata and Back text; the only deliberate
+     deviation from the source reader. */
+  --reader-muted: rgba(242, 239, 233, 0.56);
   --reader-dim: rgba(242, 239, 233, 0.2);
   --reader-gold: #c9a84c;
   --reader-gold-bright: #e4c06e;

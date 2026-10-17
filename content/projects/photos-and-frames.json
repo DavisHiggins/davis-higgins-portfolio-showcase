@@ -40,12 +40,10 @@
   "outcomes": [
     "Photos & Frames is live at photos.davishiggins.com as a purpose-built gallery for my photography."
   ],
-  "limits": [
-    "This is a separate project from wy_not_pics, which presents another photographer's work."
-  ],
+  "limits": [],
   "lessons": "Gallery interactions should support attention to the images without making the photographs harder to reach.",
   "relatedNotes": [],
-  "related": ["wy-not-pics", "davishiggins-com", "curated-notes"],
+  "related": ["davishiggins-com", "curated-notes", "phi-delta-theta"],
   "media": { "cover": "photos-and-frames-cover", "hero": "photos-and-frames-hero", "detail": "photos-and-frames-detail" },
   "sources": ["https://photos.davishiggins.com", "reference/readmes/Photos-and-Frames.md"]
 }

@@ -47,6 +47,4 @@ export const PROJECT_LOGOS: Record<string, { src: string; wide?: boolean }> = {
   'kewaunee-analytics': { src: kewaunee },
   'lakeside-sport-club': { src: lakeside },
   'higgins-building-group': { src: hbg },
-  'chaplain-platform': { src: pdt },
-  'one-chaptr': { src: oneChaptr },
 }

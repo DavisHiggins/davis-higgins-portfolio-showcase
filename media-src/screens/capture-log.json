@@ -190,5 +190,21 @@
     "status": 200,
     "finalUrl": "https://www.ynot.lifestyle/products/flame-script-hoodie",
     "file": "media-src/screens/ynot-product.png"
+  },
+  {
+    "id": "higgins-digital-home",
+    "url": "https://higginsd.com/",
+    "capturedAt": "2026-10-17T21:37:00.000Z",
+    "status": 200,
+    "finalUrl": "https://higginsd.com/",
+    "file": "media-src/screens/higgins-digital-home.png"
+  },
+  {
+    "id": "higgins-digital-services",
+    "url": "https://higginsd.com/services",
+    "capturedAt": "2026-10-17T21:37:00.000Z",
+    "status": 200,
+    "finalUrl": "https://higginsd.com/services",
+    "file": "media-src/screens/higgins-digital-services.png"
   }
 ]

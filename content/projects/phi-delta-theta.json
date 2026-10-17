@@ -9,7 +9,7 @@
   "role": "Designed and developed the chapter's public website.",
   "stack": ["Next.js", "TypeScript", "Vercel"],
   "links": [
-    { "label": "Live website", "href": "https://cltphidelt.vercel.app", "kind": "website" }
+    { "label": "Live website", "href": "https://charlottephidelt.com", "kind": "website" }
   ],
   "metrics": [],
   "problem": [
@@ -36,14 +36,14 @@
     { "title": "Don't let media overwhelm navigation.", "text": "Large imagery is balanced with a clear menu and lightweight loading on phones." }
   ],
   "outcomes": [
-    "The chapter has a public home at cltphidelt.vercel.app that presents its community and makes it easy to learn more or reach out."
+    "The chapter has a public home at charlottephidelt.com that presents its community and makes it easy to learn more or reach out."
   ],
   "limits": [
-    "This is the chapter's main public site, separate from the Chaplain Platform. It is a chapter website, not a national fraternity platform, and officer listings change over time on the live site."
+    "This is the chapter's main public site. It is a chapter website, not a national fraternity platform, and officer listings change over time on the live site."
   ],
   "lessons": "A community website should organize real identity and information without letting media overwhelm navigation.",
   "relatedNotes": [],
-  "related": ["chaplain-platform", "photos-and-frames", "wy-not-pics"],
+  "related": ["photos-and-frames", "curated-notes", "davishiggins-com"],
   "media": { "cover": "phi-delta-theta-cover", "hero": "phi-delta-theta-hero", "detail": "phi-delta-theta-detail" },
   "sources": ["https://cltphidelt.vercel.app", "Vercel deployment metadata: cltphidelt → DavisHiggins/nc-epsilon"]
 }

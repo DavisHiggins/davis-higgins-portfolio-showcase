@@ -60,7 +60,7 @@
   ],
   "lessons": "Durable project memory is a retrieval and workflow-design problem, not a reason to put an entire archive into every prompt.",
   "relatedNotes": ["building-cade", "ai-workflow-system"],
-  "related": ["dhlm", "ai-workflow-system", "dh-portfolio"],
+  "related": ["dhlm", "ai-workflow-system", "contender"],
   "media": { "cover": "cade-cover", "hero": "cade-hero", "detail": "cade-detail" },
   "sources": ["public/davis-resume.pdf", "https://cade.davishiggins.com", "source-review/cade/README.md", "Existing portfolio Cade deep dive"]
 }

@@ -47,7 +47,7 @@
   ],
   "lessons": "A commerce experience needs consistent product information and clear fulfillment expectations as much as a strong visual identity.",
   "relatedNotes": [],
-  "related": ["y-not", "higgins-digital", "one-chaptr"],
+  "related": ["higgins-digital", "higgins-building-group", "crowncode-ai"],
   "media": { "cover": "lakeside-sport-club-cover", "hero": "lakeside-sport-club-hero", "detail": "lakeside-sport-club-detail" },
   "sources": ["https://lakesidesportclub.com", "reference/readmes/Lakeside-Sport-Club.md", "Existing portfolio Lakeside entry"]
 }

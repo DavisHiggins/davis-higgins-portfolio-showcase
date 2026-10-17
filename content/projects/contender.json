@@ -21,7 +21,7 @@
   ],
   "problem": [
     "Most prop tools hand you stats, matchup notes, and a confident-looking number, but very few show where a probability came from or how much to trust it. A projection, a historical hit rate, and an estimated probability are three different things, and blending them into one figure hides the evidence a user needs.",
-    "Contender started as Propify, a Streamlit prototype with a hybrid prediction engine. The challenge was turning it into a real product without silently changing what the engine produced."
+    "Contender started as a Streamlit prototype with a hybrid prediction engine. The challenge was turning it into a real product without silently changing what the engine produced."
   ],
   "contribution": [
     "I designed and built the whole platform: the ported analysis engine and typed FastAPI service, the NBA ingestion pipeline, the Next.js interface, saved history, and the account, quota, and billing workflows."
@@ -59,13 +59,13 @@
   ],
   "outcomes": [
     "Contender is live at contender.davishiggins.com with a public NBA product, a methodology page, and a replayed historical analysis that includes a visible miss. The backend source contains more than 580 automated tests, and the September 2026 backfill of two NBA seasons completed 433 ingestion jobs with zero failures.",
-    "The project's original Propify write-up is preserved in Writing as a dated build story."
+    "The project's original build write-up is preserved in Writing as a dated build story."
   ],
   "limits": [
     "NBA is the public product. MLB and NFL work exists on a shared multi-sport foundation but is not a public release. Contender does not promise accuracy, profit, or betting outcomes, and its probabilities are labeled by calibration status."
   ],
   "lessons": "Preserving the evidence behind a result makes an analytics product easier to inspect and improve after both hits and misses.",
-  "relatedNotes": ["propify-breakdown"],
+  "relatedNotes": ["contender-breakdown"],
   "related": ["flowcast", "cade", "dhlm"],
   "media": { "cover": "contender-cover", "hero": "contender-hero", "detail": "contender-detail" },
   "sources": ["public/davis-resume.pdf", "https://contender.davishiggins.com", "source-review/contender/docs/propify-status.md", "source-review/contender/docs/evidence/nba_backfill_2026-09-25.json", "backend test count: 596 test functions at da93df0"]

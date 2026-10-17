@@ -50,7 +50,7 @@
   ],
   "lessons": "Definitions and data quality often decide whether a dashboard can support a real decision.",
   "relatedNotes": ["kewaunee-dashboards", "working-full-time-data-mining"],
-  "related": ["flowcast", "one-chaptr", "census-data-analysis"],
+  "related": ["flowcast", "nypd-crime-data-analysis", "census-data-analysis"],
   "media": { "cover": "kewaunee-analytics-cover", "hero": "kewaunee-analytics-cover", "detail": "kewaunee-analytics-detail" },
   "sources": ["public/davis-resume.pdf", "https://notes.davishiggins.com/notes/kewaunee-dashboards", "Existing portfolio Impact story: Problem-Solving and Commitment to Success"]
 }

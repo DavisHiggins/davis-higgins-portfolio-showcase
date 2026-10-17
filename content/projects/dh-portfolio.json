@@ -1,5 +1,6 @@
 {
   "slug": "dh-portfolio",
+  "published": false,
   "title": "DH Portfolio",
   "sortOrder": 18,
   "categories": ["ai-automation", "web-commerce"],

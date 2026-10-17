@@ -44,7 +44,7 @@
   ],
   "lessons": "Reliable AI-assisted work depends on task definition, context, and review more than on output speed.",
   "relatedNotes": ["ai-workflow-system", "claude-code-course", "ai-literacy"],
-  "related": ["cade", "crowncode-ai", "dh-portfolio"],
+  "related": ["cade", "crowncode-ai", "dhlm"],
   "media": { "cover": "ai-workflow-system-cover", "hero": "ai-workflow-system-cover", "detail": "ai-workflow-system-detail" },
   "sources": ["https://ai.davishiggins.com", "Existing portfolio 'Davis Intelligence' project entry", "davis-higgins-portfolio/src/data/site.ts (Beginner AI curriculum)"]
 }

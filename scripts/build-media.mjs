@@ -121,7 +121,7 @@ fs.writeFileSync(path.join(root, 'content/media-derivatives.json'), JSON.stringi
 const LOGOS = [
   ['src/assets/dhtrans.png', 'dh-mark', 128],
   ['src/assets/kewaunee-logo.png', 'kewaunee', 128],
-  ['src/assets/higgins-digital-logo.png', 'higgins-digital', 192],
+  ['src/assets/higgins-digital-mark.png', 'higgins-digital', 192],
   ['src/assets/experience-pdt-logo.png', 'pdt', 192],
   ['src/assets/experience-hbg-logo-white.png', 'hbg', 192],
   ['src/assets/experience-tus-logo.png', 'tus', 192],
@@ -134,7 +134,7 @@ const LOGOS = [
   ['src/assets/project-contender.png', 'project-contender', 224],
   ['src/assets/project-flowcast.png', 'project-flowcast', 352],
   ['src/assets/project-dhlm.png', 'project-dhlm', 224],
-  ['src/assets/project-higgins-digital.png', 'project-higgins-digital', 224],
+  ['src/assets/higgins-digital-mark.png', 'project-higgins-digital', 224],
   ['src/assets/project-prospectiq.png', 'project-prospectiq', 224],
   ['src/assets/crowncode-logo.png', 'project-crowncode', 224],
   ['src/assets/curated-notes-logo.png', 'project-curated-notes', 224],

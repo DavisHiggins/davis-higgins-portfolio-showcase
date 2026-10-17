@@ -200,13 +200,22 @@
       "provenance": "Supplied by Davis: handoff covers/individualprojectimages/secondchance.webp"
     },
     "higgins-digital-cover": {
-      "source": "media-src/external/higgins-digital-cover.webp",
+      "source": "media-src/supplied/higgins-digital-cover.jpg",
       "kind": "art",
-      "width": 1672,
-      "height": 941,
-      "alt": "Blue Higgins Digital H mark over a dark technical background.",
+      "width": 1536,
+      "height": 1024,
+      "alt": "The blue Higgins Digital H mark inlaid in a white stone tile over a dark blueprint workspace.",
       "position": "50% 50%",
-      "provenance": "Main-site project cover (davishiggins.com work data): source-review/davis-higgins-portfolio/public/davis/higginsdigitalcover2.png (sha256 40f5281b9db93ad4...)"
+      "provenance": "Supplied by Davis on October 17, 2026 as the Higgins Digital project cover."
+    },
+    "higgins-digital-hero": {
+      "source": "media-src/screens/higgins-digital-home.png",
+      "kind": "screen",
+      "width": 2880,
+      "height": 1800,
+      "alt": "The Higgins Digital homepage at higginsd.com: Websites that push businesses forward, over a dark starfield with Work and About buttons.",
+      "position": "50% 40%",
+      "provenance": "Screenshot of https://higginsd.com/ captured October 17, 2026 at 1440x900 (2x); see media-src/screens/capture-log.json."
     },
     "ai-workflow-system-cover": {
       "source": "media-src/external/ai-workflow-system-cover.webp",
@@ -273,14 +282,14 @@
       "provenance": "Higgins Digital asset inventory screenshot: source-review/higgins-digital/ASSET_INVENTORY/wyattpicture.png (sha256 eac7766e120954bb...)"
     },
     "higgins-digital-detail": {
-      "source": "media-src/external/higgins-digital-detail.webp",
+      "source": "media-src/screens/higgins-digital-services.png",
       "kind": "screen",
-      "width": 2032,
-      "height": 1341,
-      "alt": "Higgins Digital homepage headline, High-performance websites for real businesses, with quote and pricing buttons.",
-      "caption": "The Higgins Digital homepage at higginsd.com.",
+      "width": 2880,
+      "height": 1800,
+      "alt": "The Higgins Digital Services page: Websites, platforms, and systems built around your business, with a Start a project button and a numbered list of services.",
+      "caption": "The Services page at higginsd.com.",
       "position": "50% 50%",
-      "provenance": "Main-site asset (screenshot of higginsd.com): source-review/davis-higgins-portfolio/public/davis/higgins-digital-cover.png (sha256 a3ccff3f4774a17a...)"
+      "provenance": "Screenshot of https://higginsd.com/services captured October 17, 2026 at 1440x900 (2x); see media-src/screens/capture-log.json."
     },
     "ai-workflow-system-detail": {
       "source": "media-src/external/ai-workflow-system-detail.webp",

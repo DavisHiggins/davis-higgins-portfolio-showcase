@@ -45,7 +45,7 @@
   ],
   "lessons": "A client redesign starts with the company's actual strengths and the questions its customers need answered.",
   "relatedNotes": ["digital-presence"],
-  "related": ["higgins-digital", "wy-not-pics", "touch-up-solutions"],
+  "related": ["higgins-digital", "lakeside-sport-club", "photos-and-frames"],
   "media": { "cover": "higgins-building-group-cover", "hero": "higgins-building-group-hero", "detail": "higgins-building-group-detail" },
   "sources": ["https://www.higginsbuildinggroup.com", "reference/readmes/Higgins-Building-Group.md", "Existing portfolio HBG entry"]
 }

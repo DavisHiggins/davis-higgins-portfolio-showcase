@@ -48,7 +48,7 @@
   ],
   "lessons": "Good publishing infrastructure gets out of the reader's way and keeps the writing easy to maintain.",
   "relatedNotes": ["building-in-public", "digital-presence"],
-  "related": ["davishiggins-com", "dh-portfolio", "chaplain-platform"],
+  "related": ["davishiggins-com", "photos-and-frames", "phi-delta-theta"],
   "media": { "cover": "curated-notes-cover", "hero": "curated-notes-cover", "detail": "curated-notes-detail" },
   "sources": ["https://notes.davishiggins.com", "source-review/curated-notes @ b0de9c2", "reference/readmes/Curated-Notes.md"]
 }

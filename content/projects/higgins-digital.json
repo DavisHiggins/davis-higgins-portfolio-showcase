@@ -21,8 +21,8 @@
     "I founded Higgins Digital in January 2026 and built its brand, website, service structure, and project presentation. For client work I manage the full lifecycle: requirements, UI and UX design, development, backend logic, deployment, DNS and SSL, and custom domains."
   ],
   "solution": [
-    "I built Higgins Digital like a product rather than a landing page: a navy-and-gold brand system, a clear service structure around websites, custom platforms, redesigns, and integrations, and a work section that shows delivered projects with their before-and-after context.",
-    "The same delivery approach runs through client projects such as the Higgins Building Group rebuild, Lakeside Sport Club, and the wy_not_pics photography site."
+    "I built Higgins Digital like a product rather than a landing page: a black-and-white brand system anchored by the blue H mark, six focused services (custom websites, website transformations, e-commerce and product sites, digital products and platforms, AI, automation, and data systems, and optimization and ongoing care), each with its own detail page, and a Work section of 14 delivered projects.",
+    "The same delivery approach runs through client projects such as the Higgins Building Group rebuild and Lakeside Sport Club."
   ],
   "solutionPoints": [
     "Brand identity, messaging, and a reusable design system.",
@@ -52,6 +52,6 @@
   "lessons": "Showing concrete work and explaining the delivery process builds a clearer service proposition than broad promises.",
   "relatedNotes": ["higgins-digital-building", "personal-branding-career", "digital-presence"],
   "related": ["higgins-building-group", "crowncode-ai", "lakeside-sport-club"],
-  "media": { "cover": "higgins-digital-cover", "hero": "higgins-digital-cover", "detail": "higgins-digital-detail" },
+  "media": { "cover": "higgins-digital-cover", "hero": "higgins-digital-hero", "detail": "higgins-digital-detail" },
   "sources": ["public/davis-resume.pdf", "https://higginsd.com", "Existing portfolio Higgins Digital deep dive"]
 }

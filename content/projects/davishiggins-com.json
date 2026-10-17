@@ -45,7 +45,7 @@
   ],
   "lessons": "A broad project ecosystem becomes easier to understand when identity, content, and destinations share one structure.",
   "relatedNotes": ["building-davishiggins", "digital-presence"],
-  "related": ["dh-portfolio", "curated-notes", "photos-and-frames"],
+  "related": ["curated-notes", "photos-and-frames", "higgins-digital"],
   "media": { "cover": "davishiggins-com-cover", "hero": "davishiggins-com-hero", "detail": "davishiggins-com-detail" },
   "sources": ["https://davishiggins.com", "source-review/davis-higgins-portfolio @ e3d8dde"]
 }

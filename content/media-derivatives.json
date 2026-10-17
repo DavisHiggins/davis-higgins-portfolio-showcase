@@ -1439,73 +1439,75 @@
         {
           "w": 480,
           "src": "/media/higgins-digital-cover/card-480.avif",
-          "bytes": 6763
+          "bytes": 15484
         },
         {
           "w": 720,
           "src": "/media/higgins-digital-cover/card-720.avif",
-          "bytes": 11856
+          "bytes": 29721
         },
         {
           "w": 960,
           "src": "/media/higgins-digital-cover/card-960.avif",
-          "bytes": 16747
+          "bytes": 45686
         }
       ],
       "webp": [
         {
           "w": 480,
           "src": "/media/higgins-digital-cover/card-480.webp",
-          "bytes": 7250
+          "bytes": 24260
         },
         {
           "w": 720,
           "src": "/media/higgins-digital-cover/card-720.webp",
-          "bytes": 12574
+          "bytes": 46440
         },
         {
           "w": 960,
           "src": "/media/higgins-digital-cover/card-960.webp",
-          "bytes": 18466
+          "bytes": 71518
         }
       ]
     },
-    "og": "/media/higgins-digital-cover/og.jpg",
+    "og": "/media/higgins-digital-cover/og.jpg"
+  },
+  "higgins-digital-hero": {
     "hero": {
-      "width": 1672,
-      "height": 941,
+      "width": 1920,
+      "height": 1080,
       "avif": [
         {
           "w": 960,
-          "src": "/media/higgins-digital-cover/hero-960.avif",
-          "bytes": 17272
+          "src": "/media/higgins-digital-hero/hero-960.avif",
+          "bytes": 15865
         },
         {
           "w": 1440,
-          "src": "/media/higgins-digital-cover/hero-1440.avif",
-          "bytes": 29697
+          "src": "/media/higgins-digital-hero/hero-1440.avif",
+          "bytes": 23537
         },
         {
-          "w": 1672,
-          "src": "/media/higgins-digital-cover/hero-1672.avif",
-          "bytes": 36361
+          "w": 1920,
+          "src": "/media/higgins-digital-hero/hero-1920.avif",
+          "bytes": 33234
         }
       ],
       "webp": [
         {
           "w": 960,
-          "src": "/media/higgins-digital-cover/hero-960.webp",
-          "bytes": 20014
+          "src": "/media/higgins-digital-hero/hero-960.webp",
+          "bytes": 23720
         },
         {
           "w": 1440,
-          "src": "/media/higgins-digital-cover/hero-1440.webp",
-          "bytes": 33568
+          "src": "/media/higgins-digital-hero/hero-1440.webp",
+          "bytes": 36928
         },
         {
-          "w": 1672,
-          "src": "/media/higgins-digital-cover/hero-1672.webp",
-          "bytes": 41270
+          "w": 1920,
+          "src": "/media/higgins-digital-hero/hero-1920.webp",
+          "bytes": 50708
         }
       ]
     }
@@ -1513,39 +1515,39 @@
   "higgins-digital-detail": {
     "detail": {
       "width": 1600,
-      "height": 1056,
+      "height": 1000,
       "avif": [
         {
           "w": 800,
           "src": "/media/higgins-digital-detail/detail-800.avif",
-          "bytes": 21421
+          "bytes": 15306
         },
         {
           "w": 1200,
           "src": "/media/higgins-digital-detail/detail-1200.avif",
-          "bytes": 34974
+          "bytes": 23352
         },
         {
           "w": 1600,
           "src": "/media/higgins-digital-detail/detail-1600.avif",
-          "bytes": 48448
+          "bytes": 32622
         }
       ],
       "webp": [
         {
           "w": 800,
           "src": "/media/higgins-digital-detail/detail-800.webp",
-          "bytes": 29558
+          "bytes": 21188
         },
         {
           "w": 1200,
           "src": "/media/higgins-digital-detail/detail-1200.webp",
-          "bytes": 49282
+          "bytes": 33532
         },
         {
           "w": 1600,
           "src": "/media/higgins-digital-detail/detail-1600.webp",
-          "bytes": 66868
+          "bytes": 47042
         }
       ]
     }

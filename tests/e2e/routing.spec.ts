@@ -41,7 +41,7 @@ test.describe('routes', () => {
       const res = await request.get(`/writing/${note.slug}`)
       expect(res.status(), note.slug).toBe(200)
       const html = await res.text()
-      expect(html).toContain(`<link rel="canonical" href="https://notes.davishiggins.com/notes/${note.slug}" />`)
+      expect(html).toContain(`<link rel="canonical" href="${note.sourceUrl}" />`)
       expect(html).toContain('class="reader-prose"')
     }
   })
@@ -63,6 +63,7 @@ test.describe('routes', () => {
       ['/skills', '/experience'],
       ['/resume', '/davis-resume.pdf'],
       ['/docs/davis-resume.pdf', '/davis-resume.pdf'],
+      ['/writing/propify-breakdown', '/writing/contender-breakdown'],
     ]) {
       const res = await request.get(from, { maxRedirects: 0 })
       expect(res.status(), from).toBe(308)

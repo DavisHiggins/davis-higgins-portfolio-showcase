@@ -23,7 +23,7 @@ describe('project filters', () => {
 
   it('counts All as unique projects even with multi-category membership', () => {
     const counts = categoryCounts(projects)
-    expect(counts.all).toBe(24)
+    expect(counts.all).toBe(18)
     const sum = counts['data-ml'] + counts['ai-automation'] + counts['web-commerce'] + counts['software-tools'] + counts['research-community']
     expect(sum).toBeGreaterThan(counts.all)
   })

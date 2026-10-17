@@ -13,8 +13,11 @@ const projectFiles = fs.readdirSync(path.join(root, 'content/projects')).filter(
 const projects = projectFiles.map((f) => JSON.parse(fs.readFileSync(path.join(root, 'content/projects', f), 'utf8')))
 
 describe('project registry', () => {
-  it('publishes all 24 candidates, including the original 15 under their current names', () => {
+  const UNPUBLISHED = ['y-not', 'chaplain-platform', 'touch-up-solutions', 'wy-not-pics', 'dh-portfolio', 'one-chaptr']
+
+  it('keeps 24 candidates, publishes 18, and includes the original 15 under their current names', () => {
     expect(projects).toHaveLength(24)
+    expect(projects.filter((p) => p.published === false).map((p) => p.slug).sort()).toEqual([...UNPUBLISHED].sort())
     const titles = projects.map((p) => p.title)
     const original15 = ['Cade', 'Contender', 'Flowcast', 'DHLM', 'Lakeside Sport Club', 'Executive Sales & Bidding Analytics Suite', 'Higgins Digital', 'CrownCode AI', 'Higgins Building Group', 'AI Workflow System', 'ProspectIQ', 'davishiggins.com', 'Curated Notes', 'NYPD Crime Data Analysis', 'Census Data Analysis']
     for (const title of original15) expect(titles).toContain(title)
@@ -63,8 +66,22 @@ describe('project registry', () => {
     expect(wnp.role).toMatch(/Wyatt Bullock/)
   })
 
+  it('leaves unpublished projects out of every generated output', () => {
+    const published = new Set(projectsIndex.map((p) => p.slug))
+    for (const slug of UNPUBLISHED) {
+      expect(published.has(slug), slug).toBe(false)
+      expect(fs.existsSync(path.join(root, 'src/generated/projects', `${slug}.json`)), slug).toBe(false)
+      expect(routes.some((r) => r.path === `/projects/${slug}`), slug).toBe(false)
+    }
+    for (const p of projects.filter((x) => x.published !== false)) {
+      for (const slug of p.related) expect(published.has(slug), `${p.slug} -> ${slug}`).toBe(true)
+    }
+    const knowledge = fs.readFileSync(path.join(root, 'server/knowledge.generated.js'), 'utf8')
+    for (const slug of UNPUBLISHED) expect(knowledge, slug).not.toContain(`/projects/${slug}`)
+  })
+
   it('projects a light index without case-study bodies or internal fields', () => {
-    expect(projectsIndex).toHaveLength(24)
+    expect(projectsIndex).toHaveLength(18)
     const keys = Object.keys(projectsIndex[0]).sort()
     expect(keys).toEqual(['categories', 'cover', 'slug', 'sortOrder', 'status', 'summary', 'title'])
     const generated = fs.readFileSync(path.join(root, 'src/generated/projects/flowcast.json'), 'utf8')
@@ -108,7 +125,8 @@ describe('notes', () => {
     const sitemap = fs.readFileSync(path.join(root, 'public/sitemap.xml'), 'utf8')
     for (const note of notesIndex) {
       const route = routes.find((r) => r.path === `/writing/${note.slug}`)
-      expect(route?.canonical).toBe(`https://notes.davishiggins.com/notes/${note.slug}`)
+      expect(route?.canonical).toBe(note.sourceUrl)
+      expect(note.sourceUrl).toMatch(/^https:\/\/notes\.davishiggins\.com\/notes\/[a-z0-9-]+$/)
       expect(sitemap).not.toContain(`/writing/${note.slug}`)
     }
     expect(sitemap).toContain('https://portfolio.davishiggins.com/projects/flowcast')

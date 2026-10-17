@@ -45,7 +45,7 @@ test.describe('writing', () => {
     expect(body.family).toContain('Lora')
     expect(body.size).toBe('17px')
     expect(parseFloat(body.lineHeight)).toBeCloseTo(30.26, 1)
-    expect(body.color).toBe('rgba(242, 239, 233, 0.8)')
+    expect(body.color).toBe('rgba(241, 245, 249, 0.8)')
     expect(body.opacity).toBe('1')
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
     expect(overflow).toBe(0)

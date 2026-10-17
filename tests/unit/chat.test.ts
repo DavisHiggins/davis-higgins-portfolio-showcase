@@ -83,14 +83,12 @@ describe('retrieval', () => {
     expect(ids('Did Davis build SecondChance alone?')).toContain('project-secondchance')
     expect(ids('How are Cade and DHLM different?')).toEqual(expect.arrayContaining(['project-cade', 'project-dhlm']))
     expect(ids('Where can I read about his executive dashboards?')).toContain('note-kewaunee-dashboards')
-    expect(ids('Who owns the photos on wy_not_pics?')).toContain('project-wy-not-pics')
     expect(ids('When does Davis graduate and what is his GPA?')).toContain('education')
   })
 
   it('retrieves maintained guidance for standing, full-stack, and domain questions', () => {
     expect(ids('Is Davis a junior?')).toContain('guide-class-standing')
     expect(ids('Which projects show his full-stack skills?')).toContain('guide-full-stack')
-    expect(ids('Is ynotbrand.co live?')).toContain('project-y-not')
   })
 
   it('keeps follow-up questions on the earlier topic', () => {

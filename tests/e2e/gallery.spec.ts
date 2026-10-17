@@ -3,7 +3,7 @@ import { expect, test } from './fixtures'
 test.describe('projects gallery', () => {
   test('filters by category through the URL and keeps keyboard focus', async ({ page }) => {
     await page.goto('/projects')
-    await expect(page.locator('main ul > li')).toHaveCount(24)
+    await expect(page.locator('main ul > li')).toHaveCount(18)
     const data = page.getByRole('button', { name: /^Data & ML/ })
     await data.focus()
     await page.keyboard.press('Enter')
@@ -11,7 +11,7 @@ test.describe('projects gallery', () => {
     await expect(data).toHaveAttribute('aria-pressed', 'true')
     await expect(page.getByRole('button', { name: /^All/ })).toHaveAttribute('aria-pressed', 'false')
     await expect(page.locator('main ul > li')).toHaveCount(7)
-    await expect(page.getByText('7 of 24 projects in Data & ML')).toBeVisible()
+    await expect(page.getByText('7 of 18 projects in Data & ML')).toBeVisible()
     await expect(data).toBeFocused()
   })
 
@@ -20,7 +20,7 @@ test.describe('projects gallery', () => {
     await expect(page.getByRole('button', { name: /^AI & Automation/ })).toHaveAttribute('aria-pressed', 'true')
     const count = await page.locator('main ul > li').count()
     expect(count).toBeGreaterThan(0)
-    expect(count).toBeLessThan(24)
+    expect(count).toBeLessThan(18)
     await page.reload()
     await expect(page.locator('main ul > li')).toHaveCount(count)
   })
@@ -28,23 +28,43 @@ test.describe('projects gallery', () => {
   test('unknown categories fall back to All', async ({ page }) => {
     await page.goto('/projects?category=nonsense')
     await expect(page.getByRole('button', { name: /^All/ })).toHaveAttribute('aria-pressed', 'true')
-    await expect(page.locator('main ul > li')).toHaveCount(24)
+    await expect(page.locator('main ul > li')).toHaveCount(18)
   })
 
-  test('back from a case study restores the filter and scroll position', async ({ page }) => {
+  test('the Projects link from a case study keeps the filter and lands at the top', async ({ page }) => {
     await page.goto('/projects')
     await page.getByRole('button', { name: /^Websites & Commerce/ }).click()
     await expect(page).toHaveURL(/category=web-commerce/)
-    const card = page.getByRole('link', { name: /Touch Up Solutions/ })
+    const card = page.getByRole('link', { name: /Photos & Frames/ })
     await card.scrollIntoViewIfNeeded()
-    const before = await page.evaluate(() => window.scrollY)
-    expect(before).toBeGreaterThan(200)
+    expect(await page.evaluate(() => window.scrollY)).toBeGreaterThan(200)
     await card.click()
-    await expect(page.locator('h1')).toHaveText('Touch Up Solutions')
+    await expect(page.locator('h1')).toHaveText('Photos & Frames')
+    await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0)
     await page.getByRole('navigation', { name: 'Breadcrumb' }).getByRole('link', { name: 'Projects' }).click()
     await expect(page).toHaveURL(/\/projects\?category=web-commerce$/)
     await expect(page.getByRole('button', { name: /^Websites & Commerce/ })).toHaveAttribute('aria-pressed', 'true')
-    await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(before - 80)
+    await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0)
+  })
+
+  test('More projects opens the chosen case study alone, at the top of the page', async ({ page }) => {
+    await page.goto('/projects/flowcast')
+    const more = page.locator('#more a[href^="/projects/"]').first()
+    const href = await more.getAttribute('href')
+    const title = (await more.locator('h3').textContent())!.trim()
+    await more.scrollIntoViewIfNeeded()
+    await more.click()
+    await expect(page).toHaveURL(new RegExp(`${href}$`))
+    await expect(page.locator('main h1')).toHaveCount(1)
+    await expect(page.locator('main h1')).toHaveText(title)
+    await expect(page.locator('main article')).toHaveCount(1)
+    await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0)
+    // And onward again, from the new page.
+    const next = page.locator('#more a[href^="/projects/"]').nth(1)
+    const nextTitle = (await next.locator('h3').textContent())!.trim()
+    await next.click()
+    await expect(page.locator('main h1')).toHaveText(nextTitle)
+    await expect(page.locator('main article')).toHaveCount(1)
   })
 
   test('browser Back steps through filter history', async ({ page }) => {
@@ -77,6 +97,6 @@ test.describe('projects gallery', () => {
     const figure = page.locator('figure').nth(1)
     await expect(figure.locator('figcaption')).toContainText('support queue')
     await page.goto('/projects/prospectiq')
-    await expect(page.getByRole('link', { name: /GitHub/ })).toHaveCount(0)
+    await expect(page.getByRole('main').getByRole('link', { name: /GitHub/ })).toHaveCount(0)
   })
 })

@@ -58,11 +58,7 @@
             "Co-developing a multi-tenant e-commerce storefront platform for One Chaptr Creative in Next.js and TypeScript, so each university and client organization can deliver a distinct branded storefront from one shared codebase.",
             "Designing reusable component schemas and data contracts across a 63-component UI system, with responsive customer-facing routes, accessible interactions, and complete loading, empty, error, and success states.",
             "Creating typed data models, mock providers, and API boundaries that prepare the storefront for a future InkSoft commerce integration."
-          ],
-          "link": {
-            "label": "Storefront platform case study",
-            "href": "/projects/one-chaptr"
-          }
+          ]
         }
       ],
       "assistantNote": "In progress and co-developed. The InkSoft integration is prepared through typed boundaries; it is not a completed live integration."
@@ -170,8 +166,8 @@
             "Built a semester-long scripture plan and the Chaplain Platform that keeps weekly studies and chapter resources in one place."
           ],
           "link": {
-            "label": "Chaplain Platform",
-            "href": "/projects/chaplain-platform"
+            "label": "Chapter Website",
+            "href": "https://charlottephidelt.com"
           }
         },
         {
@@ -342,7 +338,7 @@
   "aliases": [
     {
       "name": "Propify",
-      "meaning": "The original name of Contender. Dated writing keeps the old name; the current product is Contender at contender.davishiggins.com."
+      "meaning": "The original name of Contender. The product and all writing on this site now use the name Contender, at contender.davishiggins.com."
     },
     {
       "name": "Davis Intelligence",
@@ -350,7 +346,7 @@
     },
     {
       "name": "DH Portfolio",
-      "meaning": "This conversational portfolio at portfolio.davishiggins.com."
+      "meaning": "This conversational portfolio at portfolio.davishiggins.com. It does not have its own case study page."
     },
     {
       "name": "DavisHiggins/Portfolio repository",
@@ -361,7 +357,7 @@
     {
       "label": "Projects gallery",
       "href": "/projects",
-      "about": "All 24 projects with filters and individual case studies at /projects/<slug>."
+      "about": "Every published project, with category filters and an individual case study at /projects/<slug>."
     },
     {
       "label": "Writing",
@@ -420,7 +416,7 @@
         "developer",
         "apis"
       ],
-      "text": "Projects that best show full-stack work (data or backend through a production web interface), all built by Davis unless noted: Contender (/projects/contender): FastAPI analysis service, NBA ingestion into Supabase Postgres, background jobs, Next.js and TypeScript product, Clerk and Stripe. Flowcast (/projects/flowcast): data pipeline, SageMaker training, serverless inference API, and a Next.js and MapLibre product. DHLM (/projects/dhlm): Next.js workspace with source routing, Google Workspace integrations, Supabase, and confirmed actions. Y NOT? (/projects/y-not) and Lakeside Sport Club (/projects/lakeside-sport-club): storefronts with server-side pricing, Stripe checkout, and order and inventory workflows. CrownCode AI (/projects/crowncode-ai): Next.js app with a server-side Claude integration. SecondChance (/projects/secondchance): Davis built the Next.js web application for a four-person team project."
+      "text": "Projects that best show full-stack work (data or backend through a production web interface), all built by Davis unless noted: Contender (/projects/contender): FastAPI analysis service, NBA ingestion into Supabase Postgres, background jobs, Next.js and TypeScript product, Clerk and Stripe. Flowcast (/projects/flowcast): data pipeline, SageMaker training, serverless inference API, and a Next.js and MapLibre product. DHLM (/projects/dhlm): Next.js workspace with source routing, Google Workspace integrations, Supabase, and confirmed actions. Lakeside Sport Club (/projects/lakeside-sport-club): a storefront with server-side pricing, Stripe checkout, and order and inventory workflows. CrownCode AI (/projects/crowncode-ai): Next.js app with a server-side Claude integration. SecondChance (/projects/secondchance): Davis built the Next.js web application for a four-person team project."
     },
     {
       "id": "ml-data",

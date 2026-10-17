@@ -13,6 +13,7 @@
     { "source": "/skills-proof", "destination": "/writing", "permanent": true },
     { "source": "/skills", "destination": "/experience", "permanent": true },
     { "source": "/resume", "destination": "/davis-resume.pdf", "permanent": true },
+    { "source": "/writing/propify-breakdown", "destination": "/writing/contender-breakdown", "permanent": true },
     { "source": "/docs/davis-resume.pdf", "destination": "/davis-resume.pdf", "permanent": true },
     { "source": "/assistant.js", "destination": "/", "permanent": false },
     { "source": "/assistant.css", "destination": "/", "permanent": false }

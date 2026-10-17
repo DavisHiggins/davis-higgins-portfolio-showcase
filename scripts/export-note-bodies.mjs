@@ -13,15 +13,17 @@ const out = path.join(root, '.verify/note-bodies')
 fs.rmSync(out, { recursive: true, force: true })
 fs.mkdirSync(out, { recursive: true })
 
-const OPEN = '<div class="reader-prose">'
+// The reader body opens with <div class="reader-prose" ...attributes>.
+const OPEN = /<div class="reader-prose"[^>]*>/
 let count = 0
 for (const file of fs.readdirSync(dir).filter((f) => f.endsWith('.html'))) {
   const html = fs.readFileSync(path.join(dir, file), 'utf8')
-  const start = html.indexOf(OPEN)
-  if (start === -1) throw new Error(`${file}: reader body not found`)
+  const open = OPEN.exec(html)
+  if (!open) throw new Error(`${file}: reader body not found`)
+  const start = open.index + open[0].length
   // The body contains no nested <div>, so the first closing tag ends it.
   const end = html.indexOf('</div>', start)
-  fs.writeFileSync(path.join(out, file.replace(/\.html$/, '.body.html')), html.slice(start + OPEN.length, end))
+  fs.writeFileSync(path.join(out, file.replace(/\.html$/, '.body.html')), html.slice(start, end))
   count++
 }
 console.log(`exported ${count} rendered note bodies to ${path.relative(root, out)}`)

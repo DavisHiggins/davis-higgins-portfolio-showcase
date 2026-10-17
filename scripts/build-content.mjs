@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 // Validates the content registries and generates everything derived from them:
 //
+// Projects marked `"published": false` stay in content/projects (validated, ready to
+// restore) but are left out of every generated output: gallery, case-study files,
+// routes, sitemap, related lists, and assistant knowledge.
+//
 //   src/generated/projects-index.json      light gallery index (shipped with /projects)
 //   src/generated/projects/<slug>.json     one case study per file (loaded by route)
 //   src/generated/notes-index.json         the 16 included notes' original metadata
@@ -116,7 +120,7 @@ const notesIndex = includedNotes.map((note) => {
   const html = fs.readFileSync(path.join(root, bodyFile), 'utf8')
   validateNoteHtml(note.slug, html)
   write(`src/generated/notes/${note.slug}.html`, html)
-  if (note.sourceUrl !== `${NOTES_SITE}/notes/${note.slug}`) fail(`note ${note.slug}: unexpected source URL`)
+  if (note.sourceUrl !== `${NOTES_SITE}/notes/${note.sourceSlug ?? note.slug}`) fail(`note ${note.slug}: unexpected source URL`)
   return {
     slug: note.slug,
     title: note.title,
@@ -134,18 +138,19 @@ const noteBySlug = new Map(notesIndex.map((n) => [n.slug, n]))
 // Projects
 // ---------------------------------------------------------------------------
 const projectFiles = fs.readdirSync(path.join(root, 'content/projects')).filter((f) => f.endsWith('.json'))
-const projects = projectFiles.map((file) => ({ file, ...read(`content/projects/${file}`) }))
-const slugs = new Set()
+const allProjects = projectFiles.map((file) => ({ file, ...read(`content/projects/${file}`) }))
+const allSlugs = new Set()
 const orders = new Set()
 
 const REQUIRED = ['slug', 'title', 'sortOrder', 'categories', 'status', 'summary', 'tagline', 'role', 'stack', 'links', 'problem', 'contribution', 'solution', 'architecture', 'decisions', 'outcomes', 'lessons', 'related', 'media']
-for (const project of projects) {
+for (const project of allProjects) {
   const ctx = `project ${project.file}`
   for (const key of REQUIRED) if (project[key] === undefined) fail(`${ctx}: missing ${key}`)
   if (`${project.slug}.json` !== project.file) fail(`${ctx}: slug does not match file name`)
   if (!/^[a-z0-9-]+$/.test(project.slug)) fail(`${ctx}: invalid slug`)
-  if (slugs.has(project.slug)) fail(`${ctx}: duplicate slug`)
-  slugs.add(project.slug)
+  if (allSlugs.has(project.slug)) fail(`${ctx}: duplicate slug`)
+  allSlugs.add(project.slug)
+  if (project.published !== undefined && typeof project.published !== 'boolean') fail(`${ctx}: published must be a boolean`)
   if (orders.has(project.sortOrder)) fail(`${ctx}: duplicate sortOrder`)
   orders.add(project.sortOrder)
   if (!project.categories?.length || project.categories.some((c) => !CATEGORY_IDS.has(c))) fail(`${ctx}: invalid categories`)
@@ -161,12 +166,16 @@ for (const project of projects) {
   const copy = JSON.stringify({ ...project, sources: undefined })
   for (const pattern of FORBIDDEN_COPY) if (pattern.test(copy)) fail(`${ctx}: copy matches forbidden pattern ${pattern}`)
 }
+const projects = allProjects.filter((p) => p.published !== false)
+const slugs = new Set(projects.map((p) => p.slug))
+const unpublished = allProjects.filter((p) => p.published === false).map((p) => p.slug)
 for (const project of projects) {
   for (const slug of project.related ?? []) {
-    if (!slugs.has(slug) || slug === project.slug) fail(`project ${project.slug}: invalid related project ${slug}`)
+    if (!slugs.has(slug) || slug === project.slug) fail(`project ${project.slug}: invalid or unpublished related project ${slug}`)
   }
+  if (project.related?.length !== 3) fail(`project ${project.slug}: needs exactly 3 related projects`)
 }
-if (projects.length !== 24) fail(`projects: expected 24 published projects, found ${projects.length}`)
+if (projects.length !== 18) fail(`projects: expected 18 published projects, found ${projects.length}`)
 projects.sort((a, b) => a.sortOrder - b.sortOrder)
 const bySlug = new Map(projects.map((p) => [p.slug, p]))
 
@@ -232,6 +241,13 @@ for (const [dir, valid] of [['src/generated/projects', slugs], ['src/generated/n
 // Profile
 // ---------------------------------------------------------------------------
 const profile = read('content/profile.json')
+// No profile link or assistant text may point at a project page that is not published.
+{
+  const profileText = JSON.stringify(profile)
+  for (const match of profileText.matchAll(/\/projects\/([a-z0-9-]+)/g)) {
+    if (!slugs.has(match[1])) fail(`profile: links to unpublished or unknown project /projects/${match[1]}`)
+  }
+}
 const publicProfile = {
   reviewedAt: profile.reviewedAt,
   identity: { name: profile.identity.name, location: profile.identity.location, headline: profile.identity.headline },
@@ -252,7 +268,7 @@ const DEFAULT_IMAGE = '/og-default.jpg'
 const routes = [
   { path: '/', kind: 'page', title: 'Davis Higgins | Data, AI, and Software Portfolio', description: 'Davis Higgins builds analytics dashboards, machine-learning products, AI systems, and websites. Data Science at UNC Charlotte, Software Engineer at One Chaptr Group, Data Analyst at Kewaunee Scientific.' },
   { path: '/experience', kind: 'page', title: 'Experience | Davis Higgins', description: 'Software engineering at One Chaptr Group, data analytics at Kewaunee Scientific, and founding Higgins Digital, plus earlier roles and leadership.' },
-  { path: '/projects', kind: 'page', title: 'Projects | Davis Higgins', description: 'Selected work across data, AI, software, and the web: 24 projects with individual case studies.' },
+  { path: '/projects', kind: 'page', title: 'Projects | Davis Higgins', description: `Selected work across data, AI, software, and the web: ${projects.length} projects with individual case studies.` },
   { path: '/education', kind: 'page', title: 'Education | Davis Higgins', description: 'B.S. in Data Science with a minor in Artificial Intelligence at UNC Charlotte, expected May 2027, plus honors and awards.' },
   { path: '/writing', kind: 'page', title: 'Writing | Davis Higgins', description: 'Notes on building products, working with data, and growing through the work.' },
   { path: '/contact', kind: 'page', title: 'Contact | Davis Higgins', description: 'Email, LinkedIn, GitHub, and other direct ways to reach Davis Higgins.' },
@@ -416,7 +432,8 @@ for (const note of notesIndex) {
     id: `note-${note.slug}`,
     title: `${note.title} (professional note)`,
     keywords: [note.title, note.slug, note.category, 'note', 'notes', 'writing', 'article', 'read', 'wrote'].join(' ').toLowerCase().split(/[^a-z0-9&+.]+/).filter(Boolean),
-    text: `Professional note "${note.title}" (${note.category}, ${note.dateLabel}, ${note.readTime}). Excerpt: ${note.excerpt} Read it on this portfolio at /writing/${note.slug}; the original is at ${note.sourceUrl}. Notes are dated writing; their historical details (such as the Propify name, class standing, or age) are not the current profile.`,
+    // A renamed note (sourceSlug) differs from its Curated Notes original, so only the portfolio copy is offered.
+    text: `Professional note "${note.title}" (${note.category}, ${note.dateLabel}, ${note.readTime}). Excerpt: ${note.excerpt} Read it on this portfolio at /writing/${note.slug}${note.sourceUrl.endsWith(`/${note.slug}`) ? `; the original is at ${note.sourceUrl}` : ''}. Notes are dated writing; their historical details (such as class standing or age) are not the current profile.`,
     links: [{ label: note.title, href: `/writing/${note.slug}` }],
   })
 }
@@ -432,6 +449,10 @@ chunks.push({
     { label: 'Curated Notes', href: NOTES_SITE },
   ],
 })
+
+for (const match of JSON.stringify(chunks).matchAll(/\/projects\/([a-z0-9-]+)/g)) {
+  if (!slugs.has(match[1])) fail(`assistant knowledge: links to unpublished or unknown project /projects/${match[1]}`)
+}
 
 const knowledge = {
   reviewedAt: profile.reviewedAt,
@@ -456,4 +477,4 @@ if (errors.length) {
   console.error(`Content validation failed (${errors.length}):\n- ${errors.join('\n- ')}`)
   process.exit(1)
 }
-console.log(`content: ${projects.length} projects, ${notesIndex.length} notes, ${routes.length} routes, ${chunks.length} knowledge chunks`)
+console.log(`content: ${projects.length} projects (${unpublished.length} unpublished), ${notesIndex.length} notes, ${routes.length} routes, ${chunks.length} knowledge chunks`)

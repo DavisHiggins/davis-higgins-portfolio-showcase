@@ -19,11 +19,11 @@ const SECTIONS = profile.experience.map((employer) => ({
 function RoleBlock({ role }: { role: Role }) {
   const internal = role.link?.href.startsWith('/')
   return (
-    <div>
+    <div data-reveal-children>
       <div className="text-xs font-medium uppercase tracking-[0.18em] text-sky-300 sm:text-sm">{role.period}</div>
       <h3 className="mt-2 break-words text-xl font-semibold leading-tight text-white sm:mt-3 sm:text-2xl">{role.title}</h3>
       {role.detail ? <div className="mt-1 text-xs text-slate-400 sm:text-sm">{role.detail}</div> : null}
-      <ul className="mt-5 space-y-3 text-sm leading-7 text-slate-300 sm:mt-6">
+      <ul data-reveal-children className="mt-5 space-y-3 text-sm leading-7 text-slate-300 sm:mt-6">
         {role.bullets.map((bullet) => (
           <Bullet key={bullet}>{bullet}</Bullet>
         ))}
@@ -75,7 +75,7 @@ export function Component() {
                   <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(8,17,31,0.18),rgba(8,17,31,0.88))]" aria-hidden="true" />
                   <div className="relative">
                     <div className="relative flex min-h-[3.5rem] items-start justify-between gap-4">
-                      <div className="min-w-0 flex-1 pr-24 sm:pr-28">
+                      <div data-reveal-children className="min-w-0 flex-1 pr-24 sm:pr-28">
                         <h2 id={`exp-title-${employer.id}`} className="break-words text-xl font-semibold leading-tight text-white sm:text-2xl">
                           {employer.website ? (
                             <a href={employer.website} target="_blank" rel="noopener noreferrer" className="transition hover:text-sky-300">

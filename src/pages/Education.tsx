@@ -28,7 +28,7 @@ export function Component() {
 
           <div className="space-y-10">
             <section aria-labelledby="edu-academic-background">
-              <h2 id="edu-academic-background" className="scroll-mt-28 text-2xl font-semibold text-white">
+              <h2 id="edu-academic-background" data-reveal className="scroll-mt-28 text-2xl font-semibold text-white">
                 Academic Background
               </h2>
               <div className="mt-6 space-y-6">
@@ -44,7 +44,7 @@ export function Component() {
                         style={{ filter: 'brightness(0) saturate(100%) invert(74%) sepia(22%) saturate(1185%) hue-rotate(180deg) brightness(101%) contrast(101%)' }}
                       />
                     </div>
-                    <div className="min-w-0 flex-1">
+                    <div data-reveal-children className="min-w-0 flex-1">
                       <h3 className="break-words text-xl font-semibold leading-tight text-white sm:text-2xl">{uncc.institution}</h3>
                       <p className="mt-3 text-sm text-slate-400">
                         {uncc.degree} • Minor in {uncc.minor} • {uncc.period}
@@ -73,7 +73,7 @@ export function Component() {
                         style={{ filter: 'hue-rotate(192deg) saturate(135%) brightness(1.18) contrast(1.08) drop-shadow(0 0 2px rgba(125, 211, 252, 0.12))' }}
                       />
                     </div>
-                    <div className="min-w-0 flex-1">
+                    <div data-reveal-children className="min-w-0 flex-1">
                       <h3 className="break-words text-lg font-semibold leading-tight text-white sm:text-xl">{cvcc.institution}</h3>
                       <p className="mt-3 text-sm text-slate-400">{cvcc.period}</p>
                       <div className="mt-5 flex flex-wrap gap-2">
@@ -90,7 +90,7 @@ export function Component() {
             </section>
 
             <section aria-labelledby="edu-honors">
-              <h2 id="edu-honors" className="mt-16 scroll-mt-28 text-2xl font-semibold text-white">
+              <h2 id="edu-honors" data-reveal className="mt-16 scroll-mt-28 text-2xl font-semibold text-white">
                 Honors
               </h2>
               <div className="mt-6 space-y-5">
@@ -99,7 +99,7 @@ export function Component() {
                     <div className="shrink-0 rounded-2xl border border-sky-300/20 bg-sky-400/10 p-3 text-sky-300 shadow-[0_0_15px_rgba(56,189,248,0.1)]" aria-hidden="true">
                       <Medal className="h-6 w-6 sm:h-8 sm:w-7" />
                     </div>
-                    <div className="min-w-0 flex-1">
+                    <div data-reveal-children className="min-w-0 flex-1">
                       <h3 className="break-words text-lg font-semibold leading-tight text-white sm:text-xl">{award.name}</h3>
                       <p className="mt-2 text-sm text-slate-400">
                         {award.organization} • {award.date}

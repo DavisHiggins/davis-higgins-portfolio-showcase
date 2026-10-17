@@ -18,19 +18,14 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth;
+  /* No CSS scroll-behavior: smooth scrolling is Lenis (src/lib/scroll-engine.ts),
+     and page changes must jump to the top instantly. */
   /* Horizontal clipping lives here rather than on the app's root div. On a normal
      element `overflow-x: hidden` forces `overflow-y` to compute to `auto`, turning
      that element into a scroll container that never actually scrolls, which
      silently disables `position: sticky` for everything inside it, including the
      header. On html it propagates to the viewport instead, with no such side effect. */
   overflow-x: hidden;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
 }
 
 body {

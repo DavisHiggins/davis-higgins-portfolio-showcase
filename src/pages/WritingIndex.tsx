@@ -69,6 +69,7 @@ export function Component() {
           initial={animate ? { opacity: 0, y: 6 } : false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.16, ease: 'easeOut' }}
+          data-reveal-children
           className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
         >
           {visible.map((note) => (

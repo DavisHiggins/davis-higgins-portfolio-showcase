@@ -5,6 +5,7 @@ const useIsomorphicLayoutEffect = typeof window === 'undefined' ? useEffect : us
 import { m, useReducedMotion } from 'framer-motion'
 import { Sparkles } from 'lucide-react'
 import { useAssistant } from '../assistant/AssistantContext'
+import { scrollToElement } from '../lib/scroll'
 
 // ---------------------------------------------------------------------------
 // Table of contents rail: fixed right sidebar with scrollspy (>=1280px).
@@ -92,33 +93,43 @@ function useScrollSpy(ids: string[]) {
     if (!el) return
     lockRef.current = true
     setActiveId(id)
-    window.scrollTo({
-      top: Math.max(0, el.getBoundingClientRect().top + window.scrollY - SCROLL_OFFSET),
-      // 'instant', not 'auto': `auto` defers to html { scroll-behavior: smooth }.
-      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
-    })
     if (history.replaceState) history.replaceState(history.state, '', `#${id}`)
     el.setAttribute('tabindex', '-1')
     el.focus({ preventScroll: true })
+
+    // Smooth scroll (Lenis) reports its own completion, with a hard stop in case the
+    // visitor interrupts it; native scrolling falls back to scrollend / an idle timer.
+    const release = () => {
+      lockRef.current = false
+      resolve.current()
+    }
+    const smoothStop = window.setTimeout(release, 1600)
+    if (
+      scrollToElement(el, SCROLL_OFFSET, () => {
+        window.clearTimeout(smoothStop)
+        release()
+      })
+    )
+      return
+    window.clearTimeout(smoothStop)
 
     let idle = 0
     let hardStop = 0
     const onTick = () => {
       window.clearTimeout(idle)
-      idle = window.setTimeout(release, 130)
+      idle = window.setTimeout(done, 130)
     }
-    function release() {
-      lockRef.current = false
+    function done() {
       window.clearTimeout(idle)
       window.clearTimeout(hardStop)
-      window.removeEventListener('scrollend', release)
+      window.removeEventListener('scrollend', done)
       window.removeEventListener('scroll', onTick)
-      resolve.current()
+      release()
     }
-    if ('onscrollend' in window) window.addEventListener('scrollend', release, { once: true })
+    if ('onscrollend' in window) window.addEventListener('scrollend', done, { once: true })
     window.addEventListener('scroll', onTick, { passive: true })
-    idle = window.setTimeout(release, 130)
-    hardStop = window.setTimeout(release, 1400)
+    idle = window.setTimeout(done, 130)
+    hardStop = window.setTimeout(done, 1400)
   }, [])
 
   return { activeId, goTo }

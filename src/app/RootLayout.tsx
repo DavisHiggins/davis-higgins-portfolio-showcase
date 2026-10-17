@@ -1,10 +1,14 @@
-import { Suspense, lazy, useEffect, useRef, useState } from 'react'
+import { Suspense, lazy, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { Outlet, ScrollRestoration, useLocation, useNavigate, useNavigationType } from 'react-router-dom'
 import { LazyMotion, MotionConfig } from 'framer-motion'
 import { Header } from './Header'
 import { AssistantProvider, useAssistant } from '../assistant/AssistantContext'
 import { EntranceProvider } from '../lib/motion'
 import { applyMetaToDocument, metaForPath } from '../lib/meta'
+import { loadScrollEngine, scrollToTop } from '../lib/scroll'
+
+// Layout effects cannot run during prerendering; fall back to useEffect there.
+const useIsomorphicLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect
 
 const AssistantPanel = lazy(() => import('../assistant/AssistantPanel'))
 const loadMotionFeatures = () => import('../lib/motion-features').then((mod) => mod.default)
@@ -72,6 +76,38 @@ function RouteEffects() {
   )
 }
 
+/** Every link navigation to another page lands at the top of that page, before it
+ *  paints, even mid smooth-scroll. Back/Forward keep the browser's restored position
+ *  (ScrollRestoration), and hash links keep their target. Also starts the smooth
+ *  scroll engine and (re)binds scroll-triggered text reveals for each page. */
+function ScrollManager() {
+  const location = useLocation()
+  const navigationType = useNavigationType()
+  const previousPath = useRef(location.pathname)
+
+  useIsomorphicLayoutEffect(() => {
+    if (previousPath.current === location.pathname) return
+    previousPath.current = location.pathname
+    if (navigationType !== 'POP' && !location.hash) scrollToTop()
+  }, [location.pathname, location.hash, navigationType])
+
+  useEffect(() => {
+    const main = document.getElementById('main')
+    if (!main) return
+    let dispose: (() => void) | undefined
+    let cancelled = false
+    void loadScrollEngine().then((engine) => {
+      if (!cancelled) dispose = engine.reveal(main)
+    })
+    return () => {
+      cancelled = true
+      dispose?.()
+    }
+  }, [location.pathname])
+
+  return null
+}
+
 function AssistantMount() {
   const { hasOpened } = useAssistant()
   if (!hasOpened) return null
@@ -112,6 +148,7 @@ export function RootLayout() {
             <AssistantMount />
             <RouteEffects />
             <ScrollRestoration getKey={(location) => (location.pathname === '/projects' || location.pathname === '/writing' ? location.pathname + location.search : location.key)} />
+            <ScrollManager />
           </div>
         </AssistantProvider>
       </EntranceProvider>

@@ -45,7 +45,7 @@ function NoteNav({ slug, from }: { slug: string; from: string }) {
   const stack = Boolean(prev && next)
 
   return (
-    <nav className={`reader-nav ${stack ? 'reader-nav--stack' : ''}`} aria-label="Note navigation">
+    <nav className={`reader-nav ${stack ? 'reader-nav--stack' : ''}`} data-reveal aria-label="Note navigation">
       <div className="reader-nav__slot">
         {prev ? (
           <Link to={`/writing/${prev.slug}${fromQ}`} className={`note-nav-btn ${stack ? 'note-nav-btn--stacked' : ''}`}>
@@ -130,10 +130,10 @@ export function Component() {
         </div>
 
         <div>
-          <div className="reader-prose" dangerouslySetInnerHTML={{ __html: html }} />
+          <div className="reader-prose" data-reveal-children dangerouslySetInnerHTML={{ __html: html }} />
 
           {note.relatedProject ? (
-            <div className="reader-related">
+            <div className="reader-related" data-reveal>
               <p className="reader-related__label">Related Project</p>
               <a href={note.relatedProject.href} target="_blank" rel="noopener noreferrer" className="reader-related__link">
                 <span>{note.relatedProject.label}</span>

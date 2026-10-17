@@ -34,7 +34,7 @@ function ProjectCard({ project, index, search }: { project: ProjectIndexItem; in
     <li>
       <Link
         to={`/projects/${project.slug}`}
-        state={{ fromGallery: true, search }}
+        state={{ search }}
         className="project-card group block rounded-[1.4rem] outline-none"
       >
         <div className="relative aspect-[16/9] overflow-hidden rounded-[1.25rem] border border-white/10 bg-panel shadow-soft transition duration-200 group-hover:border-sky-300/40 group-focus-visible:border-sky-300/60">
@@ -100,6 +100,7 @@ export function Component() {
           initial={animate ? { opacity: 0, y: 6 } : false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.16, ease: 'easeOut' }}
+          data-reveal-children
           className="grid gap-x-6 gap-y-9 sm:grid-cols-2 lg:grid-cols-3"
         >
           {visible.map((project, index) => (

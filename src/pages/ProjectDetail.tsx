@@ -1,5 +1,5 @@
-import type { MouseEvent, ReactNode } from 'react'
-import { Link, useLoaderData, useLocation, useNavigate } from 'react-router-dom'
+import type { ReactNode } from 'react'
+import { Link, useLoaderData, useLocation } from 'react-router-dom'
 import type { LoaderFunctionArgs } from 'react-router-dom'
 import { m } from 'framer-motion'
 import { ArrowLeft, ArrowRight, ExternalLink, FileText, Github, Users } from 'lucide-react'
@@ -50,10 +50,12 @@ function ProjectLinkButton({ link, primary }: { link: ProjectLink; primary: bool
 function Section({ id, title, children }: { id: string; title: string; children: ReactNode }) {
   return (
     <section id={id} aria-labelledby={`${id}-title`} className="scroll-mt-28">
-      <h2 id={`${id}-title`} className="text-2xl font-semibold tracking-tight text-white">
+      <h2 id={`${id}-title`} data-reveal className="text-2xl font-semibold tracking-tight text-white">
         {title}
       </h2>
-      <div className="mt-4 space-y-4 text-base leading-8 text-slate-300">{children}</div>
+      <div data-reveal-children className="mt-4 space-y-4 text-base leading-8 text-slate-300">
+        {children}
+      </div>
     </section>
   )
 }
@@ -70,7 +72,7 @@ function Paragraphs({ items }: { items: string[] }) {
 
 function ArchitectureFlow({ steps }: { steps: string[] }) {
   return (
-    <ol className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3" aria-label="Architecture flow">
+    <ol data-reveal-children className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3" aria-label="Architecture flow">
       {steps.map((step, i) => (
         <li key={step} className="relative flex items-start gap-3 rounded-2xl border border-sky-300/20 bg-[#0b1729]/80 p-4">
           <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-sky-300/40 bg-sky-400/10 text-xs font-semibold text-sky-200" aria-hidden="true">
@@ -87,19 +89,10 @@ export function Component() {
   const project = useLoaderData() as ProjectDetail
   const entrance = usePageEntrance()
   const location = useLocation()
-  const navigate = useNavigate()
-  const state = location.state as { fromGallery?: boolean; search?: string } | null
+  // Return to the gallery with the visitor's filter still applied.
+  const state = location.state as { search?: string } | null
   const backHref = `/projects${state?.search ?? ''}`
   const logo = PROJECT_LOGOS[project.slug]
-
-  // When the visitor came from the gallery, go back in history so the gallery's
-  // filter and scroll position are restored exactly. The href stays a real link.
-  const onBack = (event: MouseEvent<HTMLAnchorElement>) => {
-    if (state?.fromGallery && window.history.length > 1 && !event.metaKey && !event.ctrlKey && !event.shiftKey) {
-      event.preventDefault()
-      navigate(-1)
-    }
-  }
 
   const toc: TocSection[] = [
     { id: 'overview', label: 'Overview' },
@@ -116,10 +109,12 @@ export function Component() {
 
   return (
     <>
-      <m.article {...entrance} key={project.slug}>
+      {/* Sibling keys must differ: a shared key made React keep the previous
+          project's article when moving between case studies. */}
+      <m.article {...entrance} key={`article-${project.slug}`}>
         <PageShell reserveRail className="!pt-6 sm:!pt-8">
           <nav aria-label="Breadcrumb" className="mb-6">
-            <Link to={backHref} onClick={onBack} className="inline-flex min-h-[44px] items-center gap-2 rounded-full text-sm font-medium text-slate-400 transition hover:text-sky-200">
+            <Link to={backHref} className="inline-flex min-h-[44px] items-center gap-2 rounded-full text-sm font-medium text-slate-400 transition hover:text-sky-200">
               <ArrowLeft className="h-4 w-4" aria-hidden="true" />
               Projects
             </Link>
@@ -188,7 +183,7 @@ export function Component() {
           ) : null}
 
           {project.metrics.length ? (
-            <dl className={`mt-8 grid gap-4 ${project.metrics.length >= 3 ? 'sm:grid-cols-3' : 'sm:grid-cols-2'}`}>
+            <dl data-reveal-children className={`mt-8 grid gap-4 ${project.metrics.length >= 3 ? 'sm:grid-cols-3' : 'sm:grid-cols-2'}`}>
               {project.metrics.map((metric, i) => (
                 <div key={metric.label} className={`rounded-2xl border p-5 ${i === 0 ? 'border-sky-300/30 bg-sky-400/10' : 'border-white/10 bg-white/[0.03]'}`}>
                   <dt className="sr-only">{metric.label}</dt>
@@ -216,7 +211,7 @@ export function Component() {
             <Section id="built" title="What I built">
               <Paragraphs items={project.solution} />
               {project.solutionPoints.length ? (
-                <ul className="space-y-3 text-[15px] leading-7">
+                <ul data-reveal-children className="space-y-3 text-[15px] leading-7">
                   {project.solutionPoints.map((point) => (
                     <Bullet key={point}>{point}</Bullet>
                   ))}
@@ -228,7 +223,7 @@ export function Component() {
               <p>{project.architecture.summary}</p>
               <ArchitectureFlow steps={project.architecture.flow} />
               {project.architecture.layers?.length ? (
-                <div className="mt-2 grid gap-3 sm:grid-cols-2">
+                <div data-reveal-children className="mt-2 grid gap-3 sm:grid-cols-2">
                   {project.architecture.layers.map((layer) => (
                     <div key={layer.label} className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
                       <div className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-300">{layer.label}</div>
@@ -241,7 +236,7 @@ export function Component() {
           </div>
 
           {project.detailImage ? (
-            <figure className="mt-12 max-w-5xl">
+            <figure data-reveal className="mt-12 max-w-5xl">
               <div className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-panel shadow-soft">
                 <ResponsiveImage
                   image={project.detailImage}
@@ -261,7 +256,7 @@ export function Component() {
 
           <div className="mt-12 max-w-4xl space-y-12">
             <Section id="decisions" title="Key decisions">
-              <div className="grid gap-4">
+              <div data-reveal-children className="grid gap-4">
                 {project.decisions.map((d) => (
                   <div key={d.title} className="glass rounded-[1.5rem] p-5">
                     <h3 className="text-base font-semibold text-white">{d.title}</h3>
@@ -270,7 +265,7 @@ export function Component() {
                 ))}
               </div>
               {project.tradeoffs.length ? (
-                <div className="mt-6 space-y-3 text-sm leading-7">
+                <div data-reveal-children className="mt-6 space-y-3 text-sm leading-7">
                   <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-300">Tradeoffs</h3>
                   {project.tradeoffs.map((t) => (
                     <p key={t.title}>
@@ -295,7 +290,7 @@ export function Component() {
               <p>{project.lessons}</p>
             </Section>
 
-            <section aria-labelledby="stack-title">
+            <section data-reveal aria-labelledby="stack-title">
               <h2 id="stack-title" className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
                 Built with
               </h2>
@@ -308,10 +303,10 @@ export function Component() {
 
             {project.relatedNotes.length ? (
               <section aria-labelledby="related-writing-title">
-                <h2 id="related-writing-title" className="text-xl font-semibold text-white">
+                <h2 id="related-writing-title" data-reveal className="text-xl font-semibold text-white">
                   Related writing
                 </h2>
-                <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+                <ul data-reveal-children className="mt-4 grid gap-3 sm:grid-cols-2">
                   {project.relatedNotes.map((note) => (
                     <li key={note.slug}>
                       <Link to={`/writing/${note.slug}`} className="glass block h-full rounded-[1.25rem] p-4 transition hover:border-sky-300/30">
@@ -328,10 +323,10 @@ export function Component() {
           </div>
 
           <section id="more" aria-labelledby="more-title" className="mt-16 scroll-mt-28 border-t border-white/10 pt-10">
-            <h2 id="more-title" className="text-2xl font-semibold tracking-tight text-white">
+            <h2 id="more-title" data-reveal className="text-2xl font-semibold tracking-tight text-white">
               More projects
             </h2>
-            <ul className="mt-6 grid gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+            <ul data-reveal-children className="mt-6 grid gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
               {project.related.map((other) => (
                 <li key={other.slug}>
                   <Link to={`/projects/${other.slug}`} className="project-card group block rounded-[1.4rem] outline-none">
@@ -351,14 +346,14 @@ export function Component() {
                 </li>
               ))}
             </ul>
-            <Link to={backHref} className="secondary-btn mt-10">
+            <Link to={backHref} data-reveal className="secondary-btn mt-10">
               <ArrowLeft className="h-4 w-4" aria-hidden="true" />
               All projects
             </Link>
           </section>
         </PageShell>
       </m.article>
-      <SectionNav key={project.slug} sections={toc} />
+      <SectionNav key={`toc-${project.slug}`} sections={toc} />
     </>
   )
 }

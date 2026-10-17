@@ -350,7 +350,7 @@
     },
     {
       "name": "DavisHiggins/Portfolio repository",
-      "meaning": "A public showcase repository for the main davishiggins.com site, not this portfolio's application source."
+      "meaning": "The public repository behind this portfolio at portfolio.davishiggins.com. Its README and assets folder showcase the main davishiggins.com site; the rest of the repository is this portfolio's application source."
     }
   ],
   "siteGuide": [

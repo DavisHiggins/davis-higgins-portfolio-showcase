@@ -6,6 +6,7 @@ import { NAV_ITEMS, RESUME_HREF, activeNavItem } from '../lib/site'
 import { DH_MARK } from '../lib/logos'
 import { preloadAssistant, useAssistant } from '../assistant/AssistantContext'
 import { ResumeLink } from './ResumeLink'
+import { SocialLinks } from './SocialLinks'
 
 function ChatGlyph({ size = 16, fill = 'rgba(125,211,252,0.9)' }: { size?: number; fill?: string }) {
   return (
@@ -83,15 +84,17 @@ export function Header() {
                     isActive ? 'bg-white text-slate-950' : 'text-slate-300 hover:bg-white/10 hover:text-white'
                   }`}
                 >
-                  <Icon className="h-4 w-4 shrink-0" aria-hidden="true" />
+                  {/* Icons return at 1440px; below that the labels alone keep the header on one line. */}
+                  <Icon className="h-4 w-4 shrink-0 max-[1439px]:hidden" aria-hidden="true" />
                   {item.label}
                 </NavLink>
               )
             })}
           </nav>
 
-          {/* Right: resume document and assistant */}
-          <div className="flex items-center gap-2 justify-self-end sm:gap-2.5">
+          {/* Right: profiles, resume document, and assistant */}
+          <div className="flex items-center gap-1.5 justify-self-end min-[380px]:gap-2 sm:gap-2.5">
+            <SocialLinks className="hidden xl:flex" />
             <ResumeLink className="hidden xl:inline-flex" />
             <button
               type="button"
@@ -103,17 +106,18 @@ export function Header() {
               <span>Ask Davis AI</span>
             </button>
 
-            {/* Below xl: active section, resume, assistant, menu */}
+            {/* Below xl: active section, profiles, resume, assistant, menu */}
             <span className="hidden rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-300 sm:inline xl:hidden">
               {active?.label ?? 'Menu'}
             </span>
+            <SocialLinks className="flex xl:hidden" />
             <ResumeLink compact className="xl:hidden" />
             <button
               type="button"
               onClick={(event) => toggle(event.currentTarget)}
               {...launcherProps}
               aria-label="Ask Davis AI, the portfolio assistant"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-sky-300 transition hover:bg-white/10 hover:text-sky-200 xl:hidden"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-sky-300 transition hover:bg-white/10 hover:text-sky-200 min-[380px]:h-11 min-[380px]:w-11 xl:hidden"
             >
               <ChatGlyph size={17} fill="currentColor" />
             </button>
@@ -121,7 +125,7 @@ export function Header() {
               ref={menuButtonRef}
               type="button"
               onClick={() => setMenuOpen((o) => !o)}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 transition hover:bg-white/10 hover:text-white xl:hidden"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 transition hover:bg-white/10 hover:text-white min-[380px]:h-11 min-[380px]:w-11 xl:hidden"
               aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"

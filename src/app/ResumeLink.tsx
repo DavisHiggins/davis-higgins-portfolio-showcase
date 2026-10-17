@@ -27,9 +27,6 @@ export function ResumeLink({ compact = false, className = '' }: { compact?: bool
           Resume
         </span>
       )}
-      <span className="resume-link__tip" role="tooltip" aria-hidden="true">
-        Open resume PDF
-      </span>
     </a>
   )
 }

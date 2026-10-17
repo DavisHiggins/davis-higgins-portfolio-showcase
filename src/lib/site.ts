@@ -5,6 +5,8 @@ import { reviewedAt } from '../generated/site-meta.json'
 export const SITE_URL = 'https://portfolio.davishiggins.com'
 export const NOTES_SITE = 'https://notes.davishiggins.com'
 export const RESUME_HREF = '/davis-resume.pdf'
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/davishiggins'
+export const GITHUB_URL = 'https://github.com/DavisHiggins'
 export const KNOWLEDGE_REVIEWED_AT: string = reviewedAt
 
 export interface NavItem {

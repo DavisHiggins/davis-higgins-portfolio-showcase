@@ -26,10 +26,10 @@ export function categoryCounts(projects: ProjectIndexItem[]): Record<CategoryId 
 
 export const NOTE_CATEGORIES = ['Projects', 'Data & AI', 'Business', 'Personal'] as const
 
-/** Gold tag styles from the Curated Notes source (lib/tags.ts), used only inside the reader. */
+/** Reader tag styles: the Curated Notes tag shapes (lib/tags.ts) in this site's sky/cyan palette. */
 export const NOTE_TAG_STYLES: Record<string, { bg: string; text: string }> = {
-  Projects: { bg: 'rgba(201,168,76,0.12)', text: '#C9A84C' },
-  'Data & AI': { bg: 'rgba(228,192,110,0.12)', text: '#E4C06E' },
-  Business: { bg: 'rgba(160,120,48,0.16)', text: '#C9A84C' },
-  Personal: { bg: 'rgba(212,184,122,0.12)', text: '#D4B87A' },
+  Projects: { bg: 'rgba(56,189,248,0.12)', text: '#7DD3FC' },
+  'Data & AI': { bg: 'rgba(103,232,249,0.12)', text: '#67E8F9' },
+  Business: { bg: 'rgba(14,165,233,0.16)', text: '#7DD3FC' },
+  Personal: { bg: 'rgba(186,230,253,0.12)', text: '#BAE6FD' },
 }

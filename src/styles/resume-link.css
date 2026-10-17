@@ -1,5 +1,6 @@
 /* Folded-paper resume glyph, adapted from davishiggins.com's `.sb-resume` control
-   (three lines, folded corner, Carolina Blue border) to this header's dark styling. */
+   (three lines, folded corner, Carolina Blue border) to this header's dark styling.
+   Hover animates the glyph only; there is no hover text. */
 
 .resume-link {
   position: relative;
@@ -101,32 +102,66 @@
   outline: 2px solid #7dd3fc;
   outline-offset: 4px;
 }
-.resume-link__tip {
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 50%;
-  z-index: 60;
-  transform: translate(-50%, -4px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 8px;
-  background: #0a1628;
-  padding: 6px 10px;
-  color: #e2e8f0;
-  font-size: 12px;
-  font-weight: 500;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 150ms ease, transform 150ms ease;
+.social-link {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #cbd5e1;
+  transition: transform 220ms ease, color 180ms ease, border-color 180ms ease, background-color 180ms ease, box-shadow 220ms ease;
 }
-.resume-link:hover .resume-link__tip,
-.resume-link:focus-visible .resume-link__tip {
-  opacity: 1;
-  transform: translate(-50%, 0);
+.social-link svg { transition: transform 260ms cubic-bezier(0.34, 1.56, 0.64, 1); }
+.social-link:hover,
+.social-link:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(125, 211, 252, 0.45);
+  background: rgba(56, 189, 248, 0.1);
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.25);
+  color: #fff;
 }
+.social-link:focus-visible { outline: 2px solid #7dd3fc; outline-offset: 3px; }
+/* LinkedIn: the mark pops forward in the accent blue. */
+.social-link--linkedin:hover svg,
+.social-link--linkedin:focus-visible svg {
+  color: #7dd3fc;
+  transform: scale(1.18);
+}
+/* GitHub: the mark gives a quick wiggle and settles slightly enlarged. */
+.social-link--github:hover svg,
+.social-link--github:focus-visible svg {
+  animation: social-wiggle 560ms ease both;
+}
+@keyframes social-wiggle {
+  0% { transform: rotate(0) scale(1); }
+  25% { transform: rotate(-14deg) scale(1.14); }
+  50% { transform: rotate(10deg) scale(1.14); }
+  75% { transform: rotate(-5deg) scale(1.12); }
+  100% { transform: rotate(0) scale(1.12); }
+}
+
+/* The narrowest phones (< 380px) fit five header controls at 40px. */
+@media (max-width: 379px) {
+  .resume-link--compact,
+  .social-link {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    min-height: 40px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .resume-link__doc,
-  .resume-link__tip { transition: none; }
+  .social-link,
+  .social-link svg { transition: none; }
   .resume-link:hover .resume-link__doc,
-  .resume-link:focus-visible .resume-link__doc { transform: none; }
+  .resume-link:focus-visible .resume-link__doc,
+  .social-link:hover,
+  .social-link:focus-visible,
+  .social-link:hover svg,
+  .social-link:focus-visible svg { transform: none; animation: none; }
 }

@@ -3,21 +3,20 @@ import { Link } from 'react-router-dom'
 import { m } from 'framer-motion'
 import { ArrowRight, ExternalLink, Github, Globe, LineChart, NotebookPen } from 'lucide-react'
 import headshot from '../assets/opt/headshot.webp'
-import { DH_MARK, EMPLOYER_LOGOS } from '../lib/logos'
+import kewauneeLogo from '../assets/kewaunee-logo.png'
+import { DH_MARK } from '../lib/logos'
 import { usePageEntrance } from '../lib/motion'
 import { PageShell } from '../components/ui'
 import notesIndex from '../generated/notes-index.json'
+
+// The Home page as it was before the October 2026 portfolio update, with two of the
+// three Live Updates cards (Latest Writing and Live Products) kept from the update.
 
 const STATS = [
   { value: '3.9', label: 'UNCC GPA' },
   { value: '20+', label: 'Executive Dashboards' },
   { value: '10+', label: 'Production Products Shipped' },
   { value: '1+ yr', label: 'Professional Analytics Experience' },
-]
-
-const CURRENT_ROLES = [
-  { logo: EMPLOYER_LOGOS['one-chaptr'], title: 'Software Engineer', company: 'One Chaptr Group', to: '/projects/one-chaptr' },
-  { logo: EMPLOYER_LOGOS.kewaunee, title: 'Data Analyst', company: 'Kewaunee Scientific Corporation', to: '/projects/kewaunee-analytics' },
 ]
 
 const FEATURED_SITES = [
@@ -30,25 +29,27 @@ const tagClass =
   'rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.18em] text-slate-300 sm:px-4 sm:py-2 sm:text-[11px] sm:tracking-[0.2em]'
 
 interface Activity {
-  lastPush: string | null
+  lastCommit: string | null
   lastRepo: string | null
-  recentRepos: number
+  commitCount30d: number | null
 }
-type ActivityState = { status: 'loading' } | { status: 'ready'; data: Activity } | { status: 'error' }
+type ActivityState = { loading: true } | { loading: false; error: boolean; data: Activity }
 
-const CACHE_KEY = 'gh-activity-v3'
+const GITHUB_USER = 'DavisHiggins'
+const CACHE_KEY = 'gh-commit-activity-v1'
 const CACHE_MS = 15 * 60 * 1000
 
-// GitHub activity loads after the page renders, never blocks it, is bounded to a
-// few seconds, and is cached for the session. Failures say so plainly.
+// Commits by Davis across his recently pushed public repositories in the last 30
+// days, as on the original Home page. Cached for the session so repeat visits stay
+// inside GitHub's unauthenticated rate limit.
 function useGitHubActivity(): ActivityState {
-  const [state, setState] = useState<ActivityState>({ status: 'loading' })
+  const [state, setState] = useState<ActivityState>({ loading: true })
 
   useEffect(() => {
     try {
       const cached = JSON.parse(sessionStorage.getItem(CACHE_KEY) ?? 'null') as { at: number; data: Activity } | null
       if (cached && Date.now() - cached.at < CACHE_MS) {
-        setState({ status: 'ready', data: cached.data })
+        setState({ loading: false, error: false, data: cached.data })
         return
       }
     } catch {
@@ -56,54 +57,78 @@ function useGitHubActivity(): ActivityState {
     }
 
     const controller = new AbortController()
-    const timeout = window.setTimeout(() => controller.abort(), 6000)
-    const user = 'DavisHiggins'
     const headers = { Accept: 'application/vnd.github+json' }
 
     async function load() {
       const since = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000)
-      // One request per visitor (cached for the session) keeps well inside GitHub's
-      // unauthenticated rate limit.
-      const reposRes = await fetch(`https://api.github.com/users/${user}/repos?per_page=100&sort=pushed&direction=desc`, { signal: controller.signal, headers })
-      if (!reposRes.ok) throw new Error('repos')
-      const repos = (await reposRes.json()) as { name: string; pushed_at: string; fork?: boolean }[]
-      const own = Array.isArray(repos) ? repos.filter((r) => !r.fork) : []
-      const latest = own[0] ?? null
-      const recentCount = own.filter((r) => new Date(r.pushed_at) >= since).length
-      const data: Activity = { lastPush: latest?.pushed_at ?? null, lastRepo: latest?.name ?? null, recentRepos: recentCount }
+      const sinceISO = since.toISOString()
+      const reposRes = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?per_page=100&sort=pushed&direction=desc`, { signal: controller.signal, headers })
+      if (!reposRes.ok) throw new Error('repos fetch failed')
+      const repos = (await reposRes.json()) as { name: string; full_name: string; pushed_at: string }[]
+      const recent = repos.filter((r) => new Date(r.pushed_at) >= since)
+
+      const results = await Promise.all(
+        recent.slice(0, 15).map(async (repo) => {
+          try {
+            const res = await fetch(`https://api.github.com/repos/${repo.full_name}/commits?author=${GITHUB_USER}&since=${sinceISO}&per_page=100`, { signal: controller.signal, headers })
+            if (!res.ok) return null
+            const commits = (await res.json()) as { commit?: { author?: { date?: string }; committer?: { date?: string } } }[]
+            return Array.isArray(commits) ? { repo: repo.name, commits } : null
+          } catch {
+            return null
+          }
+        }),
+      )
+
+      let total = 0
+      let latest: Date | null = null
+      let latestRepo: string | null = null
+      for (const result of results) {
+        if (!result) continue
+        total += result.commits.length
+        for (const c of result.commits) {
+          const date = new Date(c.commit?.author?.date ?? c.commit?.committer?.date ?? 0)
+          if (!latest || date > latest) {
+            latest = date
+            latestRepo = result.repo
+          }
+        }
+      }
+
+      const data: Activity = { lastCommit: latest ? latest.toISOString() : null, lastRepo: latestRepo, commitCount30d: total }
       try {
         sessionStorage.setItem(CACHE_KEY, JSON.stringify({ at: Date.now(), data }))
       } catch {
         // Ignore storage failures.
       }
-      setState({ status: 'ready', data })
+      setState({ loading: false, error: false, data })
     }
 
-    load()
-      .catch(() => {
-        if (!controller.signal.aborted || controller.signal.reason !== 'unmount') setState({ status: 'error' })
-      })
-      .finally(() => window.clearTimeout(timeout))
-    return () => {
-      window.clearTimeout(timeout)
-      controller.abort('unmount')
-    }
+    load().catch((error: unknown) => {
+      if ((error as Error).name !== 'AbortError') setState({ loading: false, error: true, data: { lastCommit: null, lastRepo: null, commitCount30d: null } })
+    })
+    return () => controller.abort()
   }, [])
 
   return state
 }
 
-function timeAgo(iso: string): string {
-  const hours = Math.floor((Date.now() - new Date(iso).getTime()) / 3_600_000)
+function formatTimeAgo(iso: string): string {
+  const hours = Math.floor((Date.now() - new Date(iso).getTime()) / (1000 * 60 * 60))
   if (hours < 1) return 'less than an hour ago'
   if (hours < 24) return `${hours} hour${hours === 1 ? '' : 's'} ago`
   const days = Math.floor(hours / 24)
   return `${days} day${days === 1 ? '' : 's'} ago`
 }
 
-function GitHubActivityCard() {
+function GitHubActivityStrip() {
   const state = useGitHubActivity()
-  const ready = state.status === 'ready' && state.data.lastPush
+  const data = state.loading ? null : state.data
+  const failed = !state.loading && state.error
+  const displayCommits = failed || data?.commitCount30d == null ? null : data.commitCount30d
+  const displayLast =
+    failed || !data?.lastCommit ? 'View latest activity on GitHub' : `Last commit: ${formatTimeAgo(data.lastCommit)}${data.lastRepo ? ` on ${data.lastRepo}` : ''}`
+
   return (
     <div className="glass rounded-[1.75rem] p-5 shadow-soft">
       <div className="flex items-start gap-4">
@@ -113,21 +138,15 @@ function GitHubActivityCard() {
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-2">
             <h3 className="text-base font-semibold text-white">GitHub Activity</h3>
-            {ready ? <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 motion-safe:animate-pulse" aria-hidden="true" /> : null}
+            <span className="inline-flex h-2 w-2 animate-pulse rounded-full bg-emerald-400" aria-hidden="true" />
           </div>
-          <p className="mt-2 min-h-[1.25rem] text-sm text-slate-300" aria-live="polite">
-            {state.status === 'loading'
-              ? 'Loading recent activity…'
-              : state.status === 'ready' && state.data.lastPush
-                ? `Last public push ${timeAgo(state.data.lastPush)}${state.data.lastRepo ? ` to ${state.data.lastRepo}` : ''}`
-                : state.status === 'ready'
-                  ? 'No recent public activity'
-                  : 'Activity is unavailable right now'}
+          <p className="mt-2 text-sm text-slate-300" aria-live="polite">
+            {state.loading ? 'Loading…' : displayLast}
           </p>
-          <p className="mt-1 min-h-[1rem] text-xs text-slate-400">
-            {state.status === 'ready' ? `${state.data.recentRepos} public ${state.data.recentRepos === 1 ? 'repository' : 'repositories'} updated in the last 30 days` : 'Public repositories only'}
+          <p className="mt-1 text-xs text-slate-400">
+            {state.loading ? ' ' : displayCommits != null ? `${displayCommits} commits in the last 30 days` : 'Recent activity available on GitHub'}
           </p>
-          <a href="https://github.com/DavisHiggins" target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-sky-300 transition hover:text-sky-200">
+          <a href="https://github.com/DavisHiggins" target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-sky-300 transition hover:text-sky-200">
             View profile <ExternalLink className="h-3 w-3" aria-hidden="true" />
           </a>
         </div>
@@ -236,14 +255,14 @@ export function Component() {
                 </Link>
               </div>
 
-              <dl className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+              <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
                 {STATS.map((item) => (
-                  <div key={item.label} className="glass flex flex-col-reverse rounded-3xl p-5 shadow-soft">
-                    <dt className="mt-1 text-sm text-slate-400">{item.label}</dt>
-                    <dd className="text-2xl font-bold text-white">{item.value}</dd>
+                  <div key={item.label} className="glass rounded-3xl p-5 shadow-soft">
+                    <div className="text-2xl font-bold text-white">{item.value}</div>
+                    <div className="mt-1 text-sm text-slate-400">{item.label}</div>
                   </div>
                 ))}
-              </dl>
+              </div>
             </div>
 
             <div className="mx-auto w-full max-w-md">
@@ -256,8 +275,8 @@ export function Component() {
 
                 <div className="mt-5 rounded-[1.5rem] border border-white/10 bg-[#12203b] p-5">
                   <div className="flex items-start gap-4">
-                    <div className="flex h-14 w-28 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-white">
-                      <img src={DH_MARK} alt="" width={48} height={48} className="h-12 w-12 object-contain" />
+                    <div className="flex h-14 w-28 items-center justify-center overflow-hidden rounded-2xl bg-white">
+                      <img src={DH_MARK} alt="DH logo" width={48} height={48} className="h-12 w-12 object-contain" />
                     </div>
                     <div>
                       <div className="text-sm uppercase tracking-[0.35em] text-sky-300">Focus</div>
@@ -268,22 +287,15 @@ export function Component() {
                   </div>
 
                   <div className="mt-5 rounded-[1.5rem] border border-white/10 bg-white/[0.05] p-5">
-                    <div className="text-sm text-slate-400">Current Roles</div>
-                    <ul className="mt-3 space-y-4">
-                      {CURRENT_ROLES.map((role) => (
-                        <li key={role.company}>
-                          <Link to={role.to} className="group flex items-center gap-4">
-                            <span className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-2xl">
-                              <img src={role.logo} alt="" width={44} height={44} className="h-11 w-11 object-contain" />
-                            </span>
-                            <span className="min-w-0">
-                              <span className="block break-words text-lg font-semibold leading-snug text-white transition group-hover:text-sky-200">{role.title}</span>
-                              <span className="block text-sm text-slate-300">{role.company}</span>
-                            </span>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="flex items-center gap-4">
+                      <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-2xl">
+                        <img src={kewauneeLogo} alt="Kewaunee Scientific logo" width={50} height={50} className="h-[50px] w-[50px] object-contain" />
+                      </div>
+                      <div className="min-w-0">
+                        <div className="text-sm text-slate-400">Current Role</div>
+                        <div className="mt-1 break-words text-xl font-semibold leading-snug text-white sm:text-2xl">Data Analyst Intern at Kewaunee Scientific Corporation</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -291,19 +303,17 @@ export function Component() {
           </div>
         </div>
 
-        <section className="mt-8" aria-labelledby="live-updates">
+        <div className="mt-8">
           <div className="mb-4 flex items-center gap-2">
-            <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 motion-safe:animate-pulse" aria-hidden="true" />
-            <h2 id="live-updates" className="text-sm font-semibold uppercase tracking-[0.22em] text-sky-300">
-              Live Updates
-            </h2>
+            <span className="inline-flex h-2 w-2 animate-pulse rounded-full bg-emerald-400" aria-hidden="true" />
+            <h2 className="text-sm font-semibold uppercase tracking-[0.22em] text-sky-300">Live Updates</h2>
           </div>
           <div className="grid gap-4 md:grid-cols-3">
-            <GitHubActivityCard />
+            <GitHubActivityStrip />
             <LatestWritingCard />
             <LiveSitesCard />
           </div>
-        </section>
+        </div>
       </PageShell>
     </m.div>
   )

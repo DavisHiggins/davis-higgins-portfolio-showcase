@@ -1,0 +1,20 @@
+node_modules
+dist
+.vite
+.env
+.env.local
+handoff/
+
+# build outputs and generated content
+dist-ssr
+src/generated
+server/knowledge.generated.js
+.verify
+test-results
+playwright-report
+# regenerable masters (scripts/capture-screens.mjs, scripts/render-designed-media.mjs)
+media-src/screens/*.png
+media-src/designed/*.png
+.vercel
+
+.vercel

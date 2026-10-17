@@ -1,0 +1,49 @@
+{
+  "slug": "phi-delta-theta",
+  "title": "Phi Delta Theta NC Epsilon",
+  "sortOrder": 14,
+  "categories": ["web-commerce", "research-community"],
+  "status": "Live public site",
+  "summary": "A media-led chapter website for Phi Delta Theta at UNC Charlotte.",
+  "tagline": "The public website for the NC Epsilon chapter of Phi Delta Theta at UNC Charlotte, bringing the chapter's identity, brotherhood, leadership, and recruitment information into one place.",
+  "role": "Designed and developed the chapter's public website.",
+  "stack": ["Next.js", "TypeScript", "Vercel"],
+  "links": [
+    { "label": "Live website", "href": "https://charlottephidelt.com", "kind": "website" }
+  ],
+  "metrics": [],
+  "problem": [
+    "Chapter information lived across social posts and word of mouth. Prospective members and families needed one coherent place to understand who the chapter is, what it values, and how to get involved."
+  ],
+  "contribution": [
+    "I designed and built the site as a member of the chapter, using the chapter's existing identity and approved media."
+  ],
+  "solution": [
+    "The site leads with chapter photography and the NC Epsilon identity, then organizes chapter information, principles, leadership, and paths to explore or connect."
+  ],
+  "solutionPoints": [
+    "A full-bleed, photography-led home page with the chapter's letters and identity.",
+    "Sections for the chapter, its principles, leadership, and recruitment.",
+    "Hero media optimized for mobile loading."
+  ],
+  "architecture": {
+    "summary": "A Next.js site deployed on Vercel from the chapter site repository.",
+    "flow": ["Chapter identity + approved media", "Next.js pages", "Vercel deployment"]
+  },
+  "decisions": [
+    { "title": "Use the chapter's real identity.", "text": "Approved photography and the chapter's own marks carry the design rather than generic fraternity templates." },
+    { "title": "Keep key information easy to find.", "text": "Chapter and recruitment details stay a click away from every page." },
+    { "title": "Don't let media overwhelm navigation.", "text": "Large imagery is balanced with a clear menu and lightweight loading on phones." }
+  ],
+  "outcomes": [
+    "The chapter has a public home at charlottephidelt.com that presents its community and makes it easy to learn more or reach out."
+  ],
+  "limits": [
+    "This is the chapter's main public site. It is a chapter website, not a national fraternity platform, and officer listings change over time on the live site."
+  ],
+  "lessons": "A community website should organize real identity and information without letting media overwhelm navigation.",
+  "relatedNotes": [],
+  "related": ["photos-and-frames", "curated-notes", "davishiggins-com"],
+  "media": { "cover": "phi-delta-theta-cover", "hero": "phi-delta-theta-hero", "detail": "phi-delta-theta-detail" },
+  "sources": ["https://cltphidelt.vercel.app", "Vercel deployment metadata: cltphidelt → DavisHiggins/nc-epsilon"]
+}

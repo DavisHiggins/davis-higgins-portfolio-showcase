@@ -1,0 +1,144 @@
+/* Davis Intelligence panel. Ported from the previous public/assistant.css so the
+   assistant keeps its identity: white panel, navy header, pill suggestions,
+   anchored below the header on desktop and a bottom sheet on phones. */
+
+.di-panel {
+  position: fixed;
+  top: 96px;
+  right: 24px;
+  z-index: 70;
+  display: flex;
+  flex-direction: column;
+  width: min(360px, calc(100vw - 32px));
+  height: 560px;
+  max-height: calc(100dvh - 112px);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  background: #fff;
+  color: #1a1a1a;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.28);
+  font-family: 'Inter Variable', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  animation: di-in 0.22s ease both;
+}
+.di-panel[hidden] { display: none; }
+
+@keyframes di-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: none; }
+}
+
+.di-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 12px 14px 20px;
+  background: #0a1628;
+}
+.di-title { margin: 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.3; }
+.di-subtitle { margin: 3px 0 0; color: #8b9ab5; font-size: 12px; }
+.di-icon-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 999px; color: #cbd5e1;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.di-icon-btn:hover { background: rgba(255, 255, 255, 0.1); color: #fff; }
+.di-icon-btn:disabled { opacity: 0.4; }
+.di-icon-btn:focus-visible { outline: 2px solid #7dd3fc; outline-offset: 1px; }
+
+.di-messages {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 14px;
+}
+.di-messages::-webkit-scrollbar { width: 4px; }
+.di-messages::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
+
+.di-bubble {
+  max-width: 88%;
+  padding: 10px 14px;
+  font-size: 14px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+.di-bubble p + p, .di-bubble p + .di-list, .di-bubble .di-list + p { margin-top: 8px; }
+.di-bubble.bot { align-self: flex-start; border-radius: 14px 14px 14px 4px; background: #f1f3f5; color: #1a1a1a; }
+.di-bubble.user { align-self: flex-end; border-radius: 14px 14px 4px 14px; background: #0a1628; color: #fff; white-space: pre-wrap; }
+.di-list { list-style: disc; padding-left: 18px; }
+.di-list li + li { margin-top: 4px; }
+.di-link { color: #0369a1; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.di-link:hover { color: #0c4a6e; }
+.di-link:focus-visible { outline: 2px solid #0369a1; outline-offset: 2px; border-radius: 3px; }
+.di-error { border: 1px solid #fecaca; background: #fef2f2; }
+.di-retry {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 8px;
+  border: 1px solid #0a1628; border-radius: 999px; padding: 5px 12px;
+  color: #0a1628; font-size: 12.5px; font-weight: 600;
+}
+.di-retry:hover { background: #0a1628; color: #fff; }
+.di-retry:focus-visible { outline: 2px solid #0369a1; outline-offset: 2px; }
+
+.di-chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 2px 0 4px; }
+.di-chip {
+  border: 1px solid #d1d5db; border-radius: 999px; background: #fff; padding: 7px 13px;
+  color: #0a1628; font-size: 12.5px; line-height: 1.3; text-align: left;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.di-chip:hover { border-color: #0a1628; background: #f0f2f5; }
+.di-chip:focus-visible { outline: 2px solid #0369a1; outline-offset: 2px; }
+
+.di-typing {
+  display: flex; align-items: center; gap: 4px; align-self: flex-start; width: fit-content;
+  padding: 12px 14px; border-radius: 14px 14px 14px 4px; background: #f1f3f5;
+}
+.di-typing span[aria-hidden] {
+  display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #888;
+  animation: di-dot 1s infinite;
+}
+.di-typing span[aria-hidden]:nth-child(2) { animation-delay: 0.2s; }
+.di-typing span[aria-hidden]:nth-child(3) { animation-delay: 0.4s; }
+@keyframes di-dot {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-5px); opacity: 1; }
+}
+
+.di-input-row {
+  display: flex; flex-shrink: 0; align-items: flex-end; gap: 8px;
+  padding: 12px 14px 6px; border-top: 1px solid #e5e7eb; background: #fff;
+}
+.di-input-row textarea {
+  flex: 1; max-height: 96px; resize: none; overflow-y: hidden;
+  border: 1px solid #d1d5db; border-radius: 8px; padding: 8px 12px;
+  color: #1a1a1a; background: #fff; font: inherit; font-size: 14px; line-height: 1.5;
+  transition: border-color 0.15s ease;
+}
+.di-input-row textarea:focus { border-color: #0a1628; outline: 2px solid rgba(3, 105, 161, 0.35); outline-offset: 0; }
+.di-send {
+  display: flex; flex-shrink: 0; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: 8px; background: #0a1628; color: #fff;
+  transition: opacity 0.15s ease;
+}
+.di-send:hover { opacity: 0.85; }
+.di-send:disabled { opacity: 0.4; cursor: not-allowed; }
+.di-send:focus-visible { outline: 2px solid #0369a1; outline-offset: 2px; }
+.di-footer { flex-shrink: 0; padding: 0 14px 10px; background: #fff; color: #6b7280; font-size: 10.5px; line-height: 1.45; }
+
+@media (max-width: 640px) {
+  .di-panel { right: 16px; top: 84px; width: calc(100vw - 32px); }
+}
+@media (max-width: 480px) {
+  .di-panel {
+    top: auto; right: 0; bottom: 0; width: 100vw; height: min(78dvh, 640px); max-height: none;
+    border-radius: 16px 16px 0 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .di-panel { animation: none; }
+  .di-typing span[aria-hidden] { animation: none; opacity: 0.7; }
+}

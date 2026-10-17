@@ -1,0 +1,56 @@
+{
+  "slug": "kewaunee-analytics",
+  "title": "Executive Sales & Bidding Analytics Suite",
+  "sortOrder": 5,
+  "categories": ["data-ml"],
+  "status": "Professional work · private systems",
+  "period": "Jun 2025 – Present",
+  "summary": "Executive dashboards and reporting built around real sales and operations decisions.",
+  "tagline": "A connected suite of executive dashboards and reporting workflows at Kewaunee Scientific that turns CRM, quoting, and project data into decision-ready views for sales, engineering, estimating, operations, and leadership.",
+  "role": "Data Analyst at Kewaunee Scientific: dashboards, KPI definitions, data models, CRM data quality, and stakeholder requirements.",
+  "stack": ["Power BI", "DAX", "Zoho Analytics", "Zoho CRM", "SQL", "Excel", "Data modeling", "KPI reporting", "Data governance"],
+  "links": [
+    { "label": "Employer website", "href": "https://www.kewaunee.com/", "kind": "employer" }
+  ],
+  "metrics": [
+    { "value": "20+", "label": "Executive dashboards", "context": "Power BI and Zoho Analytics." },
+    { "value": "100+", "label": "KPI visualizations", "context": "Used across sales, engineering, estimating, and operations." },
+    { "value": "2,000+", "label": "CRM records validated", "context": "Cleaned, validated, and restructured." }
+  ],
+  "problem": [
+    "Operational records arrive with inconsistent definitions and formats, while leadership needs clear, dependable answers about sales, bids, quotes, and project status. A dashboard is only as trustworthy as the definitions and data underneath it."
+  ],
+  "contribution": [
+    "Since June 2025 I have worked as a data analyst at Kewaunee, meeting directly with sales leadership and other stakeholders, translating their questions into data models and DAX measures, and building and maintaining the dashboards they use."
+  ],
+  "solution": [
+    "I build and maintain executive Power BI and Zoho Analytics reporting across sales performance, bidding activity, quote conversion, project pipelines, and expiration tracking, backed by standardized KPI definitions, data dictionaries, and automated recurring reports."
+  ],
+  "solutionPoints": [
+    "20+ executive dashboards and 100+ KPI visualizations.",
+    "Data models and DAX measures built from stakeholder requirements.",
+    "2,000+ CRM records cleaned, validated, and restructured for reliable downstream KPIs.",
+    "Standardized KPI definitions, data dictionaries, and automated recurring metric reports."
+  ],
+  "architecture": {
+    "summary": "Every view starts from the decision a stakeholder needs to make and works backward to validated data.",
+    "flow": ["Stakeholder question", "Source records + validation", "Data model, DAX measures, KPI definitions", "Executive dashboards", "Automated recurring reporting"]
+  },
+  "decisions": [
+    { "title": "Start from the decision.", "text": "Each dashboard begins with what a stakeholder is trying to decide, which keeps views small and usable instead of chart-heavy." },
+    { "title": "Make shared definitions explicit.", "text": "Standard KPI definitions and data dictionaries mean a number means the same thing in every report." },
+    { "title": "Fix the data, not just the chart.", "text": "Cleaning and restructuring CRM records improved accuracy at the source, which made downstream KPIs more reliable." }
+  ],
+  "outcomes": [
+    "One request from the VP of Sales called for tracking projects expiring across day, week, month, and year windows with several other components, a structure the analytics platform did not support directly. Through documentation, iteration, and a workaround, I delivered a live expiration-tracking dashboard that leadership now uses.",
+    "The suite now includes 20+ executive dashboards and 100+ KPI visualizations, supported by 2,000+ cleaned CRM records and shared metric definitions."
+  ],
+  "limits": [
+    "This is private professional work. The visuals on this page are illustrative and contain no company data, internal screenshots, or proprietary schemas."
+  ],
+  "lessons": "Definitions and data quality often decide whether a dashboard can support a real decision.",
+  "relatedNotes": ["kewaunee-dashboards", "working-full-time-data-mining"],
+  "related": ["flowcast", "nypd-crime-data-analysis", "census-data-analysis"],
+  "media": { "cover": "kewaunee-analytics-cover", "hero": "kewaunee-analytics-cover", "detail": "kewaunee-analytics-detail" },
+  "sources": ["public/davis-resume.pdf", "https://notes.davishiggins.com/notes/kewaunee-dashboards", "Existing portfolio Impact story: Problem-Solving and Commitment to Success"]
+}

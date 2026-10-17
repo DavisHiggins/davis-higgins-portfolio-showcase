@@ -1,0 +1,51 @@
+{
+  "slug": "higgins-building-group",
+  "title": "Higgins Building Group",
+  "sortOrder": 9,
+  "categories": ["web-commerce"],
+  "status": "Live public site · client work",
+  "summary": "A photography-led website rebuild for a custom luxury home builder.",
+  "tagline": "A full website rebuild for an established Hickory, North Carolina builder of custom luxury homes, designed so the company's own project photography carries the experience.",
+  "role": "Led discovery, information architecture, design, development, stakeholder review, and deployment through Higgins Digital.",
+  "stack": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+  "links": [
+    { "label": "Live website", "href": "https://www.higginsbuildinggroup.com", "kind": "website" },
+    { "label": "GitHub showcase", "href": "https://github.com/DavisHiggins/Higgins-Building-Group", "kind": "showcase" }
+  ],
+  "metrics": [],
+  "problem": [
+    "Higgins Building Group had years of finished custom homes and the photography to prove it, but the old site showed that work at thumbnail scale inside a dated layout. The strongest asset the business owned was the thing visitors saw least."
+  ],
+  "contribution": [
+    "Company leadership commissioned the rebuild, and I ran it independently through Higgins Digital: stakeholder discovery, a content audit, information architecture, design, development, quality assurance, a revision round worked directly from the owner's change list, and the production deployment."
+  ],
+  "solution": [
+    "The new site lets the homes do the selling. Project photography runs full width, a filterable portfolio opens each photo in a lightbox, a five-stage process page explains how a build works, and a \"Begin a conversation\" path sits in the header on every page."
+  ],
+  "solutionPoints": [
+    "Rebuilt structure: home, about, portfolio, process, properties, testimonials, and contact.",
+    "An optimized image library served at the right size for each device.",
+    "A navy-and-gold design system drawn from the company's logo, with a mobile-first layout.",
+    "Protected contact and early-notice forms, search-ready metadata, and accessibility and reduced-motion passes."
+  ],
+  "architecture": {
+    "summary": "A photo pipeline feeds every page, and inquiries go straight to the company.",
+    "flow": ["Company photo library", "Optimized responsive images", "Site pages", "Portfolio: filters + lightbox", "Protected inquiry delivery"]
+  },
+  "decisions": [
+    { "title": "Full-width photography without the weight.", "text": "Every photo is prepared for the web and served at the size each device needs, so the work looks its best on a phone without a slow page." },
+    { "title": "Organize around how homeowners search.", "text": "Navigation follows the questions a prospective client asks: what have they built, how does a build work, and how do I start." },
+    { "title": "Stop spam quietly.", "text": "Forms are protected from abuse without making real homeowners solve a puzzle." }
+  ],
+  "outcomes": [
+    "The production site at higginsbuildinggroup.com presents the company's homes, process, and contact paths in a modern responsive experience. In the owner's words on the public project page: \"Davis took our old website and turned it into something that finally feels like Higgins Building Group.\""
+  ],
+  "limits": [
+    "Performance scores and lead metrics are not reported here because there is no dated measurement artifact to support them."
+  ],
+  "lessons": "A client redesign starts with the company's actual strengths and the questions its customers need answered.",
+  "relatedNotes": ["digital-presence"],
+  "related": ["higgins-digital", "lakeside-sport-club", "photos-and-frames"],
+  "media": { "cover": "higgins-building-group-cover", "hero": "higgins-building-group-hero", "detail": "higgins-building-group-detail" },
+  "sources": ["https://www.higginsbuildinggroup.com", "reference/readmes/Higgins-Building-Group.md", "Existing portfolio HBG entry"]
+}

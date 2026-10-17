@@ -1,0 +1,50 @@
+{
+  "slug": "ai-workflow-system",
+  "title": "AI Workflow System",
+  "sortOrder": 12,
+  "categories": ["ai-automation"],
+  "status": "Live public site",
+  "summary": "A public guide to structured AI-assisted planning, building, review, and delivery.",
+  "tagline": "A public learning platform at ai.davishiggins.com that turns the AI-assisted workflows I use every day into repeatable methods for planning, building, documenting, reviewing, and shipping work.",
+  "role": "Built the platform and wrote its guidance, drawn from my own development and analytics workflows.",
+  "stack": ["React", "Vite", "JavaScript", "Claude Code", "SEO metadata", "Vercel"],
+  "links": [
+    { "label": "Live website", "href": "https://ai.davishiggins.com", "kind": "website" }
+  ],
+  "metrics": [],
+  "problem": [
+    "Using an AI tool without context, a defined task, or a review step produces fast output that is hard to trust or maintain. Most beginner guidance focuses on prompts and tools rather than the process around them."
+  ],
+  "contribution": [
+    "I built the platform and wrote its content. The material comes from the systems I use for real projects: task files, project memory, scaffolding, review loops, and shipping practices."
+  ],
+  "solution": [
+    "The site organizes guidance around a repeatable process instead of tool hype: a free AI Workflow System framework, a Claude Code playbook covering task files, project memory, agents, and review loops, and a structured curriculum that starts with setup and builds toward a controlled Claude Code operating system."
+  ],
+  "solutionPoints": [
+    "A practical framework for planning, building, reviewing, and shipping with AI.",
+    "A Claude Code playbook: task files, project memory, agents, and review loops.",
+    "A module-based curriculum that progresses from installation to a reusable operating system.",
+    "SEO-ready metadata and social previews on a fast single-page React and Vite build."
+  ],
+  "architecture": {
+    "summary": "A lightweight React and Vite content platform deployed on Vercel.",
+    "flow": ["Workflows I use on real projects", "Written guides + playbook", "Curriculum modules", "React / Vite site at ai.davishiggins.com"]
+  },
+  "decisions": [
+    { "title": "Teach a process, not a tool.", "text": "Task definition, context, and review generalize beyond any one model or product." },
+    { "title": "Treat review as part of execution.", "text": "Every workflow includes a verification step instead of trusting first output." },
+    { "title": "Lead with free guidance.", "text": "The core framework is available without an account so the method can be judged on its own." }
+  ],
+  "outcomes": [
+    "The platform is live at ai.davishiggins.com, and the companion notes on daily AI use and building the Claude Code course document the approach in more depth."
+  ],
+  "limits": [
+    "This project was previously listed on the portfolio as \"Davis Intelligence\"; that name now belongs to this site's public assistant. Paid course availability and checkout are not described here; the live site shows what is currently offered."
+  ],
+  "lessons": "Reliable AI-assisted work depends on task definition, context, and review more than on output speed.",
+  "relatedNotes": ["ai-workflow-system", "claude-code-course", "ai-literacy"],
+  "related": ["cade", "crowncode-ai", "dhlm"],
+  "media": { "cover": "ai-workflow-system-cover", "hero": "ai-workflow-system-cover", "detail": "ai-workflow-system-detail" },
+  "sources": ["https://ai.davishiggins.com", "Existing portfolio 'Davis Intelligence' project entry", "davis-higgins-portfolio/src/data/site.ts (Beginner AI curriculum)"]
+}

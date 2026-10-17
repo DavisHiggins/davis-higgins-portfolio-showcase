@@ -1,0 +1,167 @@
+/* Folded-paper resume glyph, adapted from davishiggins.com's `.sb-resume` control
+   (three lines, folded corner, Carolina Blue border) to this header's dark styling.
+   Hover animates the glyph only; there is no hover text. */
+
+.resume-link {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.3rem 0.55rem;
+  border-radius: 12px;
+  color: #cbd5e1;
+  text-decoration: none;
+}
+.resume-link--compact {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+}
+.resume-link__viz {
+  position: relative;
+  display: grid;
+  width: 2.1rem;
+  height: 2.3rem;
+  place-items: center;
+}
+.resume-link--compact .resume-link__viz {
+  width: 1.25rem;
+  height: 1.5rem;
+}
+.resume-link__doc {
+  position: relative;
+  display: block;
+  width: 1.6rem;
+  height: 2rem;
+  overflow: hidden;
+  border: 1px solid rgba(75, 156, 211, 0.82);
+  border-radius: 0.18rem;
+  background: linear-gradient(180deg, #fffffff5, #edf5fbe0);
+  box-shadow: 0 0 0 1px #4b9cd324, 0 0 1rem #4b9cd324;
+  transform-origin: 50% 80%;
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+.resume-link--compact .resume-link__doc {
+  width: 1.05rem;
+  height: 1.35rem;
+}
+.resume-link__fold {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-bottom: 1px solid rgba(75, 156, 211, 0.5);
+  border-left: 1px solid rgba(75, 156, 211, 0.5);
+  background: #edf5fb;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+.resume-link--compact .resume-link__fold {
+  width: 0.34rem;
+  height: 0.34rem;
+}
+.resume-link__line {
+  position: absolute;
+  left: 0.28rem;
+  height: 2px;
+  border-radius: 99rem;
+  background: #4b9cd3;
+}
+.resume-link__line:nth-child(2) { top: 0.68rem; width: 0.9rem; }
+.resume-link__line:nth-child(3) { top: 0.99rem; width: 1.03rem; }
+.resume-link__line:nth-child(4) { top: 1.3rem; width: 0.7rem; }
+.resume-link--compact .resume-link__line { left: 0.18rem; height: 1.5px; }
+.resume-link--compact .resume-link__line:nth-child(2) { top: 0.45rem; width: 0.6rem; }
+.resume-link--compact .resume-link__line:nth-child(3) { top: 0.66rem; width: 0.68rem; }
+.resume-link--compact .resume-link__line:nth-child(4) { top: 0.87rem; width: 0.46rem; }
+.resume-link__label {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.resume-link:hover .resume-link__doc,
+.resume-link:focus-visible .resume-link__doc {
+  border-color: #7dd3fc;
+  transform: translateY(-0.12rem) rotate(-2deg);
+}
+.resume-link:hover,
+.resume-link:focus-visible {
+  color: #fff;
+}
+.resume-link:focus-visible {
+  outline: 2px solid #7dd3fc;
+  outline-offset: 4px;
+}
+.social-link {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #cbd5e1;
+  transition: transform 220ms ease, color 180ms ease, border-color 180ms ease, background-color 180ms ease, box-shadow 220ms ease;
+}
+.social-link svg { transition: transform 260ms cubic-bezier(0.34, 1.56, 0.64, 1); }
+.social-link:hover,
+.social-link:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(125, 211, 252, 0.45);
+  background: rgba(56, 189, 248, 0.1);
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.25);
+  color: #fff;
+}
+.social-link:focus-visible { outline: 2px solid #7dd3fc; outline-offset: 3px; }
+/* LinkedIn: the mark pops forward in the accent blue. */
+.social-link--linkedin:hover svg,
+.social-link--linkedin:focus-visible svg {
+  color: #7dd3fc;
+  transform: scale(1.18);
+}
+/* GitHub: the mark gives a quick wiggle and settles slightly enlarged. */
+.social-link--github:hover svg,
+.social-link--github:focus-visible svg {
+  animation: social-wiggle 560ms ease both;
+}
+@keyframes social-wiggle {
+  0% { transform: rotate(0) scale(1); }
+  25% { transform: rotate(-14deg) scale(1.14); }
+  50% { transform: rotate(10deg) scale(1.14); }
+  75% { transform: rotate(-5deg) scale(1.12); }
+  100% { transform: rotate(0) scale(1.12); }
+}
+
+/* The narrowest phones (< 380px) fit five header controls at 40px. */
+@media (max-width: 379px) {
+  .resume-link--compact,
+  .social-link {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    min-height: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resume-link__doc,
+  .social-link,
+  .social-link svg { transition: none; }
+  .resume-link:hover .resume-link__doc,
+  .resume-link:focus-visible .resume-link__doc,
+  .social-link:hover,
+  .social-link:focus-visible,
+  .social-link:hover svg,
+  .social-link:focus-visible svg { transform: none; animation: none; }
+}

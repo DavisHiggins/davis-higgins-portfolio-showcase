@@ -1,0 +1,57 @@
+{
+  "slug": "higgins-digital",
+  "title": "Higgins Digital",
+  "sortOrder": 8,
+  "categories": ["web-commerce", "software-tools"],
+  "status": "Live public site",
+  "period": "Jan 2026 – Present",
+  "summary": "The public platform for a Charlotte software development company.",
+  "tagline": "Higgins Digital is the software development company I founded to build custom websites, web platforms, and AI-enabled systems for businesses. This case study covers the company's own platform and delivery approach.",
+  "role": "Founder and web developer: brand, company website, service and project presentation, and end-to-end client delivery.",
+  "stack": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Web APIs", "Analytics", "Vercel", "Cloudflare"],
+  "links": [
+    { "label": "Live website", "href": "https://higginsd.com", "kind": "website" },
+    { "label": "GitHub showcase", "href": "https://github.com/DavisHiggins/Higgins-Digital", "kind": "showcase" }
+  ],
+  "metrics": [],
+  "problem": [
+    "I was already building websites and digital tools, but the work needed a company presence as professional as the output: one that communicates trust quickly, explains services clearly, and shows real work rather than promises."
+  ],
+  "contribution": [
+    "I founded Higgins Digital in January 2026 and built its brand, website, service structure, and project presentation. For client work I manage the full lifecycle: requirements, UI and UX design, development, backend logic, deployment, DNS and SSL, and custom domains."
+  ],
+  "solution": [
+    "I built Higgins Digital like a product rather than a landing page: a black-and-white brand system anchored by the blue H mark, six focused services (custom websites, website transformations, e-commerce and product sites, digital products and platforms, AI, automation, and data systems, and optimization and ongoing care), each with its own detail page, and a Work section of 14 delivered projects.",
+    "The same delivery approach runs through client projects such as the Higgins Building Group rebuild and Lakeside Sport Club."
+  ],
+  "solutionPoints": [
+    "Brand identity, messaging, and a reusable design system.",
+    "Service, pricing, and process pages with a clear inquiry path.",
+    "Project case studies that lead with concrete work.",
+    "A repeatable delivery process from discovery through deployment and handoff."
+  ],
+  "architecture": {
+    "summary": "Brand, content, and frontend are designed together so the company site demonstrates the standard it sells.",
+    "flow": ["Brand strategy + positioning", "Design system + UI components", "Services + process", "Project case studies", "Inquiry and quote paths"]
+  },
+  "decisions": [
+    { "title": "Use concrete work as evidence.", "text": "Project pages lead with delivered work and before-and-after improvements instead of broad claims." },
+    { "title": "Keep the copy direct.", "text": "The messaging focuses on what business owners care about: credibility, speed, usability, ownership, and a clear next step." },
+    { "title": "Treat the company site as a platform.", "text": "The site is structured to grow with new case studies and services without a redesign." }
+  ],
+  "tradeoffs": [
+    { "title": "Visual polish vs. performance", "text": "Motion and rich visuals have to stay light enough to support a performance-first promise." },
+    { "title": "Founder brand vs. company brand", "text": "The site benefits from my personal credibility while presenting Higgins Digital as a standalone business." }
+  ],
+  "outcomes": [
+    "Higgins Digital has a live company platform at higginsd.com and a public body of delivered client and product work, several of which appear in this gallery."
+  ],
+  "limits": [
+    "Current services and pricing are published on higginsd.com rather than repeated here."
+  ],
+  "lessons": "Showing concrete work and explaining the delivery process builds a clearer service proposition than broad promises.",
+  "relatedNotes": ["higgins-digital-building", "personal-branding-career", "digital-presence"],
+  "related": ["higgins-building-group", "crowncode-ai", "lakeside-sport-club"],
+  "media": { "cover": "higgins-digital-cover", "hero": "higgins-digital-hero", "detail": "higgins-digital-detail" },
+  "sources": ["public/davis-resume.pdf", "https://higginsd.com", "Existing portfolio Higgins Digital deep dive"]
+}

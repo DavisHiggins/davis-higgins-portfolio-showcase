@@ -1,0 +1,49 @@
+{
+  "slug": "photos-and-frames",
+  "title": "Photos & Frames",
+  "sortOrder": 21,
+  "categories": ["web-commerce", "research-community"],
+  "status": "Live public site",
+  "summary": "My photography portfolio, where every image is monochrome until you show intent.",
+  "tagline": "A home for my photography that feels like an exhibition rather than a feed: every photo appears in black and white and reveals its color on hover, focus, or touch.",
+  "role": "Took the photographs and designed and built the site.",
+  "stack": ["React", "TypeScript", "Vite", "Tailwind CSS", "GSAP", "Framer Motion", "Lenis", "Vercel"],
+  "links": [
+    { "label": "Live website", "href": "https://photos.davishiggins.com", "kind": "website" },
+    { "label": "GitHub showcase", "href": "https://github.com/DavisHiggins/Photos-and-Frames", "kind": "showcase" }
+  ],
+  "metrics": [],
+  "problem": [
+    "Photographic work needs a focused, responsive presentation that lets the images carry the experience. A social feed crops, compresses, and surrounds them with noise."
+  ],
+  "contribution": [
+    "I took the photographs and designed and built the site, including the workflow that prepares every original photo for the web."
+  ],
+  "solution": [
+    "The site follows one visual rule: monochrome first, color on intent. The gallery is split into portraits, nature, and couples, each with a frame count and a full-screen lightbox with keyboard navigation. A services page covers photo editing, portfolio websites, custom galleries, and visual curation."
+  ],
+  "solutionPoints": [
+    "A black-and-white-to-color reveal that works with a mouse, the keyboard, and touch.",
+    "Collection-based browsing with a lightbox.",
+    "An animated homepage composition, smooth scrolling, and page motion.",
+    "Lazy-loaded, web-ready images so an image-heavy page stays responsive."
+  ],
+  "architecture": {
+    "summary": "Original photos are prepared once, then reused across collections without duplication.",
+    "flow": ["Original photos", "Web-ready images", "Gallery: one collection at a time", "Monochrome card → color on hover, focus, or touch", "Full-screen lightbox"]
+  },
+  "decisions": [
+    { "title": "Make the reveal work for everyone.", "text": "Color responds to keyboard focus and taps as well as a mouse, so the core interaction works on every device." },
+    { "title": "Stay fast on a phone.", "text": "Images load as they are needed." },
+    { "title": "One photo, many collections.", "text": "A photograph can belong to more than one collection without being stored twice." }
+  ],
+  "outcomes": [
+    "Photos & Frames is live at photos.davishiggins.com as a purpose-built gallery for my photography."
+  ],
+  "limits": [],
+  "lessons": "Gallery interactions should support attention to the images without making the photographs harder to reach.",
+  "relatedNotes": [],
+  "related": ["davishiggins-com", "curated-notes", "phi-delta-theta"],
+  "media": { "cover": "photos-and-frames-cover", "hero": "photos-and-frames-hero", "detail": "photos-and-frames-detail" },
+  "sources": ["https://photos.davishiggins.com", "reference/readmes/Photos-and-Frames.md"]
+}

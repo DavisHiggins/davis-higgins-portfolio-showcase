@@ -1,0 +1,49 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "functions": {
+    "api/chat.js": { "maxDuration": 30 }
+  },
+  "redirects": [
+    { "source": "/impact", "destination": "/writing", "permanent": true },
+    { "source": "/skills-proof", "destination": "/writing", "permanent": true },
+    { "source": "/skills", "destination": "/experience", "permanent": true },
+    { "source": "/resume", "destination": "/davis-resume.pdf", "permanent": true },
+    { "source": "/writing/propify-breakdown", "destination": "/writing/contender-breakdown", "permanent": true },
+    { "source": "/docs/davis-resume.pdf", "destination": "/davis-resume.pdf", "permanent": true },
+    { "source": "/assistant.js", "destination": "/", "permanent": false },
+    { "source": "/assistant.css", "destination": "/", "permanent": false }
+  ],
+  "headers": [
+    {
+      "source": "/assets/:path*",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/media/:path*",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }]
+    },
+    {
+      "source": "/davis-resume.pdf",
+      "headers": [
+        { "key": "Content-Type", "value": "application/pdf" },
+        { "key": "Content-Disposition", "value": "inline; filename=\"Davis-Higgins-Resume.pdf\"" }
+      ]
+    },
+    {
+      "source": "/api/:path*",
+      "headers": [{ "key": "Cache-Control", "value": "no-store" }]
+    },
+    {
+      "source": "/:path*",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
+}

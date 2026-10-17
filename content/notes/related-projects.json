@@ -1,0 +1,9 @@
+{
+  "_comment": "Related Project blocks rendered at the end of the original source articles (curated-notes production source b0de9c2, MDX frontmatter relatedProject/relatedProjectLabel). Destinations are kept verbatim except the Contender note, which links to the current product (October 17, 2026).",
+  "ai-workflow-system": { "href": "https://ai.davishiggins.com", "label": "View AI Workflow System" },
+  "building-cade": { "href": "https://cade.davishiggins.com", "label": "View the Cade Case Study" },
+  "building-davishiggins": { "href": "https://davishiggins.com", "label": "View davishiggins.com" },
+  "crowncode-build": { "href": "https://crowncode.higginsd.com", "label": "View CrownCode AI" },
+  "higgins-digital-building": { "href": "https://higginsd.com", "label": "View Higgins Digital" },
+  "contender-breakdown": { "href": "https://contender.davishiggins.com", "label": "View Contender" }
+}

@@ -1,0 +1,66 @@
+{
+  "slug": "cade",
+  "title": "Cade",
+  "sortOrder": 2,
+  "categories": ["ai-automation", "software-tools"],
+  "status": "Private system · public case-study site",
+  "period": "Jul 2026 – Present",
+  "summary": "A Claude-powered working system with structured memory and reusable Jobs.",
+  "tagline": "A personal agentic operating system that connects Claude Code to a structured Obsidian memory vault, retrieves the context each task needs, and carries useful outcomes from one session to the next.",
+  "role": "Designed and built the operating system, its memory architecture and Jobs, and the public case-study website.",
+  "stack": ["Claude Code", "Obsidian", "Markdown", "Next.js", "React", "TypeScript", "GSAP", "Lenis", "Three.js", "Vercel"],
+  "links": [
+    { "label": "Case-study website", "href": "https://cade.davishiggins.com", "kind": "website" },
+    { "label": "GitHub showcase", "href": "https://github.com/DavisHiggins/Cade", "kind": "showcase" }
+  ],
+  "metrics": [],
+  "problem": [
+    "Modern models can analyze, write, and build at a high level, but their usefulness drops when the context behind the work disappears between sessions. My projects carry decisions, constraints, corrections, and open tasks that cannot be rebuilt reliably from a short prompt, and re-explaining them wastes time and makes the output less consistent.",
+    "Chat history preserves conversations. It does not give you a structured, task-aware memory across many projects and recurring workflows."
+  ],
+  "contribution": [
+    "I designed the operating loop, the vault structure, and the Job format, and I use and maintain the system across my own analytics, development, business, and writing work. I also built the public website that explains the system without exposing its private contents."
+  ],
+  "solution": [
+    "Cade runs every session through a five-stage loop: Orient, Retrieve, Prime, Execute, and Persist. Short operating rules load at the start of each session, while deeper project knowledge stays in a plain-Markdown Obsidian vault and is retrieved only when relevant.",
+    "Recurring work is organized as Jobs. A Job names the procedure to follow, the quality bar to meet, the references to load, and the lessons from earlier attempts, so repeated work improves instead of starting over."
+  ],
+  "solutionPoints": [
+    "Orient: load identity, operating rules, active priorities, and the system map.",
+    "Retrieve: follow indexes and links to the smallest useful set of notes for the task.",
+    "Prime: attach the matching Job's procedure, standard, and lessons.",
+    "Execute: do the work with focused context and verify the result.",
+    "Persist: write verified outcomes, corrections, and open work back to the vault."
+  ],
+  "architecture": {
+    "summary": "Two boot layers keep always-on rules small, and everything else is retrieved through a connected memory system.",
+    "flow": ["Boot config (CLAUDE.md)", "Vault index", "Job", "Linked context", "Work + verification", "Persisted outcome"],
+    "layers": [
+      { "label": "Boot layer", "text": "A concise configuration defines identity, operating rules, permission boundaries, and the connection to the vault." },
+      { "label": "System map", "text": "A vault index explains how the vault is organized and points to active projects, priorities, and the next relevant source." },
+      { "label": "Memory layer", "text": "Obsidian Markdown: project folders, priorities, daily notes, Jobs, a living profile, indexes, and wikilinks." },
+      { "label": "Public interface", "text": "A Next.js, TypeScript, GSAP, and Three.js website documents the architecture while keeping vault content private." }
+    ]
+  },
+  "decisions": [
+    { "title": "Separate always-on rules from searchable memory.", "text": "Only the instructions needed for safe, consistent operation load automatically. Larger project knowledge stays searchable, so the system stays focused." },
+    { "title": "Retrieve the smallest useful context.", "text": "Cade follows indexes and links to what the task needs instead of loading or summarizing the whole vault." },
+    { "title": "Turn recurring work into Jobs.", "text": "A Job carries procedure, quality expectations, references, and lessons together, so repeated work gets better over time." },
+    { "title": "Keep the human in control.", "text": "Persistent context does not grant more authority. External communication, deployments, commits, and sensitive edits stay behind explicit approval." }
+  ],
+  "tradeoffs": [
+    { "title": "Continuity vs. stale context", "text": "Memory is only useful while it is accurate, so completed priorities leave the active queue and verified outcomes replace assumptions." },
+    { "title": "Public explanation vs. privacy", "text": "The website shows enough depth to demonstrate the design while keeping personal memory, employer information, and credentials out of view." }
+  ],
+  "outcomes": [
+    "Cade gives my work one consistent operating model across analytics, development, operations, education, content, and career preparation, replacing context that used to be rebuilt by hand in every conversation. The public case-study site at cade.davishiggins.com explains the loop, the memory architecture, the Jobs, and the human-control model."
+  ],
+  "limits": [
+    "Cade is a private working system built on Claude Code; it does not train a model or act autonomously outside approved boundaries. This portfolio's assistant is a separate public tool and cannot reach Cade's memory."
+  ],
+  "lessons": "Durable project memory is a retrieval and workflow-design problem, not a reason to put an entire archive into every prompt.",
+  "relatedNotes": ["building-cade", "ai-workflow-system"],
+  "related": ["dhlm", "ai-workflow-system", "contender"],
+  "media": { "cover": "cade-cover", "hero": "cade-hero", "detail": "cade-detail" },
+  "sources": ["public/davis-resume.pdf", "https://cade.davishiggins.com", "source-review/cade/README.md", "Existing portfolio Cade deep dive"]
+}

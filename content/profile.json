@@ -1,0 +1,441 @@
+{
+  "reviewedAt": "2026-10-15",
+  "reviewNote": "Public professional facts only. Source authority: the current resume (public/davis-resume.pdf, SHA-256 82ce2524…), the public project sites and source repositories, and the previously published portfolio experience data. Edit this file, then run `npm run build` to regenerate pages, sitemap, and assistant knowledge.",
+  "identity": {
+    "name": "Davis Higgins",
+    "location": "Charlotte, North Carolina",
+    "headline": "Data Analyst | Data Science & AI | Web Developer | Digital Creator",
+    "summary": "Data Science student at UNC Charlotte, Software Engineer at One Chaptr Group, Data Analyst at Kewaunee Scientific, and founder of Higgins Digital. Builds analytics dashboards, machine-learning products, AI systems, and websites.",
+    "seniority": "Early-career: a student with professional analytics and software engineering experience. Not a senior engineer."
+  },
+  "education": [
+    {
+      "id": "uncc",
+      "institution": "University of North Carolina at Charlotte",
+      "degree": "B.S. in Data Science",
+      "minor": "Artificial Intelligence",
+      "period": "Aug 2024 to May 2027",
+      "expectedGraduation": "May 2027",
+      "gpaDisplay": "3.9",
+      "honors": [
+        "5x Chancellor's List",
+        "1x Dean's List"
+      ],
+      "description": "Building a technical foundation in analytics, machine learning, statistical thinking, and applied business problem solving while pairing coursework with internships, product development, and independent projects."
+    },
+    {
+      "id": "cvcc",
+      "institution": "Catawba Valley Community College",
+      "period": "Aug 2022 to May 2024",
+      "gpaDisplay": "4.0",
+      "honors": [
+        "4x President's List"
+      ],
+      "description": "Selected for a dual-enrollment program to gain college credits while completing high school."
+    }
+  ],
+  "awards": [
+    {
+      "name": "Public Anthropology Award for Excellence in Writing on Public Issues",
+      "organization": "Center for a Public Anthropology",
+      "date": "Apr 2025",
+      "description": "Recognized for excellence in writing on public issues. The publication was selected for its ability to address a public issue through thoughtful, persuasive, and captivating writing."
+    }
+  ],
+  "experience": [
+    {
+      "id": "one-chaptr",
+      "company": "One Chaptr Group",
+      "logo": "one-chaptr",
+      "subtitle": "One Chaptr Creative · Charlotte, NC",
+      "current": true,
+      "roles": [
+        {
+          "period": "Aug 2026 – Present",
+          "title": "Software Engineer",
+          "detail": "Storefront Platform · Web Development · Frontend UI/UX",
+          "bullets": [
+            "Co-developing a multi-tenant e-commerce storefront platform for One Chaptr Creative in Next.js and TypeScript, so each university and client organization can deliver a distinct branded storefront from one shared codebase.",
+            "Designing reusable component schemas and data contracts across a 63-component UI system, with responsive customer-facing routes, accessible interactions, and complete loading, empty, error, and success states.",
+            "Creating typed data models, mock providers, and API boundaries that prepare the storefront for a future InkSoft commerce integration."
+          ]
+        }
+      ],
+      "assistantNote": "In progress and co-developed. The InkSoft integration is prepared through typed boundaries; it is not a completed live integration."
+    },
+    {
+      "id": "kewaunee",
+      "company": "Kewaunee Scientific Corporation",
+      "logo": "kewaunee",
+      "subtitle": "Laboratory Manufacturing",
+      "accent": "from-blue-500/10 via-red-500/10 to-white/5",
+      "current": true,
+      "roles": [
+        {
+          "period": "Jun 2025 – Present",
+          "title": "Data Analyst",
+          "detail": "Dashboard Development · KPI Reporting · Data Governance",
+          "bullets": [
+            "Build and maintain 20+ executive Power BI and Zoho Analytics dashboards and 100+ KPI visualizations used across sales, engineering, estimating, and operations.",
+            "Translate business requirements into data models, DAX measures, automated reporting, and decision-ready dashboards for cross-functional and executive decisions.",
+            "Cleaned, validated, and restructured 2,000+ CRM records to improve data accuracy and downstream KPI reliability.",
+            "Developed standardized KPI definitions and data dictionaries and automated recurring metric reports, strengthening data governance while reducing manual reporting effort.",
+            "Meet directly with executives and stakeholders to understand which reports and automations would make their work easier, then translate those requests into practical tools."
+          ],
+          "link": {
+            "label": "Analytics suite case study",
+            "href": "/projects/kewaunee-analytics"
+          }
+        }
+      ],
+      "assistantNote": "The role began as an internship in June 2025: full-time during summers and part-time during academic terms. Do not describe it as permanent full-time employment or count it as years of full-time tenure."
+    },
+    {
+      "id": "higgins-digital",
+      "company": "Higgins Digital",
+      "logo": "higgins-digital",
+      "website": "https://higginsd.com/",
+      "subtitle": "Software Development Company",
+      "accent": "from-blue-600/20 via-cyan-400/10 to-white/5",
+      "current": true,
+      "roles": [
+        {
+          "period": "Jan 2026 – Present",
+          "title": "Founder & Web Developer",
+          "detail": "Custom Web Platforms · Production Deployment · UI/UX",
+          "bullets": [
+            "Build custom web platforms and AI-enabled digital systems for businesses, integrating APIs, serverless functions, analytics, and modern cloud deployment.",
+            "Manage project lifecycles from client requests and UI/UX design to backend logic, DNS and SSL setup, and custom domains.",
+            "Deploy and maintain client sites for performance, reliability, and cross-device compatibility."
+          ],
+          "link": {
+            "label": "Company Website",
+            "href": "https://higginsd.com/"
+          }
+        },
+        {
+          "period": "Jan 2026 – Present",
+          "title": "Personal Branding & Career Consultant",
+          "detail": "Resume Strategy · LinkedIn Optimization · Personal Branding",
+          "bullets": [
+            "Redesign and optimize resumes for students and early-career professionals targeting internships and full-time roles.",
+            "Audit and rewrite LinkedIn profiles to improve recruiter visibility, keyword alignment, and professional narrative.",
+            "Develop cohesive personal brand strategy across resume, LinkedIn, and online presence."
+          ]
+        }
+      ],
+      "assistantNote": "Describe Higgins Digital as a software development company. Do not quote prices; current services and pricing are on higginsd.com."
+    },
+    {
+      "id": "lakeside",
+      "company": "Lakeside Sport Club",
+      "logo": "lakeside",
+      "website": "https://lakesidesportclub.com",
+      "subtitle": "Sport & Lifestyle Apparel",
+      "accent": "from-blue-900/25 via-amber-500/10 to-white/5",
+      "current": true,
+      "roles": [
+        {
+          "period": "2026 – Present",
+          "title": "Creative Director",
+          "bullets": [
+            "Lead the creative direction and digital commerce strategy for a sport and lifestyle apparel brand, overseeing brand identity, product presentation, website experience, and campaign assets.",
+            "Designed and developed the brand's e-commerce platform, connecting product discovery, merchandising, and checkout in one cohesive experience."
+          ],
+          "link": {
+            "label": "Lakeside Sport Club case study",
+            "href": "/projects/lakeside-sport-club"
+          }
+        }
+      ]
+    },
+    {
+      "id": "phi-delta-theta",
+      "company": "Phi Delta Theta",
+      "logo": "pdt",
+      "subtitle": "NC Epsilon · UNC Charlotte",
+      "accent": "from-sky-400/10 via-yellow-400/10 to-white/5",
+      "current": true,
+      "roles": [
+        {
+          "period": "Apr 2026 – Present",
+          "title": "Chaplain",
+          "detail": "Faith Leadership · Brotherhood · Chapter Culture",
+          "bullets": [
+            "Plan and deliver weekly Bible studies focused on faith, discipline, brotherhood, and personal growth.",
+            "Built a semester-long scripture plan and the Chaplain Platform that keeps weekly studies and chapter resources in one place."
+          ],
+          "link": {
+            "label": "Chapter Website",
+            "href": "https://charlottephidelt.com"
+          }
+        },
+        {
+          "period": "Began Jan 2026 · Former office",
+          "title": "Vice President of Philanthropy",
+          "detail": "Leadership · Fundraising · NC Epsilon",
+          "bullets": [
+            "Led fundraising initiatives that generated $3,000+ per semester for the Live Like Lou Foundation.",
+            "Coordinated philanthropy initiatives that improved member engagement and community impact."
+          ]
+        }
+      ],
+      "assistantNote": "Davis is currently chaplain. He previously served as VP of Philanthropy (started January 2026); the end date is not published, and the chapter now lists a different philanthropy officer. Do not say he currently holds the philanthropy office."
+    },
+    {
+      "id": "hbg",
+      "company": "Higgins Building Group, Inc.",
+      "logo": "hbg",
+      "subtitle": "Construction",
+      "accent": "from-yellow-400/10 via-blue-500/10 to-white/5",
+      "current": false,
+      "roles": [
+        {
+          "period": "May 2024 – Aug 2024",
+          "title": "Assistant to Project Manager",
+          "detail": "Operational Oversight · Timeline Documentation",
+          "bullets": [
+            "Coordinated project documentation and cross-functional workflows to support construction operations.",
+            "Monitored timelines, materials, and logistics to improve project execution and efficiency."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teesly",
+      "company": "Teesly LLC",
+      "logo": "teesly",
+      "subtitle": "Custom Apparel Business",
+      "accent": "from-orange-500/10 via-slate-500/10 to-white/5",
+      "current": false,
+      "roles": [
+        {
+          "period": "Jan 2023 – May 2024",
+          "title": "Co-Founder & Operations Lead",
+          "detail": "Self-employed · Retail Sales · Business Ownership",
+          "bullets": [
+            "Ran a mobile retail operation across regional AAU basketball tournaments, adjusting pricing, revenue splits, and product mix from live sales data.",
+            "Managed inventory, transactions, on-demand production, and fulfillment for 100+ custom orders per event.",
+            "Adjusted offerings in real time based on customer demand, event context, and buying behavior.",
+            "On one tournament weekend in Rock Hill, SC, ran the table solo after a teammate fell ill and cleared just over $1,500 across two days after costs."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tus",
+      "company": "Touch-Up Solutions",
+      "logo": "tus",
+      "subtitle": "Manufacturing & Distribution",
+      "accent": "from-yellow-400/10 via-sky-500/10 to-white/5",
+      "current": false,
+      "roles": [
+        {
+          "period": "Dec 2022 – May 2024",
+          "title": "Warehouse Specialist",
+          "detail": "Order Fulfillment · Production · Shipment Handling",
+          "bullets": [
+            "Executed high-volume inventory handling and order fulfillment with accuracy and efficiency.",
+            "Ensured on-time shipment processing, supporting productive and reliable warehouse operations."
+          ]
+        }
+      ]
+    }
+  ],
+  "skills": {
+    "rule": "Skills are shown through the work that used them, not proficiency percentages.",
+    "programming": [
+      "Python",
+      "SQL",
+      "TypeScript",
+      "JavaScript",
+      "R",
+      "Java"
+    ],
+    "dataAndML": [
+      "pandas",
+      "NumPy",
+      "Matplotlib",
+      "scikit-learn",
+      "Random Forests",
+      "XGBoost",
+      "regression",
+      "feature engineering",
+      "statistical modeling"
+    ],
+    "analytics": [
+      "Power BI",
+      "DAX",
+      "Zoho Analytics",
+      "Excel",
+      "Google Analytics",
+      "data modeling",
+      "ETL",
+      "KPI reporting",
+      "data governance"
+    ],
+    "ai": [
+      "RAG systems",
+      "LLM workflows",
+      "agentic systems",
+      "context retrieval",
+      "workflow automation",
+      "Claude API",
+      "Gemini API"
+    ],
+    "web": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "FastAPI",
+      "REST APIs",
+      "Three.js",
+      "GSAP",
+      "Framer Motion"
+    ],
+    "cloudAndData": [
+      "Amazon S3",
+      "AWS SageMaker",
+      "SQL Server",
+      "PostgreSQL",
+      "Supabase",
+      "Vercel",
+      "Netlify",
+      "Railway",
+      "Cloudflare"
+    ],
+    "tools": [
+      "Git",
+      "GitHub",
+      "GitHub Actions",
+      "VS Code",
+      "Salesforce",
+      "Zoho CRM",
+      "Zoho Creator",
+      "Stripe"
+    ]
+  },
+  "careerDirection": {
+    "targets": [
+      "Data Analyst",
+      "Data Scientist",
+      "Software Engineer",
+      "AI Engineer",
+      "Web Developer"
+    ],
+    "summary": "Open to early-career data, software, and AI roles aligned with his experience. Graduate study in data science or business analytics is a stated future goal, not an earned credential."
+  },
+  "contact": {
+    "email": "davishiggins@icloud.com",
+    "linkedin": "https://www.linkedin.com/in/davishiggins",
+    "github": "https://github.com/DavisHiggins",
+    "website": "https://davishiggins.com",
+    "company": "https://higginsd.com",
+    "notes": "https://notes.davishiggins.com",
+    "resume": "/davis-resume.pdf",
+    "instagram": "https://instagram.com/daviscoded"
+  },
+  "aliases": [
+    {
+      "name": "Propify",
+      "meaning": "The original name of Contender. The product and all writing on this site now use the name Contender, at contender.davishiggins.com."
+    },
+    {
+      "name": "Davis Intelligence",
+      "meaning": "This public portfolio assistant. The older portfolio project card with this name is now listed as AI Workflow System (ai.davishiggins.com)."
+    },
+    {
+      "name": "DH Portfolio",
+      "meaning": "This conversational portfolio at portfolio.davishiggins.com. It does not have its own case study page."
+    },
+    {
+      "name": "DavisHiggins/Portfolio repository",
+      "meaning": "The public repository behind this portfolio at portfolio.davishiggins.com. Its README and assets folder showcase the main davishiggins.com site; the rest of the repository is this portfolio's application source."
+    }
+  ],
+  "siteGuide": [
+    {
+      "label": "Projects gallery",
+      "href": "/projects",
+      "about": "Every published project, with category filters and an individual case study at /projects/<slug>."
+    },
+    {
+      "label": "Writing",
+      "href": "/writing",
+      "about": "Sixteen professional and career notes reproduced from Curated Notes. Writing replaced the old Impact page."
+    },
+    {
+      "label": "Resume PDF",
+      "href": "/davis-resume.pdf",
+      "about": "The resume is a direct PDF link from the document icon in the header. There is no separate resume page."
+    },
+    {
+      "label": "Experience",
+      "href": "/experience",
+      "about": "Roles and responsibilities. Skills are shown within experience and project case studies; the old Skills page was removed."
+    },
+    {
+      "label": "Education",
+      "href": "/education",
+      "about": "UNC Charlotte and Catawba Valley Community College, plus honors."
+    },
+    {
+      "label": "Contact",
+      "href": "/contact",
+      "about": "Email, LinkedIn, GitHub, and other direct links."
+    }
+  ],
+  "assistantGuides": [
+    {
+      "id": "class-standing",
+      "keywords": [
+        "junior",
+        "senior",
+        "sophomore",
+        "freshman",
+        "year",
+        "class",
+        "standing",
+        "age",
+        "old"
+      ],
+      "text": "The portfolio does not state a class standing or age. State the facts instead: Davis started at UNC Charlotte in August 2024 after dual enrollment at Catawba Valley Community College and expects to graduate in May 2027, so the 2026-27 academic year is his final year. Older notes that mention being a junior or a specific age are dated writing."
+    },
+    {
+      "id": "full-stack",
+      "keywords": [
+        "full-stack",
+        "fullstack",
+        "full",
+        "stack",
+        "backend",
+        "frontend",
+        "end-to-end",
+        "engineering",
+        "software",
+        "developer",
+        "apis"
+      ],
+      "text": "Projects that best show full-stack work (data or backend through a production web interface), all built by Davis unless noted: Contender (/projects/contender): FastAPI analysis service, NBA ingestion into Supabase Postgres, background jobs, Next.js and TypeScript product, Clerk and Stripe. Flowcast (/projects/flowcast): data pipeline, SageMaker training, serverless inference API, and a Next.js and MapLibre product. DHLM (/projects/dhlm): Next.js workspace with source routing, Google Workspace integrations, Supabase, and confirmed actions. Lakeside Sport Club (/projects/lakeside-sport-club): a storefront with server-side pricing, Stripe checkout, and order and inventory workflows. CrownCode AI (/projects/crowncode-ai): Next.js app with a server-side Claude integration. SecondChance (/projects/secondchance): Davis built the Next.js web application for a four-person team project."
+    },
+    {
+      "id": "ml-data",
+      "keywords": [
+        "machine",
+        "learning",
+        "ml",
+        "model",
+        "models",
+        "data",
+        "science",
+        "analytics",
+        "statistics",
+        "statistical",
+        "forecast",
+        "prediction",
+        "dashboards"
+      ],
+      "text": "Machine-learning and data work: Flowcast (XGBoost demand forecasting on AWS SageMaker), Contender (rules projection blended with a Random Forest, Ridge fallback), SecondChance (team LightGBM models; Davis built the web app), the Kewaunee analytics suite (Power BI and Zoho Analytics dashboards, DAX, data quality), the NYPD crime analysis (chi-square testing and logistic regression), the Census team paper (correlation, ANOVA, chi-square), and ProspectIQ (data normalization, enrichment, and scoring pipeline)."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "slug": "curated-notes",
+  "title": "Curated Notes",
+  "sortOrder": 16,
+  "categories": ["web-commerce", "research-community"],
+  "status": "Live public site",
+  "summary": "An owned publishing platform for long-form notes on projects, data, AI, business, and life.",
+  "tagline": "A pre-built editorial site at notes.davishiggins.com for long-form notes on how my projects were made, what I'm learning in data and AI, and what I believe.",
+  "role": "Wrote the notes and designed and built the publishing platform.",
+  "stack": ["Next.js", "TypeScript", "MDX", "Tailwind CSS", "GSAP", "Framer Motion", "Lenis", "Vercel"],
+  "links": [
+    { "label": "Live website", "href": "https://notes.davishiggins.com", "kind": "website" },
+    { "label": "Read the notes here", "href": "/writing", "kind": "internal" },
+    { "label": "GitHub showcase", "href": "https://github.com/DavisHiggins/Curated-Notes", "kind": "showcase" }
+  ],
+  "metrics": [
+    { "value": "19", "label": "Published notes", "context": "As of October 2026; 16 appear in this portfolio's Writing section." }
+  ],
+  "problem": [
+    "Longer reflections and build stories need an owned, readable home that can grow beyond a social feed."
+  ],
+  "contribution": [
+    "I wrote every note and designed and built the site, including its publishing workflow and reading experience."
+  ],
+  "solution": [
+    "Each note is a full article with a serif reading face, a comfortable line length, a reading-progress bar, and links to the previous and next notes. A featured row leads the home page, and every note sits in a grid filterable by Projects, Data & AI, Business, and Personal."
+  ],
+  "solutionPoints": [
+    "A dark, gold-accented editorial system: Syne for display, DM Sans for interface text, Lora for reading.",
+    "MDX publishing: writing a note is the whole workflow, and every edit is versioned.",
+    "Pre-built article pages that load quickly and are easy for search engines to read.",
+    "Project notes link directly to the product or case study they describe."
+  ],
+  "architecture": {
+    "summary": "Content stays separate from presentation, and every page is built ahead of time.",
+    "flow": ["MDX notes", "Publishing workflow", "Home: featured row + filterable grid", "A pre-built page for every note"]
+  },
+  "decisions": [
+    { "title": "Writing comes first.", "text": "There is no admin panel to maintain; publishing a note is writing it." },
+    { "title": "Pre-build every note.", "text": "Articles load quickly and stay readable without client-side work." },
+    { "title": "Keep motion out of the paragraphs.", "text": "Animation frames the article but never moves the text someone is reading." }
+  ],
+  "outcomes": [
+    "Curated Notes holds 19 published notes. Sixteen professional and technical ones are reproduced word for word in this portfolio's Writing section, using the same reader layout."
+  ],
+  "limits": [
+    "Three personal notes on faith, kindness, and fitness remain on the original site rather than in this portfolio."
+  ],
+  "lessons": "Good publishing infrastructure gets out of the reader's way and keeps the writing easy to maintain.",
+  "relatedNotes": ["building-in-public", "digital-presence"],
+  "related": ["davishiggins-com", "photos-and-frames", "phi-delta-theta"],
+  "media": { "cover": "curated-notes-cover", "hero": "curated-notes-cover", "detail": "curated-notes-detail" },
+  "sources": ["https://notes.davishiggins.com", "source-review/curated-notes @ b0de9c2", "reference/readmes/Curated-Notes.md"]
+}

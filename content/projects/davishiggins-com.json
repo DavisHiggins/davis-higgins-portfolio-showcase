@@ -1,0 +1,51 @@
+{
+  "slug": "davishiggins-com",
+  "title": "davishiggins.com",
+  "sortOrder": 17,
+  "categories": ["web-commerce"],
+  "status": "Live public site",
+  "summary": "A motion-led personal home connecting projects, experience, writing, and contact.",
+  "tagline": "The central public home for my professional identity and project ecosystem: an editorial, highly interactive site that organizes work across data, AI, analytics, web development, and design.",
+  "role": "Designed and built the site, its content layer, its interaction system, and the presentation of the wider project ecosystem.",
+  "stack": ["Astro", "TypeScript", "SCSS", "GSAP", "Lenis", "Vercel"],
+  "links": [
+    { "label": "Live website", "href": "https://davishiggins.com", "kind": "website" },
+    { "label": "GitHub showcase", "href": "https://github.com/DavisHiggins/Portfolio", "kind": "showcase" }
+  ],
+  "metrics": [],
+  "problem": [
+    "A broad mix of data, AI, web, and creative work needs a coherent public identity. Without a clear structure, a visitor sees a list of unrelated links instead of one body of work."
+  ],
+  "contribution": [
+    "I designed and developed the site, from its content model and Work system to its motion design, and I maintain the destinations it connects."
+  ],
+  "solution": [
+    "The site combines recruiter-facing information, categorized project discovery, current experience, writing, and direct contact paths. A structured Work system presents each project by category, status, purpose, technology, and destination."
+  ],
+  "solutionPoints": [
+    "A Work system organized by category and development status.",
+    "Current positions, focus, and verified accomplishments in one place.",
+    "Custom motion: smooth scrolling, animated transitions, cursor effects, and a contrast toggle.",
+    "A document-icon resume link that opens the PDF directly, the same pattern this portfolio now uses."
+  ],
+  "architecture": {
+    "summary": "Shared content is kept separate from presentation, with one token system for color, contrast, and responsive behavior.",
+    "flow": ["Shared content data", "Astro + TypeScript pages", "SCSS tokens + GSAP / Lenis motion", "Vercel deployment"]
+  },
+  "decisions": [
+    { "title": "Separate content from presentation.", "text": "Project and experience data live in one place, so a change appears everywhere it is used." },
+    { "title": "One token system.", "text": "Color, contrast, and spacing come from shared tokens, which keeps the contrast toggle and responsive layouts consistent." },
+    { "title": "Keep destinations consistent.", "text": "Every project link points to the same verified destination used across my other sites." }
+  ],
+  "outcomes": [
+    "davishiggins.com is live as the hub that connects this portfolio, Curated Notes, Higgins Digital, and individual project sites."
+  ],
+  "limits": [
+    "The public DavisHiggins/Portfolio repository is a showcase of this main site, not the source of this conversational portfolio."
+  ],
+  "lessons": "A broad project ecosystem becomes easier to understand when identity, content, and destinations share one structure.",
+  "relatedNotes": ["building-davishiggins", "digital-presence"],
+  "related": ["curated-notes", "photos-and-frames", "higgins-digital"],
+  "media": { "cover": "davishiggins-com-cover", "hero": "davishiggins-com-hero", "detail": "davishiggins-com-detail" },
+  "sources": ["https://davishiggins.com", "source-review/davis-higgins-portfolio @ e3d8dde"]
+}

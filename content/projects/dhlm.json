@@ -1,0 +1,58 @@
+{
+  "slug": "dhlm",
+  "title": "DHLM",
+  "sortOrder": 3,
+  "categories": ["ai-automation", "software-tools"],
+  "status": "Private system · public case-study site",
+  "summary": "A private intelligence workspace grounded in approved Google data and notes.",
+  "tagline": "A single-user, Gemini-powered workspace that answers from a living Markdown knowledge base plus approved Gmail, Calendar, and Drive data, cites its sources, and requires confirmation before anything is written or sent.",
+  "role": "Designed and built the workspace, source router, integrations, memory-review workflow, career workspace, and the public case study.",
+  "stack": ["Next.js", "React", "TypeScript", "Gemini API", "Gmail API", "Google Calendar API", "Google Drive API", "Supabase", "Zod", "Tailwind CSS", "Vitest", "Playwright", "GSAP", "Lenis", "Vercel"],
+  "links": [
+    { "label": "Case-study website", "href": "https://dhlm.davishiggins.com", "kind": "website" },
+    { "label": "GitHub showcase", "href": "https://github.com/DavisHiggins/DHLM", "kind": "showcase" }
+  ],
+  "metrics": [],
+  "problem": [
+    "The context I need is split across email, calendar, files, and project notes. Pulling it together by hand interrupts the work, and a general assistant cannot be trusted to read and act across those sources without clear boundaries."
+  ],
+  "contribution": [
+    "I designed and built DHLM end to end: the routing layer that decides which sources a question needs, the Google integrations and security model, the human-approved memory workflow, the career workspace, and the public case-study site with synthetic previews."
+  ],
+  "solution": [
+    "A deterministic router decides which sources each question needs before any model call. Generic questions are answered directly, project questions retrieve personal context, and live Google data is fetched in parallel only when the question requires it. Answers stream with knowledge-base and live-data citations side by side.",
+    "Nothing becomes permanent memory automatically: DHLM proposes updates with evidence and confidence, and changes are validated, versioned, and synced only after approval."
+  ],
+  "solutionPoints": [
+    "Ranked retrieval with an explicit precedence order: current priorities, recent changes, active projects, then profile.",
+    "Single-account Google sign-in with PKCE, read-only scopes by default, and an encrypted refresh-token cookie.",
+    "Single-use, five-minute confirmations before any Gmail draft or Calendar event is created.",
+    "A career workspace for job discovery, deterministic fit scoring, truthful resume tailoring, and application tracking."
+  ],
+  "architecture": {
+    "summary": "Routing happens before the model is called, so the model only ever sees the sources a question actually needs.",
+    "flow": ["Question", "Deterministic source router", "Knowledge base · Gmail · Calendar · Drive", "Gemini answer with citations", "Review: memory proposals and confirmed actions"],
+    "layers": [
+      { "label": "Interface", "text": "Next.js, React, TypeScript, and Tailwind CSS, with a separate public case study that uses synthetic data." },
+      { "label": "Intelligence", "text": "Gemini, with a fast default model and a deeper model only on request and within a daily budget." },
+      { "label": "Sources", "text": "A Markdown knowledge base, optionally synced to Gemini File Search by content hash, plus approved Google Workspace APIs." },
+      { "label": "Safety", "text": "Zod-validated contracts, separated sign-in and connection grants, and confirmed write actions." }
+    ]
+  },
+  "decisions": [
+    { "title": "Fetch only what the question needs.", "text": "Routing rules run before the model, which keeps unrelated personal data out of every prompt and keeps responses fast." },
+    { "title": "Separate sign-in, access, and action.", "text": "Signing in, granting a data connection, and performing a write are distinct steps, and writes require a fresh confirmation." },
+    { "title": "Use synthetic data in public.", "text": "The public case study demonstrates routing, citations, and review with synthetic previews instead of real inbox or calendar content." }
+  ],
+  "outcomes": [
+    "DHLM runs as my private workspace, and the public case study at dhlm.davishiggins.com shows how routing, citations, human review, and the career workspace fit together without exposing a real account."
+  ],
+  "limits": [
+    "DHLM is a private, single-user system. The public site is a case study, not a working inbox assistant, and it does not send email on its own. This portfolio's assistant cannot access DHLM or any of Davis's accounts."
+  ],
+  "lessons": "Connecting information is only useful when source selection, citations, and action boundaries stay understandable.",
+  "relatedNotes": [],
+  "related": ["cade", "ai-workflow-system", "crowncode-ai"],
+  "media": { "cover": "dhlm-cover", "hero": "dhlm-hero", "detail": "dhlm-detail" },
+  "sources": ["https://dhlm.davishiggins.com", "source-review/dhlm/README.md", "Existing portfolio DHLM description"]
+}
